@@ -1,0 +1,266 @@
+Generated File. Do not edit.
+
+[HEADER]
+Version|0.16|$
+Arch|x86-msvc|$
+
+[PLUGINS]
+npGoogleUpdate3.dll|$
+C:\Users\Aleksi\AppData\Local\Google\Update\1.3.21.165\npGoogleUpdate3.dll|$
+1.3.21.165|$
+1381306113844|0|0|$
+Google Update|$
+Google Update|$
+2
+0|application/x-vnd.google.update3webcontrol.3|||$
+1|application/x-vnd.google.oneclickctrl.9|||$
+NPSWF32_11_9_900_117.dll|$
+C:\WINDOWS\SysWOW64\Macromed\Flash\NPSWF32_11_9_900_117.dll|$
+11.9.900.117|$
+1381259737240|0|0|$
+Shockwave Flash 11.9 r900|$
+Shockwave Flash|$
+2
+0|application/x-shockwave-flash|Adobe Flash movie|swf|$
+1|application/futuresplash|FutureSplash movie|spl|$
+npjp2.dll|$
+C:\Program Files (x86)\Java\jre7\bin\plugin2\npjp2.dll|$
+10.40.2.43|$
+1381173656041|0|0|$
+Next Generation Java Plug-in 10.40.2 for Mozilla browsers|$
+Java(TM) Platform SE 7 U40|$
+38
+0|application/x-java-applet|Java Applet||$
+1|application/x-java-bean|JavaBeans||$
+2|application/x-java-vm|||$
+3|application/x-java-applet;version=1.1.1|||$
+4|application/x-java-bean;version=1.1.1|||$
+5|application/x-java-applet;version=1.1|||$
+6|application/x-java-bean;version=1.1|||$
+7|application/x-java-applet;version=1.2|||$
+8|application/x-java-bean;version=1.2|||$
+9|application/x-java-applet;version=1.1.3|||$
+10|application/x-java-bean;version=1.1.3|||$
+11|application/x-java-applet;version=1.1.2|||$
+12|application/x-java-bean;version=1.1.2|||$
+13|application/x-java-applet;version=1.3|||$
+14|application/x-java-bean;version=1.3|||$
+15|application/x-java-applet;version=1.2.2|||$
+16|application/x-java-bean;version=1.2.2|||$
+17|application/x-java-applet;version=1.2.1|||$
+18|application/x-java-bean;version=1.2.1|||$
+19|application/x-java-applet;version=1.3.1|||$
+20|application/x-java-bean;version=1.3.1|||$
+21|application/x-java-applet;version=1.4|||$
+22|application/x-java-bean;version=1.4|||$
+23|application/x-java-applet;version=1.4.1|||$
+24|application/x-java-bean;version=1.4.1|||$
+25|application/x-java-applet;version=1.4.2|||$
+26|application/x-java-bean;version=1.4.2|||$
+27|application/x-java-applet;version=1.5|||$
+28|application/x-java-bean;version=1.5|||$
+29|application/x-java-applet;version=1.6|||$
+30|application/x-java-bean;version=1.6|||$
+31|application/x-java-applet;version=1.7|||$
+32|application/x-java-bean;version=1.7|||$
+33|application/x-java-applet;jpi-version=1.7.0_40|||$
+34|application/x-java-bean;jpi-version=1.7.0_40|||$
+35|application/x-java-vm-npruntime|||$
+36|application/x-java-applet;deploy=10.40.2|||$
+37|application/x-java-applet;javafx=2.2.40|||$
+npDeployJava1.dll|$
+C:\WINDOWS\SysWOW64\npDeployJava1.dll|$
+10.40.2.43|$
+1381173655581|0|0|$
+NPRuntime Script Plug-in Library for Java(TM) Deploy|$
+Java Deployment Toolkit 7.0.400.43|$
+1
+0|application/java-deployment-toolkit|||$
+npitunes.dll|$
+C:\Program Files (x86)\iTunes\Mozilla Plugins\npitunes.dll|$
+1.0.1.1|$
+1380584316000|0|0|$
+iTunes Detector Plug-in|$
+iTunes Application Detector|$
+1
+0|application/itunes-plugin|This plug-in detects the presence of iTunes when opening iTunes Store URLs in a web page with Firefox.||$
+npPDFXCviewNPPlugin.dll|$
+C:\Program Files\Tracker Software\PDF Viewer\Win32\npPDFXCviewNPPlugin.dll|$
+2.5.212.0|$
+1377796026000|0|0|$
+PDF-XChange Viewer Netscape Gecko Plugin|$
+PDF-XChange Viewer|$
+1
+0|application/pdf|Portable Document Format|pdf|$
+npqtplugin5.dll|$
+C:\Program Files (x86)\QuickTime\Plugins\npqtplugin5.dll|$
+7.7.4.0|$
+1369330775487|0|0|$
+The QuickTime Plugin allows you to view a wide variety of multimedia content in Web pages. For more information, visit the <A HREF=http://www.apple.com/quicktime/>QuickTime</A> Web site.|$
+QuickTime Plug-in 7.7.4|$
+7
+0|sovellus/x-mpeg|AMC media|amc|$
+1|video/mp4|MPEG-4 media|mp4|$
+2|audio/mp4|MPEG-4 media|mp4|$
+3|audio/x-m4a|AAC-èèni|m4a|$
+4|audio/x-m4p|AAC-èènitiedosto|m4p|$
+5|audio/x-m4b|AAC-èènikirja|m4b|$
+6|video/x-m4v|Video|m4v|$
+npqtplugin4.dll|$
+C:\Program Files (x86)\QuickTime\Plugins\npqtplugin4.dll|$
+7.7.4.0|$
+1369330773855|0|0|$
+The QuickTime Plugin allows you to view a wide variety of multimedia content in Web pages. For more information, visit the <A HREF=http://www.apple.com/quicktime/>QuickTime</A> Web site.|$
+QuickTime Plug-in 7.7.4|$
+7
+0|audio/mpeg|MPEG Audio|mpeg,mpg,m1s,m1a,mp2,mpm,mpa,m2a|$
+1|audio/x-mpeg|MPEG Audio|mpeg,mpg,m1s,m1a,mp2,mpm,mpa,m2a|$
+2|video/3gpp|3GPP media|3gp,3gpp|$
+3|audio/3gpp|3GPP media|3gp,3gpp|$
+4|video/3gpp2|3GPP2 media|3g2,3gp2|$
+5|audio/3gpp2|3GPP2 media|3g2,3gp2|$
+6|video/sd-video|SD video|sdv|$
+npqtplugin3.dll|$
+C:\Program Files (x86)\QuickTime\Plugins\npqtplugin3.dll|$
+7.7.4.0|$
+1369330773241|0|0|$
+The QuickTime Plugin allows you to view a wide variety of multimedia content in Web pages. For more information, visit the <A HREF=http://www.apple.com/quicktime/>QuickTime</A> Web site.|$
+QuickTime Plug-in 7.7.4|$
+5
+0|audio/x-aac|AAC-èèni|aac,adts|$
+1|audio/x-caf|CAF-èèni|caf|$
+2|audio/x-ac3|AC3-èèni|ac3|$
+3|video/x-mpeg|MPEG media|mpeg,mpg,m1s,m1v,m1a,m75,m15,mp2,mpm,mpv,mpa|$
+4|video/mpeg|MPEG media|mpeg,mpg,m1s,m1v,m1a,m75,m15,mp2,mpm,mpv,mpa|$
+npqtplugin2.dll|$
+C:\Program Files (x86)\QuickTime\Plugins\npqtplugin2.dll|$
+7.7.4.0|$
+1369330772717|0|0|$
+The QuickTime Plugin allows you to view a wide variety of multimedia content in Web pages. For more information, visit the <A HREF=http://www.apple.com/quicktime/>QuickTime</A> Web site.|$
+QuickTime Plug-in 7.7.4|$
+8
+0|audio/aiff|AIFF-èèni|aiff,aif,aifc,cdda|$
+1|audio/x-aiff|AIFF-èèni|aiff,aif,aifc,cdda|$
+2|audio/basic|uLaw/AU-èèni|au,snd,ulw|$
+3|audio/mid|MIDI|mid,midi,smf,kar|$
+4|audio/vnd.qcelp|QUALCOMM PureVoice audio|qcp|$
+5|audio/x-gsm|GSM-èèni|gsm|$
+6|audio/AMR|AMR-èèni|AMR|$
+7|audio/aac|AAC-èèni|aac,adts|$
+npqtplugin.dll|$
+C:\Program Files (x86)\QuickTime\Plugins\npqtplugin.dll|$
+7.7.4.0|$
+1369330771712|0|0|$
+The QuickTime Plugin allows you to view a wide variety of multimedia content in Web pages. For more information, visit the <A HREF=http://www.apple.com/quicktime/>QuickTime</A> Web site.|$
+QuickTime Plug-in 7.7.4|$
+7
+0|application/sdp|SDP-lèhetyksen kuvaaja|sdp|$
+1|application/x-sdp|SDP-lèhetyksen kuvaaja|sdp|$
+2|application/x-rtsp|RTSP-lèhetyksen kuvaaja|rtsp,rts|$
+3|video/quicktime|QuickTime Movie|mov,qt,mqv|$
+4|video/flc|AutoDesk Animator|flc,fli,cel|$
+5|audio/x-wav|WAVE-èèni|wav,bwf|$
+6|audio/wav|WAVE-èèni|wav,bwf|$
+npctrl.dll|$
+c:\Program Files (x86)\Microsoft Silverlight\5.1.20513.0\npctrl.dll|$
+5.1.20513.0|$
+1368447276000|0|0|$
+5.1.20513.0|$
+Silverlight Plug-In|$
+2
+0|application/x-silverlight|npctrl|scr|$
+1|application/x-silverlight-2|||$
+npPDFXEditPlugin.x86.dll|$
+C:\Program Files\Tracker Software\PDF Editor\npPDFXEditPlugin.x86.dll|$
+3.0.301.0|$
+1366972082000|0|0|$
+PDF-XChange Editor Netscape Gecko Plugin|$
+PDF-XChange Editor|$
+1
+0|application/pdf|Portable Document Format|pdf|$
+npNokiaSuiteEnabler.dll|$
+C:\Program Files (x86)\Nokia\Nokia Suite\npNokiaSuiteEnabler.dll|$
+1.0.0.1|$
+1366325190000|0|0|$
+Nokia Suite Enabler Plugin|$
+Nokia Suite Enabler Plugin|$
+1
+0|application/x-enabler-nokiasuite|||$
+np32dsw_1202122.dll|$
+C:\WINDOWS\SysWOW64\Adobe\Director\np32dsw_1202122.dll|$
+12.0.2.122|$
+1364998416000|0|0|$
+Adobe Shockwave for Director Netscape plug-in, version 12.0.2.122|$
+Shockwave for Director|$
+1
+0|application/x-director|Shockwave Movie|dir,dxr,dcr|$
+nppdf32.dll|$
+C:\Program Files (x86)\Adobe\Reader 11.0\Reader\browser\nppdf32.dll|$
+11.0.2.0|$
+1360965892000|0|0|$
+Adobe PDF Plug-In For Firefox and Netscape 11.0.02|$
+Adobe Acrobat|$
+7
+0|application/pdf|Acrobat Portable Document Format|pdf|$
+1|application/vnd.adobe.pdfxml|Adobe PDF in XML Format|pdfxml|$
+2|application/vnd.adobe.x-mars|Adobe PDF in XML Format|mars|$
+3|application/vnd.fdf|Acrobat Forms Data Format|fdf|$
+4|application/vnd.adobe.xfdf|XML Version of Acrobat Forms Data Format|xfdf|$
+5|application/vnd.adobe.xdp+xml| Acrobat XML Data Package|xdp|$
+6|application/vnd.adobe.xfd+xml|Adobe FormFlow99 Data File|xfd|$
+nppdf32.dll|$
+C:\Program Files (x86)\Adobe\Reader 11.0\Reader\AIR\nppdf32.dll|$
+11.0.2.0|$
+1360965892000|0|0|$
+Adobe PDF Plug-In For Firefox and Netscape 11.0.02|$
+Adobe Acrobat|$
+7
+0|application/pdf|Acrobat Portable Document Format|pdf|$
+1|application/vnd.adobe.pdfxml|Adobe PDF in XML Format|pdfxml|$
+2|application/vnd.adobe.x-mars|Adobe PDF in XML Format|mars|$
+3|application/vnd.fdf|Acrobat Forms Data Format|fdf|$
+4|application/vnd.adobe.xfdf|XML Version of Acrobat Forms Data Format|xfdf|$
+5|application/vnd.adobe.xdp+xml| Acrobat XML Data Package|xdp|$
+6|application/vnd.adobe.xfd+xml|Adobe FormFlow99 Data File|xfd|$
+npBrowserPlugin.dll|$
+C:\PROGRA~2\COMMON~1\Nero\BROWSE~1\npBrowserPlugin.dll|$
+1.1.2.0|$
+1355936452000|0|0|$
+Plug-in for detecting Nero Kwik Media.|$
+Nero Kwik Media Helper|$
+1
+0|application/x-KwikMedia|||$
+npmathplugin.dll|$
+C:\Program Files (x86)\Common Files\Wolfram Research\Browser\8.0.4.2615434\npmathplugin.dll|$
+8.0.39.59379|$
+1317922028000|0|0|$
+Enables the interaction of Mathematica content with the latest installed version of Mathematica.|$
+Wolfram Mathematica|$
+5
+0|application/vnd.wolfram.cdf|Computable Document Format|cdf|$
+1|application/vnd.wolfram.cdf.text|Computable Document Format|cdf|$
+2|application/vnd.wolfram.mathematica|Wolfram Mathematica Notebook|nb|$
+3|application/vnd.wolfram.player|Wolfram Mathematica Player Notebook|nbp|$
+4|application/mathematica|Wolfram Mathematica Notebook|nb,nbp|$
+NPSPWRAP.DLL|$
+C:\PROGRA~2\MICROS~3\Office14\NPSPWRAP.DLL|$
+14.0.4761.1000|$
+1269454958000|0|0|$
+The plug-in allows you to open and edit files using Microsoft Office applications|$
+Microsoft Office 2010|$
+1
+0|application/x-sharepoint|SharePoint Plug-in for Firefox||$
+NPAUTHZ.DLL|$
+C:\PROGRA~2\MICROS~3\Office14\NPAUTHZ.DLL|$
+14.0.4730.1010|$
+1263066138000|0|0|$
+Office Authorization plug-in for NPAPI browsers|$
+Microsoft Office 2010|$
+1
+0|application/x-msoffice14|14.0.4730.1010|*|$
+
+[INVALID]
+C:\WINDOWS\SysWOW64\npmproxy.dll|$
+1367643436327|$
+c:\Program Files (x86)\Microsoft Silverlight\5.1.20513.0\npctrlui.dll|$
+1368447276000|$
