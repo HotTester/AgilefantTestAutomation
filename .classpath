@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="source/java-main"/>
+	<classpathentry kind="src" path="source/java-test"/>
+	<classpathentry including="*.properties|*/*.graphml|*/*.xls" kind="src" path="source/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="libraries/bsh-2.0b4.jar"/>
+	<classpathentry kind="lib" path="libraries/commons-codec-1.8.jar" sourcepath="libraries/commons-codec-1.8-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/AgilefantTestAutomation/libraries/commons-codec-1.8-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="libraries/commons-collections-3.2.1.jar" sourcepath="libraries/commons-collections-3.2.1-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/AgilefantTestAutomation/libraries/commons-collections-3.2.1-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="libraries/commons-exec-1.1.jar" sourcepath="libraries/commons-exec-1.1-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/AgilefantTestAutomation/libraries/commons-exec-1.1-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="libraries/commons-io-2.4.jar" sourcepath="libraries/commons-io-2.4-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/AgilefantTestAutomation/libraries/commons-io-2.4-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="libraries/commons-jxpath-1.3.jar" sourcepath="libraries/commons-jxpath-1.3-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/AgilefantTestAutomation/libraries/commons-jxpath-1.3-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="libraries/commons-lang3-3.1.jar" sourcepath="libraries/commons-lang3-3.1-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/AgilefantTestAutomation/libraries/commons-lang3-3.1-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="libraries/commons-logging-1.1.3.jar" sourcepath="libraries/commons-logging-1.1.3-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/AgilefantTestAutomation/libraries/commons-logging-1.1.3-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="libraries/commons-logging-adapters-1.1.3.jar"/>
+	<classpathentry kind="lib" path="libraries/commons-logging-api-1.1.3.jar"/>
+	<classpathentry kind="lib" path="libraries/graphwalker-2.6.3-SNAPSHOT.jar" sourcepath="libraries/graphwalker-2.6.3-SNAPSHOT-source"/>
+	<classpathentry kind="lib" path="libraries/guava-15.0.jar"/>
+	<classpathentry kind="lib" path="libraries/httpclient-4.3.1.jar"/>
+	<classpathentry kind="lib" path="libraries/httpcore-4.3.jar"/>
+	<classpathentry kind="lib" path="libraries/httpmime-4.3.1.jar"/>
+	<classpathentry kind="lib" path="libraries/json-20080701.jar"/>
+	<classpathentry kind="lib" path="libraries/junit-dep-4.11.jar"/>
+	<classpathentry kind="lib" path="libraries/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="libraries/poi-3.6-20091214.jar"/>
+	<classpathentry kind="lib" path="libraries/dbunit-2.4.9.jar" sourcepath="libraries/dbunit-2.4.9-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/AgilefantTestAutomation/libraries/dbunit-2.4.9-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="libraries/selenium-java-2.37.0.jar" sourcepath="libraries/selenium-java-2.37.0-srcs.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://selenium.googlecode.com/git/docs/api/java/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="libraries/junit-4.11.jar" sourcepath="libraries/junit-4.11-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/AgilefantTestAutomation/libraries/junit-4.11-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="libraries/hamcrest-core-1.3.jar" sourcepath="libraries/hamcrest-core-1.3-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/AgilefantTestAutomation/libraries/hamcrest-core-1.3-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target"/>
+</classpath>
