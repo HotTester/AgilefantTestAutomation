@@ -1,14 +1,15 @@
 /**
+ * T-76.5613 Software Testing and Quality Assurance P
+ * School of Science
+ * Aalto University
  * 
+ * Group Exercise of Team Hotsters
  */
 
 package fi.aalto.stqa.hotsters.agilefanttestautomation.harness;
 
 
 import java.io.File;
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
-import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang.NullArgumentException;
@@ -42,9 +43,6 @@ public final class BrowserDriverFactory {
   // @formatter:on
 
   /**  */
-  private static final String CHARACTER_ENCODING_UTF8 = "UTF-8"; //$NON-NLS-1$
-
-  /**  */
   public static final int DEFAULT_IMPLICIT_WAITING_TIMEOUT_IN_SECONDS = 30;
 
 
@@ -71,8 +69,8 @@ public final class BrowserDriverFactory {
   /**
    * @return
    */
-  public final WebDriver createFirefoxInstance() {
-    final File profilePath = resolveFirefoxProfilePath();
+  public final WebDriver createFirefoxDriverInstance() {
+    final File profilePath = ResourceResolver.resolveBasedOn(firefoxProfilePath());
     final FirefoxProfile profile = new FirefoxProfile(profilePath);
     final WebDriver driver = new FirefoxDriver(profile);
 
@@ -81,31 +79,6 @@ public final class BrowserDriverFactory {
         TimeUnit.SECONDS);
 
     return driver;
-  }
-
-
-
-  /**
-   * @return
-   */
-  private final File resolveFirefoxProfilePath() {
-    final String resourcePath =
-        this.getClass().getResource(firefoxProfilePath()).getPath();
-
-    if (resourcePath == null) {
-      throw new ResourceNotFoundException(String.format(
-          Locale.ROOT, ERR_MSG_FIREFOX_PROFILE_CANNOT_BE_FOUND_FROM_PATH, resourcePath));
-    }
-
-    String profilePath = null;
-    try {
-      profilePath = URLDecoder.decode(resourcePath, CHARACTER_ENCODING_UTF8);
-    }
-    catch (final UnsupportedEncodingException ex) {
-      throw new RuntimeException(ERR_MSG_UNKNOWN_CHARACTER_ENCODING_IDENTIFIER, ex);
-    }
-
-    return new File(profilePath);
   }
 
 
@@ -157,4 +130,5 @@ public final class BrowserDriverFactory {
 
     _implicitWaitingTimeoutInSeconds = timeout;
   }
+
 } // end of class BrowserDriverFactory

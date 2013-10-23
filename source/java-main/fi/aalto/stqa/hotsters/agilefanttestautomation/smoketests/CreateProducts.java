@@ -1,5 +1,12 @@
+/**
+ * T-76.5613 Software Testing and Quality Assurance P
+ * School of Science
+ * Aalto University
+ * 
+ * Group Exercise of Team Hotsters
+ */
 
-package fi.aalto.stqa.hotsters.agilefanttestautomation;
+package fi.aalto.stqa.hotsters.agilefanttestautomation.smoketests;
 
 
 import java.io.File;
@@ -27,7 +34,7 @@ public class CreateProducts extends ModelAPI {
   private final String username = "admin";
   private final String password = "secret";
   private final TestData productNames = new TestData(
-      CreateProducts.class.getResourceAsStream("/test-data/agilefantdemo-test-data.xls"));
+      this.getClass().getResourceAsStream("/test-data/agilefantdemo-test-data.xls"));
   private String sheetName;
   private int rowIndex;
   private int cellnum;

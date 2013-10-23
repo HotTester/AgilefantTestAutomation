@@ -3,8 +3,7 @@
  * School of Science
  * Aalto University
  * 
- * Group Exercise
- * 
+ * Group Exercise of Team Hotsters
  */
 
 package fi.aalto.stqa.hotsters.agilefanttestautomation;

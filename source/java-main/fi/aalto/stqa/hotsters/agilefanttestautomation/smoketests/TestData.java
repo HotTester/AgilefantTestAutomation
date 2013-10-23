@@ -1,5 +1,12 @@
+/**
+ * T-76.5613 Software Testing and Quality Assurance P
+ * School of Science
+ * Aalto University
+ * 
+ * Group Exercise of Team Hotsters
+ */
 
-package fi.aalto.stqa.hotsters.agilefanttestautomation;
+package fi.aalto.stqa.hotsters.agilefanttestautomation.smoketests;
 
 
 import java.io.IOException;
