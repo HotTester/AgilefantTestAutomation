@@ -81,21 +81,6 @@ public class AgilefantSmokeTests extends BrowserBasedTestBase {
       // TODO Auto-generated catch block
       exception.printStackTrace();
     }
-
-
-
-    String actualResult = null;
-    try {
-      actualResult = modelHandler().getStatistics();
-    }
-    catch (final InterruptedException exception) {
-      // TODO Auto-generated catch block
-      exception.printStackTrace();
-    }
-
-    if (actualResult != null) {
-      System.out.println(actualResult);
-    }
   }
 
 } // end of class BrowserBasedTestBase

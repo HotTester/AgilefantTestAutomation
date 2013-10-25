@@ -27,10 +27,7 @@ public class BrowserBasedTestBase {
   private final BrowserDriverFactory _bdFactory = new BrowserDriverFactory();
 
   /**  */
-  private WebDriver _driver;
-
-  /**  */
-  private ModelHandler _modelHandler;
+  private TestContext _context;
 
 
 
@@ -38,9 +35,21 @@ public class BrowserBasedTestBase {
    * 
    */
   @Before
-  public final void initializeTestBase() {
-    setDriver(_bdFactory.createFirefoxDriverInstance());
-    setModelHandler(new ModelHandler());
+  public final void initializeTest() {
+    initializeTestContext();
+  }
+
+
+
+  /**
+   * 
+   */
+  private final void initializeTestContext() {
+    setContext(new TestContext());
+
+    context().setOutputStream(System.out);
+    context().setDriver(_bdFactory.createFirefoxDriverInstance());
+    context().setModelHandler(new ModelHandler());
   }
 
 
@@ -49,8 +58,32 @@ public class BrowserBasedTestBase {
    * 
    */
   @After
-  public final void tearDownTestBase() {
+  public final void finalizeTest() {
+    printStatistics();
+
     driver().quit();
+  }
+
+
+
+  /**
+   * 
+   */
+  public final void printStatistics() {
+    String statistics = null;
+
+    try {
+      statistics = modelHandler().getStatistics();
+    }
+    catch (final InterruptedException ex) {
+      throw new InternalException(ex);
+    }
+
+    if (statistics == null) {
+      return;
+    }
+
+    context().outputStream().println(statistics);
   }
 
 
@@ -58,18 +91,8 @@ public class BrowserBasedTestBase {
   /**
    * @return the driver
    */
-  public WebDriver driver() {
-    return _driver;
-  }
-
-
-
-  /**
-   * @param driver
-   *          the driver to set
-   */
-  public void setDriver(final WebDriver driver) {
-    _driver = driver;
+  public final WebDriver driver() {
+    return context().driver();
   }
 
 
@@ -77,18 +100,29 @@ public class BrowserBasedTestBase {
   /**
    * @return the modelHandler
    */
-  public ModelHandler modelHandler() {
-    return _modelHandler;
+  public final ModelHandler modelHandler() {
+    return context().modelHandler();
   }
 
 
 
+
   /**
-   * @param modelHandler
-   *          the modelHandler to set
+   * @return the context
    */
-  public void setModelHandler(final ModelHandler modelHandler) {
-    _modelHandler = modelHandler;
+  public final TestContext context() {
+    return _context;
+  }
+
+
+
+
+  /**
+   * @param context
+   *          the context to set
+   */
+  public final void setContext(final TestContext context) {
+    _context = context;
   }
 
 } // end of class BrowserBasedTestBase
