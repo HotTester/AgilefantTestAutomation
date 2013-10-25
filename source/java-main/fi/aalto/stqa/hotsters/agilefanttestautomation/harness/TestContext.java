@@ -19,7 +19,7 @@ import org.openqa.selenium.WebDriver;
 public final class TestContext {
 
   /**  */
-  private PrintStream outputStream;
+  private PrintStream _outputStream;
 
   /**  */
   private WebDriver _driver;
@@ -30,20 +30,29 @@ public final class TestContext {
 
 
   /**
-   * @return the outputStream
+   * @param s
+   */
+  public void println(final String s) {
+    outputStream().println(s);
+  }
+
+
+
+  /**
+   * @return the _outputStream
    */
   public PrintStream outputStream() {
-    return outputStream;
+    return _outputStream;
   }
 
 
 
   /**
    * @param outputStream
-   *          the outputStream to set
+   *          the _outputStream to set
    */
   public void setOutputStream(final PrintStream outputStream) {
-    this.outputStream = outputStream;
+    _outputStream = outputStream;
   }
 
 

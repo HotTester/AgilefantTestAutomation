@@ -83,7 +83,7 @@ public class BrowserBasedTestBase {
       return;
     }
 
-    context().outputStream().println(statistics);
+    context().println(statistics);
   }
 
 
