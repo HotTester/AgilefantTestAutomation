@@ -9,17 +9,16 @@
 package fi.aalto.stqa.hotsters.agilefanttestautomation.smoketests;
 
 
-import java.io.File;
-
 import org.graphwalker.conditions.TimeDuration;
 import org.graphwalker.generators.AllPathPermutationsGenerator;
+import org.graphwalker.generators.PathGenerator;
+import org.graphwalker.multipleModels.ModelAPI;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.BrowserBasedTestBase;
-import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.ResourceResolver;
 
 
 
@@ -56,31 +55,12 @@ public class AgilefantSmokeTests extends BrowserBasedTestBase {
    */
   @Test
   public void upgradedAgilefantDemo() {
-    final String modelResource = "/test-models/agilefantdemo-create-products.graphml"; //$NON-NLS-1$
-    final File modelFile = ResourceResolver.resolveBasedOn(modelResource);
+    final String modelName = "CreateProducts"; //$NON-NLS-1$
+    final Class<? extends ModelAPI> modelHandler = CreateProducts.class;
+    final String modelResourcePath = "/test-models/agilefantdemo-create-products.graphml"; //$NON-NLS-1$
+    final PathGenerator pathGenerator = new AllPathPermutationsGenerator(new TimeDuration(1500));
 
-    try {
-      modelHandler().add(
-          "CreateProducts",
-          new CreateProducts(
-              modelFile,
-              true,
-              new AllPathPermutationsGenerator(new TimeDuration(1500)),
-              false,
-              driver()));
-    }
-    catch (final Exception exception) {
-      // TODO Auto-generated catch block
-      exception.printStackTrace();
-    }
-
-    try {
-      modelHandler().execute("CreateProducts");
-    }
-    catch (final InterruptedException exception) {
-      // TODO Auto-generated catch block
-      exception.printStackTrace();
-    }
+    initializeAndExecuteSingleModel(modelName, modelHandler, modelResourcePath, pathGenerator);
   }
 
 } // end of class BrowserBasedTestBase

@@ -12,10 +12,11 @@ package fi.aalto.stqa.hotsters.agilefanttestautomation.harness;
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.lang.NullArgumentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
+
+import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.exceptions.CreateException;
 
 
 
@@ -25,14 +26,6 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 public final class BrowserDriverFactory {
 
   // @formatter:off
-  /**  */
-  private static final String ERR_MSG_UNKNOWN_CHARACTER_ENCODING_IDENTIFIER = 
-      "Internal error: Unknown character encoding identifier."; //$NON-NLS-1$
-
-  /**  */
-  private static final String ERR_MSG_FIREFOX_PROFILE_CANNOT_BE_FOUND_FROM_PATH = 
-      "Firefox profile cannot be found from path \"%s\"."; //$NON-NLS-1$
-
   /**  */
   private static final String ERR_MSG_LENGTH_OF_THE_PROFILE_PATH_MUST_BE_A_POSITIVE_NUMBER =
       "Length of the profile path must be a positive number."; //$NON-NLS-1$
@@ -98,10 +91,10 @@ public final class BrowserDriverFactory {
    */
   public void setFirefoxProfilePath(final String path) {
     if (path == null) {
-      throw new NullArgumentException("path"); //$NON-NLS-1$
+      throw CreateException.forNullArgument("path"); //$NON-NLS-1$
     }
     if (path.trim().length() < 1) {
-      throw new IllegalArgumentException(
+      throw CreateException.forIllegalArgument(
           ERR_MSG_LENGTH_OF_THE_PROFILE_PATH_MUST_BE_A_POSITIVE_NUMBER);
     }
 
@@ -125,7 +118,8 @@ public final class BrowserDriverFactory {
    */
   public void setImplicitWaitingTimeoutInSeconds(final int timeout) {
     if (timeout < 0) {
-      throw new IllegalArgumentException(ERR_MSG_TIMEOUT_CANNOT_BE_NEGATIVE);
+      throw CreateException.forIllegalArgument(
+          ERR_MSG_TIMEOUT_CANNOT_BE_NEGATIVE);
     }
 
     _implicitWaitingTimeoutInSeconds = timeout;

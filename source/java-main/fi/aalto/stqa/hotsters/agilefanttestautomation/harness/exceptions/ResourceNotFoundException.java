@@ -6,16 +6,16 @@
  * Group Exercise of Team Hotsters
  */
 
-package fi.aalto.stqa.hotsters.agilefanttestautomation.harness;
+package fi.aalto.stqa.hotsters.agilefanttestautomation.harness.exceptions;
 
 
 /**
  * @author Aleksi
  */
-public final class InternalException extends RuntimeException {
+public final class ResourceNotFoundException extends RuntimeException {
 
   /** Serialization identifier. */
-  private static final long serialVersionUID = 9052451534655356031L;
+  private static final long serialVersionUID = 8898472913812888590L;
 
 
 
@@ -25,7 +25,7 @@ public final class InternalException extends RuntimeException {
    * @param enableSuppression
    * @param writableStackTrace
    */
-  public InternalException(
+  public ResourceNotFoundException(
       final String message,
       final Throwable cause,
       final boolean enableSuppression,
@@ -40,7 +40,7 @@ public final class InternalException extends RuntimeException {
    * @param message
    * @param cause
    */
-  public InternalException(final String message, final Throwable cause) {
+  public ResourceNotFoundException(final String message, final Throwable cause) {
     super(message, cause);
   }
 
@@ -49,7 +49,7 @@ public final class InternalException extends RuntimeException {
   /**
    * @param message
    */
-  public InternalException(final String message) {
+  public ResourceNotFoundException(final String message) {
     super(message);
   }
 
@@ -58,8 +58,8 @@ public final class InternalException extends RuntimeException {
   /**
    * @param cause
    */
-  public InternalException(final Throwable cause) {
+  public ResourceNotFoundException(final Throwable cause) {
     super(cause);
   }
 
-} // end of class InternalException
+} // end of class ResourceNotFoundException

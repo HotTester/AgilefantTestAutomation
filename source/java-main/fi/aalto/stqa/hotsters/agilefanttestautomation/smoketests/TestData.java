@@ -25,7 +25,6 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
 public class TestData {
 
-  private InputStream myxls;
   private HSSFWorkbook wb;
   private HSSFSheet sheet;
   private HSSFRow row;

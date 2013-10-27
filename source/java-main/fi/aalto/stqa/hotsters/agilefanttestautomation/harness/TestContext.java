@@ -10,6 +10,8 @@ import java.io.PrintStream;
 import org.graphwalker.multipleModels.ModelHandler;
 import org.openqa.selenium.WebDriver;
 
+import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.exceptions.CreateException;
+
 
 
 
@@ -39,9 +41,26 @@ public final class TestContext {
 
 
   /**
+   * @param exception
+   */
+  public void printException(final Exception exception) {
+    if (exception == null) {
+      throw CreateException.forNullArgument("exception"); //$NON-NLS-1$
+    }
+
+    exception.printStackTrace(outputStream());
+  }
+
+
+
+  /**
    * @return the _outputStream
    */
   public PrintStream outputStream() {
+    if (_outputStream == null) {
+      CreateException.forUnsetVariable("outputStream"); //$NON-NLS-1$
+    }
+
     return _outputStream;
   }
 
@@ -62,6 +81,10 @@ public final class TestContext {
    * @return the driver
    */
   public final WebDriver driver() {
+    if (_outputStream == null) {
+      CreateException.forUnsetVariable("driver"); //$NON-NLS-1$
+    }
+
     return _driver;
   }
 
@@ -83,6 +106,10 @@ public final class TestContext {
    * @return the modelHandler
    */
   public final ModelHandler modelHandler() {
+    if (_outputStream == null) {
+      CreateException.forUnsetVariable("modelHandler"); //$NON-NLS-1$
+    }
+
     return _modelHandler;
   }
 

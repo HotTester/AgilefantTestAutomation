@@ -13,7 +13,8 @@ import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLDecoder;
-import java.util.Locale;
+
+import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.exceptions.CreateException;
 
 
 
@@ -25,13 +26,9 @@ public final class ResourceResolver {
 
   // @formatter:off
   /**  */
-  private static final String ERR_MSG_RESOURCE_PATH_CANNOT_BE_RESOLVED = 
-      "Requested resource path \"%s\" cannot be resolved."; //$NON-NLS-1$
- 
-  /**  */
   private static final String ERR_MSG_UNKNOWN_CHARACTER_ENCODING_IDENTIFIER = 
       "Internal error: Unknown character encoding identifier."; //$NON-NLS-1$
-// @formatter:on
+  // @formatter:on
 
   /**  */
   private static final String CHARACTER_ENCODING_UTF8 = "UTF-8"; //$NON-NLS-1$
@@ -42,7 +39,7 @@ public final class ResourceResolver {
    * @param path
    * @return
    */
-  public static File resolveBasedOn(final String path) {
+  public static final File resolveBasedOn(final String path) {
     final String rawPath = resolveAbsolutePath(path);
     final String decodedPath = decodeURLPath(rawPath);
     final File result = new File(decodedPath);
@@ -53,23 +50,30 @@ public final class ResourceResolver {
 
 
   /**
-   * @param path
+   * @param resourcePath
    * @return
    */
-  private static String resolveAbsolutePath(final String path) {
-    final URL resourceLocation = ResourceResolver.class.getResource(path);
-    if (resourceLocation == null) {
-      throw new ResourceNotFoundException(String.format(
-          Locale.ROOT, ERR_MSG_RESOURCE_PATH_CANNOT_BE_RESOLVED, resourceLocation));
-    }
+  private static final String resolveAbsolutePath(final String resourcePath) {
+    final String paramPath = "path"; //$NON-NLS-1$
 
-    final String resourcePath = resourceLocation.getPath();
     if (resourcePath == null) {
-      throw new ResourceNotFoundException(String.format(
-          Locale.ROOT, ERR_MSG_RESOURCE_PATH_CANNOT_BE_RESOLVED, resourceLocation));
+      throw CreateException.forNullArgument(paramPath);
+    }
+    if (resourcePath.trim().length() < 1) {
+      throw CreateException.forNullOrEmptyStringArgument(paramPath);
     }
 
-    return resourcePath;
+    final URL resourceLocation = ResourceResolver.class.getResource(resourcePath);
+    if (resourceLocation == null) {
+      throw CreateException.forMissingResource(resourceLocation);
+    }
+
+    final String absoluteResourcePath = resourceLocation.getPath();
+    if (absoluteResourcePath == null) {
+      throw CreateException.forMissingResource(resourceLocation);
+    }
+
+    return absoluteResourcePath;
   }
 
 
@@ -78,14 +82,15 @@ public final class ResourceResolver {
    * @param resourcePath
    * @return
    */
-  private static String decodeURLPath(final String resourcePath) {
+  private static final String decodeURLPath(final String resourcePath) {
     String profilePath = null;
 
     try {
       profilePath = URLDecoder.decode(resourcePath, CHARACTER_ENCODING_UTF8);
     }
-    catch (final UnsupportedEncodingException ex) {
-      throw new InternalException(ERR_MSG_UNKNOWN_CHARACTER_ENCODING_IDENTIFIER, ex);
+    catch (final UnsupportedEncodingException exception) {
+      throw CreateException.forInternalException(
+          exception, ERR_MSG_UNKNOWN_CHARACTER_ENCODING_IDENTIFIER);
     }
 
     return profilePath;
