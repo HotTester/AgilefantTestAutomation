@@ -14,8 +14,6 @@ import org.graphwalker.generators.AllPathPermutationsGenerator;
 import org.graphwalker.generators.PathGenerator;
 import org.graphwalker.multipleModels.ModelAPI;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.BrowserBasedTestBase;
@@ -28,27 +26,7 @@ import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.BrowserBasedTestBa
  * 
  * @author Aleksi
  */
-public class AgilefantSmokeTests extends BrowserBasedTestBase {
-
-  /**
-   * 
-   */
-  @Before
-  public void setUp() {
-    // EMPTY
-  }
-
-
-
-  /**
-   * 
-   */
-  @After
-  public void tearDown() {
-    // EMPTY
-  }
-
-
+public class UpgradedAgilefantDemo extends BrowserBasedTestBase {
 
   /**
    * 
@@ -63,4 +41,4 @@ public class AgilefantSmokeTests extends BrowserBasedTestBase {
     initializeAndExecuteSingleModel(modelName, modelHandler, modelResourcePath, pathGenerator);
   }
 
-} // end of class BrowserBasedTestBase
+} // end of class UpgradedAgilefantDemo
