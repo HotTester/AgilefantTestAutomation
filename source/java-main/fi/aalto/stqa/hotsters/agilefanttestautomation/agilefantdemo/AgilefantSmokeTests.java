@@ -6,7 +6,7 @@
  * Group Exercise of Team Hotsters
  */
 
-package fi.aalto.stqa.hotsters.agilefanttestautomation.smoketests;
+package fi.aalto.stqa.hotsters.agilefanttestautomation.agilefantdemo;
 
 
 import org.graphwalker.conditions.TimeDuration;
