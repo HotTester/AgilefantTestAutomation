@@ -10,7 +10,7 @@ package fi.aalto.stqa.hotsters.agilefanttestautomation;
 
 
 import org.graphwalker.conditions.TimeDuration;
-import org.graphwalker.generators.A_StarPathGenerator;
+import org.graphwalker.generators.AllPathPermutationsGenerator;
 import org.graphwalker.generators.PathGenerator;
 import org.graphwalker.multipleModels.ModelAPI;
 
@@ -36,7 +36,7 @@ public class Tests extends BrowserBasedTestBase {
     final String modelName = "ProductProjectIterationStoryCreationModelHandler"; //$NON-NLS-1$
     final Class<? extends ModelAPI> modelHandler = ProductProjectIterationStoryCreationModelHandler.class;
     final String modelResourcePath = "/test-models/product-project-iteration-story-creation.graphml"; //$NON-NLS-1$
-    final PathGenerator pathGenerator = new A_StarPathGenerator(new TimeDuration(1800));
+    final PathGenerator pathGenerator = new AllPathPermutationsGenerator(new TimeDuration(1800));
 
     initializeAndExecuteSingleModel(modelName, modelHandler, modelResourcePath, pathGenerator);
   }
