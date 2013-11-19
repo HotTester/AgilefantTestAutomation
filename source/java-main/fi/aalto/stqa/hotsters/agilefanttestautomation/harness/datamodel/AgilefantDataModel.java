@@ -75,6 +75,9 @@ public class AgilefantDataModel {
   /**  */
   private final Collection<Product> _products = new Vector<>(MAX_PRODUCTS);
 
+  /**  */
+  private boolean _rememberMeState = false;
+
 
 
   // num_of_products=0; num_of_current_product=0; num_of_stories_in_product=new int [MAX_PRODUCTS];
@@ -141,6 +144,15 @@ public class AgilefantDataModel {
   @SuppressWarnings("static-method")
   public String agilefantAdminPassword() {
     return AGILEFANT_ADMIN_DEFAULT_PASSWORD;
+  }
+
+
+
+  /**
+   * @param rememberMe
+   */
+  public void setRememberMeStatus(final boolean rememberMe) {
+
   }
 
 
@@ -227,6 +239,27 @@ public class AgilefantDataModel {
    */
   public final Random randomizer() {
     return _randomizer;
+  }
+
+
+
+
+  /**
+   * @return the rememberMeState
+   */
+  public final boolean shouldRememberMe() {
+    return _rememberMeState;
+  }
+
+
+
+
+  /**
+   * @param rememberMeState
+   *          the rememberMeState to set
+   */
+  public final void setRememberMeState(final boolean rememberMeState) {
+    _rememberMeState = rememberMeState;
   }
 
 } // end of class AgilefantDataModel
