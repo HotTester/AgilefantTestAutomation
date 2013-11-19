@@ -34,7 +34,7 @@ SWITCH_MODEL</y:NodeLabel>
           <y:Geometry height="45.8525390625" width="195.5370676511981" x="-321.6885537301109" y="133.83880086965905"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="16.955078125" modelName="custom" textColor="#000000" visible="true" width="190.30712890625" x="2.614969372474093" y="14.44873046875">v_CreateNewProjectDialog_Opened<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="16.955078125" modelName="custom" textColor="#000000" visible="true" width="190.30712890625" x="2.614969372474036" y="14.44873046875">v_CreateNewProjectDialog_Opened<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -51,7 +51,7 @@ SWITCH_MODEL</y:NodeLabel>
           <y:Geometry height="30.0" width="368.3869521777569" x="-214.27684902281936" y="277.92385563884545"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="16.955078125" modelName="custom" textColor="#000000" visible="true" width="342.3251953125" x="13.03087843262847" y="6.5224609375">v_CreateNewProjectDialog_VerifyUnknownProductErrorMessage<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="16.955078125" modelName="custom" textColor="#000000" visible="true" width="342.3251953125" x="13.030878432628441" y="6.5224609375">v_CreateNewProjectDialog_VerifyUnknownProductErrorMessage<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -68,7 +68,7 @@ SWITCH_MODEL</y:NodeLabel>
           <y:Geometry height="30.0" width="351.00692840646644" x="-584.3462774292859" y="277.92385563884545"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="custom" textColor="#000000" visible="true" width="342.87109375" x="4.0679173282332215" y="5.93359375">v_CreateNewProjectDialog_VerifyInvalidInputErrorMessage<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="custom" textColor="#000000" visible="true" width="342.87109375" x="4.067917328233193" y="5.93359375">v_CreateNewProjectDialog_VerifyInvalidInputErrorMessage<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -85,7 +85,7 @@ SWITCH_MODEL</y:NodeLabel>
           <y:Geometry height="38.97921478060047" width="200.3701064804211" x="-76.02725648091479" y="31.219923868799924"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="29.91015625" modelName="custom" textColor="#000000" visible="true" width="183.93701171875" x="8.21654738083555" y="4.53452926530025">v_MainPage_VerifyProjectCreation
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="29.91015625" modelName="custom" textColor="#000000" visible="true" width="183.93701171875" x="8.21654738083555" y="4.534529265300236">v_MainPage_VerifyProjectCreation
 REQTAG=Project Creation<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
@@ -97,8 +97,19 @@ REQTAG=Project Creation<y:LabelModel>
         </y:ShapeNode>
       </data>
     </node>
+    <node id="n5">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="66.8734747131208" x="283.7585751434396" y="-71.63715453103885"/>
+          <y:Fill color="#00FF00" color2="#CCFFCC" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="16.955078125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="28.728515625" x="19.072479544060343" y="6.5224609375">Start</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+          <y:DropShadow color="#B3A691" offsetX="1" offsetY="1"/>
+        </y:ShapeNode>
+      </data>
+    </node>
     <edge id="e0" source="n1" target="n0">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -119,7 +130,6 @@ REQTAG=Project Creation<y:LabelModel>
       </data>
     </edge>
     <edge id="e1" source="n0" target="n1">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="15.304687500000114" sy="36.38628663302728" tx="97.74416581105969" ty="0.0">
@@ -140,7 +150,6 @@ REQTAG=Project Creation<y:LabelModel>
       </data>
     </edge>
     <edge id="e2" source="n1" target="n2">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="97.74416581105969" sy="0.0" tx="-106.33664697057097" ty="0.0">
@@ -162,7 +171,6 @@ REQTAG=Project Creation<y:LabelModel>
       </data>
     </edge>
     <edge id="e3" source="n2" target="n1">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="-141.56107580240396" sy="0.0" tx="67.5" ty="22.923109445854152">
@@ -176,7 +184,6 @@ REQTAG=Project Creation<y:LabelModel>
       </data>
     </edge>
     <edge id="e4" source="n3" target="n1">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="124.20488057523914" sy="-14.993488292082361" tx="-60.71791274630169" ty="1.444837961479152"/>
@@ -187,7 +194,6 @@ REQTAG=Project Creation<y:LabelModel>
       </data>
     </edge>
     <edge id="e5" source="n1" target="n3">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="40.3233644897079" ty="-9.713947276457361">
@@ -208,7 +214,6 @@ REQTAG=Project Creation<y:LabelModel>
       </data>
     </edge>
     <edge id="e6" source="n4" target="n0">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="4.896753903872494" tx="-58.76163623634511" ty="-28.386211971881835"/>
@@ -219,7 +224,6 @@ REQTAG=Project Creation<y:LabelModel>
       </data>
     </edge>
     <edge id="e7" source="n1" target="n4">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="-89.911928831833" sy="0.0" tx="0.0" ty="0.0">
@@ -232,6 +236,25 @@ REQTAG=Project Creation<y:LabelModel>
             </y:LabelModel>
             <y:ModelParameter>
               <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="left" ratio="0.0" segment="-1"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e8" source="n5" target="n0">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="-48.6833520056299"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="35.693359375" x="-47.8466796875" y="27.322089167171555">noOp<y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/>
             </y:ModelParameter>
             <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>

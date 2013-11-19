@@ -19,9 +19,6 @@ import org.openqa.selenium.WebDriver;
 
 import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.exceptions.CreateException;
 
-
-
-
 /**
  * Remember to start the selenium server, before running the test:
  * java -jar lib/selenium-server.jar -singleWindow

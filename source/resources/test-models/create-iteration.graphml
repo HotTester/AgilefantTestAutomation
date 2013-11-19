@@ -34,7 +34,7 @@ SWITCH_MODEL</y:NodeLabel>
           <y:Geometry height="45.8525390625" width="217.98510460269927" x="930.9854522320987" y="116.13245520720898"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="16.955078125" modelName="custom" textColor="#000000" visible="true" width="198.61083984375" x="9.687132379474633" y="14.44873046875">v_CreateNewIterationDialog_Opened<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="16.955078125" modelName="custom" textColor="#000000" visible="true" width="198.61083984375" x="9.68713237947452" y="14.44873046875">v_CreateNewIterationDialog_Opened<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -85,7 +85,7 @@ SWITCH_MODEL</y:NodeLabel>
           <y:Geometry height="38.97921478060047" width="287.4436868504619" x="290.05117012353463" y="299.21617526560175"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="29.91015625" modelName="custom" textColor="#000000" visible="true" width="259.86279296875" x="13.790446940855986" y="4.53452926530025">v_MainPage_VerifyProjectBasedIterationCreation
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="29.91015625" modelName="custom" textColor="#000000" visible="true" width="259.86279296875" x="13.79044694085593" y="4.53452926530025">v_MainPage_VerifyProjectBasedIterationCreation
 REQTAG=Creation of a project-based iteration<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
@@ -115,8 +115,19 @@ REQTAG=Creation of a standalone iteration<y:LabelModel>
         </y:ShapeNode>
       </data>
     </node>
+    <node id="n6">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="66.8734747131208" x="331.0828879485426" y="-58.20041123509006"/>
+          <y:Fill color="#00FF00" color2="#CCFFCC" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="16.955078125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="28.728515625" x="19.0724795440604" y="6.5224609375">Start</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+          <y:DropShadow color="#B3A691" offsetX="1" offsetY="1"/>
+        </y:ShapeNode>
+      </data>
+    </node>
     <edge id="e0" source="n1" target="n0">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="-66.52879560929705" sy="0.4425834446567478" tx="61.8046875" ty="30.288887179461312"/>
@@ -135,7 +146,6 @@ REQTAG=Creation of a standalone iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e1" source="n0" target="n1">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="-17.258698374761593" tx="0.0" ty="0.0">
@@ -156,7 +166,6 @@ REQTAG=Creation of a standalone iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e2" source="n1" target="n2">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="-7.92626953125"/>
@@ -175,7 +184,6 @@ REQTAG=Creation of a standalone iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e3" source="n2" target="n1">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="4.53838890716446" tx="103.09981186351092" ty="12.46465843841446"/>
@@ -186,7 +194,6 @@ REQTAG=Creation of a standalone iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e4" source="n1" target="n3">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="99.23736401371161" sy="4.505137837535301" tx="0.0" ty="0.0">
@@ -208,7 +215,6 @@ REQTAG=Creation of a standalone iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e5" source="n3" target="n1">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="80.58065330591853" ty="15.861396529235407">
@@ -221,7 +227,6 @@ REQTAG=Creation of a standalone iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e6" source="n4" target="n0">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="-61.37118176538536" ty="0.0">
@@ -234,7 +239,6 @@ REQTAG=Creation of a standalone iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e7" source="n1" target="n4">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="60.58065330591853" sy="0.0" tx="0.0" ty="0.0">
@@ -255,7 +259,6 @@ REQTAG=Creation of a standalone iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e8" source="n5" target="n0">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="-99.77284421993681" sy="0.0" tx="-8.195143171171253" ty="44.896538928918545"/>
@@ -266,7 +269,6 @@ REQTAG=Creation of a standalone iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e9" source="n1" target="n5">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="45.161320866637425" sy="0.0" tx="0.0" ty="0.0">
@@ -279,6 +281,25 @@ REQTAG=Creation of a standalone iteration<y:LabelModel>
             </y:LabelModel>
             <y:ModelParameter>
               <y:SmartEdgeLabelModelParameter angle="6.283185307179586" distance="37.993954916067324" distanceToCenter="true" position="left" ratio="0.5515942948999503" segment="-1"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e10" source="n6" target="n0">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="22.324312805102977" ty="-41.03253777162399"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="35.693359375" x="-47.8466771851314" y="33.27068108084473">noOp<y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/>
             </y:ModelParameter>
             <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>

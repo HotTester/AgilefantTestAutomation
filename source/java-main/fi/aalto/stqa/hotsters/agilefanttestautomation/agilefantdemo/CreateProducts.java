@@ -19,9 +19,6 @@ import org.graphwalker.multipleModels.ModelAPI;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-
-
-
 /**
  * Remember to start the selenium server, before running the test:
  * java -jar lib/selenium-server.jar -singleWindow

@@ -1,15 +1,61 @@
 HEADER<{{
+/**
+* T-76.5613 Software Testing and Quality Assurance P
+* School of Science
+* Aalto University
+*
+ * Group Exercise of Team Hotsters
+*/
+import java.io.File;
+
 import org.apache.log4j.Logger;
 import org.graphwalker.Util;
 import org.graphwalker.generators.PathGenerator;
+import org.graphwalker.multipleModels.ModelAPI;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
-public class ModelAPI extends org.graphwalker.multipleModels.ModelAPI {
-  private static Logger logger = Util.setupLogger(ModelAPI.class);
+/**
+ *Remember to start the selenium server, before running the test:
+ *java -jar lib/selenium-server.jar -singleWindow
+*/
 
-  public ModelAPI(File model, boolean efsm, PathGenerator generator, boolean weight) {
+public class NewModelAPI extends ModelAPI {
+
+  /**  */
+  private final TestContext _testContext;
+  /**  */
+
+  private final AgilefantDataModel _dataModel = AgilefantDataModel.instance();
+
+  /**  */
+  private final Logger log = Util.setupLogger(NewModelAPI.class);
+  
+  /**
+   * @param model
+   * @param efsm
+   * @param generator
+   * @param weight
+   * @param testContext
+   */
+  public NewModelAPI(
+      final File model,
+      final boolean efsm,
+      final PathGenerator generator,
+      final boolean weight,
+      final TestContext testContext) {
+
     super(model, efsm, generator, weight);
+    
+    if (testContext == null) {
+      throw CreateException.forNullArgument("testContext"); //$NON-NLS-1$
+    }
+    _testContext = testContext;
+    log.info("Model handler created."); //$NON-NLS-1$
   }
+
 }}>HEADER
+
   /**
    * This method implements the {EDGE_VERTEX} '{LABEL}'
    * {DESCRIPTION}
@@ -17,5 +63,26 @@ public class ModelAPI extends org.graphwalker.multipleModels.ModelAPI {
   public void {LABEL}() {
   }
 FOOTER<{{
-}
+
+  /**
+   * @return
+   */
+  public WebDriver driver() {
+    return context().driver();
+  }
+ /**
+   * @return
+   */
+  public TestContext context() {
+    return _testContext;
+  }
+
+  /**
+   * @return the dataModel
+   */
+  public final AgilefantDataModel dataModel() {
+    return _dataModel;
+  }
+} // end of class NewModelAPI
+
 }}>FOOTER

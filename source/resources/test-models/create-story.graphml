@@ -136,7 +136,7 @@ SWITCH_MODEL</y:NodeLabel>
           <y:Geometry height="38.97921478060047" width="297.38427734375" x="105.52953342275009" y="305.38351969135545"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="29.91015625" modelName="custom" textColor="#000000" visible="true" width="242.04150390625" x="27.67138671875" y="4.534529265300307">v_MainPage_VerifyProjectBasedStoryCreation
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="29.91015625" modelName="custom" textColor="#000000" visible="true" width="242.04150390625" x="27.67138671875" y="4.53452926530025">v_MainPage_VerifyProjectBasedStoryCreation
 REQTAG=Creation of a project-based story<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
@@ -202,8 +202,19 @@ REQTAG=Creation of a story for a project-based iteration<y:LabelModel>
         </y:ShapeNode>
       </data>
     </node>
+    <node id="n11">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="66.8734747131208" x="-89.97560460442423" y="81.50295333095221"/>
+          <y:Fill color="#00FF00" color2="#CCFFCC" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="16.955078125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="28.728515625" x="19.072479544060343" y="6.5224609375">Start</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+          <y:DropShadow color="#B3A691" offsetX="1" offsetY="1"/>
+        </y:ShapeNode>
+      </data>
+    </node>
     <edge id="e0" source="n0" target="n1">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="41.1551802288285" tx="0.0" ty="0.0"/>
@@ -222,7 +233,6 @@ REQTAG=Creation of a story for a project-based iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e1" source="n1" target="n2">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="21.308876494023934"/>
@@ -241,7 +251,6 @@ REQTAG=Creation of a story for a project-based iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e2" source="n2" target="n0">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="-19.846303734804565" tx="60.8046875" ty="0.0"/>
@@ -260,7 +269,6 @@ REQTAG=Creation of a story for a project-based iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e3" source="n2" target="n3">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="47.0" sy="0.0" tx="0.0" ty="0.0">
@@ -281,7 +289,6 @@ REQTAG=Creation of a story for a project-based iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e4" source="n3" target="n2">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="14.637265528044054" tx="72.00894091093323" ty="-30.498572476058825">
@@ -294,7 +301,6 @@ REQTAG=Creation of a story for a project-based iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e5" source="n2" target="n4">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="-8.501427523941175"/>
@@ -313,7 +319,6 @@ REQTAG=Creation of a story for a project-based iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e6" source="n4" target="n2">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="11.498572476058825" tx="69.67560757759975" ty="20.0"/>
@@ -324,7 +329,6 @@ REQTAG=Creation of a story for a project-based iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e7" source="n2" target="n5">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="83.0" sy="0.0" tx="0.0" ty="-8.0">
@@ -345,7 +349,6 @@ REQTAG=Creation of a story for a project-based iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e8" source="n5" target="n2">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="9.554264834192281" tx="63.0" ty="26.501427523941175">
@@ -358,7 +361,6 @@ REQTAG=Creation of a story for a project-based iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e9" source="n2" target="n6">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="51.67560757759975" sy="0.0" tx="0.0" ty="-7.0">
@@ -379,7 +381,6 @@ REQTAG=Creation of a story for a project-based iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e10" source="n6" target="n2">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="8.554264834192281" tx="43.0" ty="25.501427523941175">
@@ -392,7 +393,6 @@ REQTAG=Creation of a story for a project-based iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e11" source="n2" target="n7">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="-68.22381393149362" sy="0.0" tx="0.0" ty="0.0">
@@ -413,7 +413,6 @@ REQTAG=Creation of a story for a project-based iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e12" source="n7" target="n0">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="52.87345579690765" ty="-31.389570829799254">
@@ -426,7 +425,6 @@ REQTAG=Creation of a story for a project-based iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e13" source="n2" target="n8">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="-29.897981433069617" sy="0.0" tx="0.0" ty="0.0">
@@ -447,7 +445,6 @@ REQTAG=Creation of a story for a project-based iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e14" source="n8" target="n0">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="-41.086686478174045">
@@ -460,7 +457,6 @@ REQTAG=Creation of a story for a project-based iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e15" source="n2" target="n9">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="-15.071927724018906" sy="0.0" tx="0.0" ty="9.12682665601892">
@@ -481,7 +477,6 @@ REQTAG=Creation of a story for a project-based iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e16" source="n9" target="n0">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="39.1111339225497" ty="0.0">
@@ -489,12 +484,20 @@ REQTAG=Creation of a story for a project-based iteration<y:LabelModel>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="4.0" x="-59.871115190152466" y="-32.00000458028603">
+            <y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
     </edge>
     <edge id="e17" source="n2" target="n10">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="8.94044207089064" sy="0.0" tx="0.0" ty="12.873654940887945">
@@ -515,7 +518,6 @@ REQTAG=Creation of a story for a project-based iteration<y:LabelModel>
       </data>
     </edge>
     <edge id="e18" source="n10" target="n0">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="-135.7319217262891" sy="0.0" tx="-30.712245400222017" ty="37.64299897215335">
@@ -524,6 +526,37 @@ REQTAG=Creation of a story for a project-based iteration<y:LabelModel>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="4.0" x="28.000002026420162" y="-32.10842414590718">
+            <y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e19" source="n11" target="n0">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="-39.645705868586504" ty="-26.051894236688042">
+            <y:Point x="-56.538867247863834" y="294.9637104997362"/>
+            <y:Point x="-57.42599797301074" y="294.9637104997362"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="35.693359375" x="-47.84667898492438" y="89.72540497442623">noOp<y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
