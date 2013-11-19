@@ -19,7 +19,6 @@ import org.graphwalker.multipleModels.ModelHandler;
 import org.openqa.selenium.WebDriver;
 
 import org.junit.After;
-import org.junit.Before;
 
 import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.exceptions.CreateException;
 
@@ -62,34 +61,7 @@ public class BrowserBasedTestBase {
   private static final Boolean WEIGHTED_EDGES = Boolean.TRUE;
 
   /**  */
-  private BrowserDriverFactory _bdFactory;
-
-  /**  */
   private TestContext _context;
-
-
-
-  /**
-   * 
-   */
-  @Before
-  public final void initializeTest() {
-    initializeTestContext();
-  }
-
-
-
-  /**
-   * 
-   */
-  private final void initializeTestContext() {
-    setBrowserDriverFactory(new BrowserDriverFactory());
-    setContext(new TestContext());
-
-    context().setOutputStream(System.out);
-    context().setDriver(bdFactory().createFirefoxDriverInstance());
-    context().setModelHandler(new ModelHandler());
-  }
 
 
 
@@ -208,7 +180,7 @@ public class BrowserBasedTestBase {
             Boolean.TYPE,
             PathGenerator.class,
             Boolean.TYPE,
-            WebDriver.class
+            TestContext.class
       });
     }
     catch (final NoSuchMethodException exMissingConstructor) {
@@ -247,7 +219,7 @@ public class BrowserBasedTestBase {
           EXTENDED_STATE_MACHINE,
           pathGenerator,
           WEIGHTED_EDGES,
-          driver());
+          context());
     }
     catch (final InstantiationException exAbstractClass) {
       throw CreateException.forIllegalArgument(
@@ -343,7 +315,6 @@ public class BrowserBasedTestBase {
 
 
 
-
   /**
    * @return the context
    */
@@ -353,32 +324,12 @@ public class BrowserBasedTestBase {
 
 
 
-
   /**
    * @param context
    *          the context to set
    */
   public final void setContext(final TestContext context) {
     _context = context;
-  }
-
-
-
-  /**
-   * @return
-   */
-  private final BrowserDriverFactory bdFactory() {
-    return _bdFactory;
-  }
-
-
-
-  /**
-   * @param bdFactory
-   *          the bdFactory to set
-   */
-  public final void setBrowserDriverFactory(final BrowserDriverFactory bdFactory) {
-    _bdFactory = bdFactory;
   }
 
 } // end of class BrowserBasedTestBase

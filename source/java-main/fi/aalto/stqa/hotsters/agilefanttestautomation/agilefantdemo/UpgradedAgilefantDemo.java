@@ -16,7 +16,7 @@ import org.graphwalker.multipleModels.ModelAPI;
 
 import org.junit.Test;
 
-import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.BrowserBasedTestBase;
+import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.InitializedBrowserBasedTestBase;
 
 
 
@@ -26,15 +26,15 @@ import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.BrowserBasedTestBa
  * 
  * @author Aleksi
  */
-public class UpgradedAgilefantDemo extends BrowserBasedTestBase {
+public class UpgradedAgilefantDemo extends InitializedBrowserBasedTestBase {
 
   /**
    * 
    */
   @Test
   public void upgradedAgilefantDemo() {
-    final String modelName = "CreateProducts"; //$NON-NLS-1$
-    final Class<? extends ModelAPI> modelHandler = CreateProducts.class;
+    final String modelName = "CreateProductsModelHandler"; //$NON-NLS-1$
+    final Class<? extends ModelAPI> modelHandler = CreateProductsModelHandler.class;
     final String modelResourcePath = "/test-models/agilefantdemo-create-products.graphml"; //$NON-NLS-1$
     final PathGenerator pathGenerator = new AllPathPermutationsGenerator(new TimeDuration(1500));
 

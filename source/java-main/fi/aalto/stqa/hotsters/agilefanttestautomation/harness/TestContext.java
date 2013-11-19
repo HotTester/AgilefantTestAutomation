@@ -11,6 +11,7 @@ import org.graphwalker.multipleModels.ModelHandler;
 import org.openqa.selenium.WebDriver;
 
 import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.exceptions.CreateException;
+import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.uimodel.AgilefantUIModel;
 
 
 
@@ -24,10 +25,16 @@ public final class TestContext {
   private PrintStream _outputStream;
 
   /**  */
+  private BrowserDriverFactory _browserDriverFactory;
+
+  /**  */
   private WebDriver _driver;
 
   /**  */
   private ModelHandler _modelHandler;
+
+  /**  */
+  private AgilefantUIModel _agilefantUserIntefraceModel;
 
 
 
@@ -76,7 +83,6 @@ public final class TestContext {
 
 
 
-
   /**
    * @return the driver
    */
@@ -90,7 +96,6 @@ public final class TestContext {
 
 
 
-
   /**
    * @param driver
    *          the driver to set
@@ -98,7 +103,6 @@ public final class TestContext {
   public final void setDriver(final WebDriver driver) {
     _driver = driver;
   }
-
 
 
 
@@ -115,13 +119,54 @@ public final class TestContext {
 
 
 
-
   /**
    * @param modelHandler
    *          the modelHandler to set
    */
   public final void setModelHandler(final ModelHandler modelHandler) {
     _modelHandler = modelHandler;
+  }
+
+
+
+  /**
+   * @return
+   */
+  public final BrowserDriverFactory browserDriverFactory() {
+    return _browserDriverFactory;
+  }
+
+
+
+  /**
+   * @param browserDriverFactory
+   *          the browserDriverFactory to set
+   */
+  public final void setBrowserDriverFactory(
+      final BrowserDriverFactory browserDriverFactory) {
+
+    _browserDriverFactory = browserDriverFactory;
+  }
+
+
+
+
+  /**
+   * @return the agilefantUserIntefraceModel
+   */
+  public final AgilefantUIModel uiModel() {
+    return _agilefantUserIntefraceModel;
+  }
+
+
+
+
+  /**
+   * @param agilefantUserIntefraceModel
+   *          the agilefantUserIntefraceModel to set
+   */
+  public final void setUIModel(final AgilefantUIModel agilefantUserIntefraceModel) {
+    _agilefantUserIntefraceModel = agilefantUserIntefraceModel;
   }
 
 } // end of class TestContext

@@ -19,6 +19,9 @@ import org.openqa.selenium.WebDriver;
 
 import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.exceptions.CreateException;
 
+
+
+
 /**
  * Remember to start the selenium server, before running the test:
  * java -jar lib/selenium-server.jar -singleWindow
@@ -59,14 +62,14 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
 
 
 
-  public void e_LoginPage_Open() {
+  public void LoginPage_Open() {
     log.info("Opening login page...");
     getMbt().passRequirement(true);
   }
 
 
 
-  public void v_LoginPage_Opened() {
+  public void LoginPage_Opened() {
     log.info("Verifying presence of the login page.");
     getMbt().passRequirement(true);
   }
@@ -76,7 +79,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_CreateNewIterationDialog_CancelButton_Click'
    */
-  public void e_CreateNewIterationDialog_CancelButton_Click() {
+  public void CreateNewIterationDialog_CancelButton_Click() {
   }
 
 
@@ -84,7 +87,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_CreateNewIterationDialog_EnterInvalidProjectBasedDetailsAndSave'
    */
-  public void e_CreateNewIterationDialog_EnterInvalidProjectBasedDetailsAndSave() {
+  public void CreateNewIterationDialog_EnterInvalidProjectBasedDetailsAndSave() {
   }
 
 
@@ -92,7 +95,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_CreateNewIterationDialog_EnterInvalidStandaloneDetailsAndSave'
    */
-  public void e_CreateNewIterationDialog_EnterInvalidStandaloneDetailsAndSave() {
+  public void CreateNewIterationDialog_EnterInvalidStandaloneDetailsAndSave() {
   }
 
 
@@ -100,7 +103,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_CreateNewIterationDialog_EnterProjectBasedDetailsAndSave'
    */
-  public void e_CreateNewIterationDialog_EnterProjectBasedDetailsAndSave() {
+  public void CreateNewIterationDialog_EnterProjectBasedDetailsAndSave() {
   }
 
 
@@ -108,7 +111,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_CreateNewIterationDialog_EnterStandaloneDetailsAndSave'
    */
-  public void e_CreateNewIterationDialog_EnterStandaloneDetailsAndSave() {
+  public void CreateNewIterationDialog_EnterStandaloneDetailsAndSave() {
   }
 
 
@@ -116,7 +119,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_CreateNewProjectDialog_CancelButton_Click'
    */
-  public void e_CreateNewProjectDialog_CancelButton_Click() {
+  public void CreateNewProjectDialog_CancelButton_Click() {
   }
 
 
@@ -124,7 +127,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_CreateNewProjectDialog_EnterDetailsAndSave'
    */
-  public void e_CreateNewProjectDialog_EnterDetailsAndSave() {
+  public void CreateNewProjectDialog_EnterDetailsAndSave() {
   }
 
 
@@ -132,7 +135,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_CreateNewProjectDialog_EnterInvalidInputDetailsAndSave'
    */
-  public void e_CreateNewProjectDialog_EnterInvalidInputDetailsAndSave() {
+  public void CreateNewProjectDialog_EnterInvalidInputDetailsAndSave() {
   }
 
 
@@ -140,7 +143,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_CreateNewStoryDialog_CancelButton_Click'
    */
-  public void e_CreateNewStoryDialog_CancelButton_Click() {
+  public void CreateNewStoryDialog_CancelButton_Click() {
   }
 
 
@@ -148,7 +151,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_CreateNewStoryDialog_EnterInvalidProductBasedDetailsAndSave'
    */
-  public void e_CreateNewStoryDialog_EnterInvalidProductBasedDetailsAndSave() {
+  public void CreateNewStoryDialog_EnterInvalidProductBasedDetailsAndSave() {
   }
 
 
@@ -156,7 +159,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_CreateNewStoryDialog_EnterInvalidProjectBasedDetailsAndSave'
    */
-  public void e_CreateNewStoryDialog_EnterInvalidProjectBasedDetailsAndSave() {
+  public void CreateNewStoryDialog_EnterInvalidProjectBasedDetailsAndSave() {
   }
 
 
@@ -164,7 +167,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_CreateNewStoryDialog_EnterInvalidProjectBasedIterationDetailsAndSave'
    */
-  public void e_CreateNewStoryDialog_EnterInvalidProjectBasedIterationDetailsAndSave() {
+  public void CreateNewStoryDialog_EnterInvalidProjectBasedIterationDetailsAndSave() {
   }
 
 
@@ -172,7 +175,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_CreateNewStoryDialog_EnterInvalidStandAloneIterationDetailsAndSave'
    */
-  public void e_CreateNewStoryDialog_EnterInvalidStandAloneIterationDetailsAndSave() {
+  public void CreateNewStoryDialog_EnterInvalidStandAloneIterationDetailsAndSave() {
   }
 
 
@@ -180,7 +183,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_CreateNewStoryDialog_EnterProductBasedDetailsAndSave'
    */
-  public void e_CreateNewStoryDialog_EnterProductBasedDetailsAndSave() {
+  public void CreateNewStoryDialog_EnterProductBasedDetailsAndSave() {
   }
 
 
@@ -188,7 +191,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_CreateNewStoryDialog_EnterProjectBasedDetailsAndSave'
    */
-  public void e_CreateNewStoryDialog_EnterProjectBasedDetailsAndSave() {
+  public void CreateNewStoryDialog_EnterProjectBasedDetailsAndSave() {
   }
 
 
@@ -196,7 +199,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_CreateNewStoryDialog_EnterProjectBasedIterationDetailsAndSave'
    */
-  public void e_CreateNewStoryDialog_EnterProjectBasedIterationDetailsAndSave() {
+  public void CreateNewStoryDialog_EnterProjectBasedIterationDetailsAndSave() {
   }
 
 
@@ -204,7 +207,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_CreateNewStoryDialog_EnterStandaloneIterationDetailsAndSave'
    */
-  public void e_CreateNewStoryDialog_EnterStandaloneIterationDetailsAndSave() {
+  public void CreateNewStoryDialog_EnterStandaloneIterationDetailsAndSave() {
   }
 
 
@@ -212,7 +215,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_CreateProductDialog_CancelButton_Click'
    */
-  public void e_CreateProductDialog_CancelButton_Click() {
+  public void CreateProductDialog_CancelButton_Click() {
   }
 
 
@@ -220,7 +223,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_CreateProductDialog_EnterInvalidProductInformationAndSave'
    */
-  public void e_CreateProductDialog_EnterInvalidProductInformationAndSave() {
+  public void CreateProductDialog_EnterInvalidProductInformationAndSave() {
   }
 
 
@@ -228,7 +231,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_CreateProductDialog_EnterProductInformationAndSave'
    */
-  public void e_CreateProductDialog_EnterProductInformationAndSave() {
+  public void CreateProductDialog_EnterProductInformationAndSave() {
   }
 
 
@@ -236,7 +239,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_Header_CreateNewProductLink_Click'
    */
-  public void e_Header_CreateNewProductLink_Click() {
+  public void Header_CreateNewProductLink_Click() {
   }
 
 
@@ -244,7 +247,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_Header_LogoutLink_Click'
    */
-  public void e_Header_LogoutLink_Click() {
+  public void Header_LogoutLink_Click() {
   }
 
 
@@ -252,7 +255,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_Header_NewIterationLink_Click'
    */
-  public void e_Header_NewIterationLink_Click() {
+  public void Header_NewIterationLink_Click() {
   }
 
 
@@ -260,7 +263,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_Header_NewProjectLink_Click'
    */
-  public void e_Header_NewProjectLink_Click() {
+  public void Header_NewProjectLink_Click() {
   }
 
 
@@ -268,7 +271,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_Header_NewStoryLink_Click'
    */
-  public void e_Header_NewStoryLink_Click() {
+  public void Header_NewStoryLink_Click() {
   }
 
 
@@ -276,7 +279,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_LoginPage_EnterUserCredentials'
    */
-  public void e_LoginPage_EnterUserCredentials() {
+  public void LoginPage_EnterUserCredentials() {
   }
 
 
@@ -284,7 +287,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Edge 'e_NoOp'
    */
-  public void e_NoOp() {
+  public void NoOp() {
   }
 
 
@@ -292,7 +295,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Vertex 'v_CreateNewIterationDialog_Opened'
    */
-  public void v_CreateNewIterationDialog_Opened() {
+  public void CreateNewIterationDialog_Opened() {
   }
 
 
@@ -300,7 +303,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Vertex 'v_CreateNewIterationDialog_VerifyInvalidInputErrorMessage'
    */
-  public void v_CreateNewIterationDialog_VerifyInvalidInputErrorMessage() {
+  public void CreateNewIterationDialog_VerifyInvalidInputErrorMessage() {
   }
 
 
@@ -308,7 +311,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Vertex 'v_CreateNewIterationDialog_VerifyInvalidStandaloneIterationInputErrorMessage'
    */
-  public void v_CreateNewIterationDialog_VerifyInvalidStandaloneIterationInputErrorMessage() {
+  public void CreateNewIterationDialog_VerifyInvalidStandaloneIterationInputErrorMessage() {
   }
 
 
@@ -316,7 +319,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Vertex 'v_CreateNewProjectDialog_Opened'
    */
-  public void v_CreateNewProjectDialog_Opened() {
+  public void CreateNewProjectDialog_Opened() {
   }
 
 
@@ -324,7 +327,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Vertex 'v_CreateNewProjectDialog_VerifyInvalidInputErrorMessage'
    */
-  public void v_CreateNewProjectDialog_VerifyInvalidInputErrorMessage() {
+  public void CreateNewProjectDialog_VerifyInvalidInputErrorMessage() {
   }
 
 
@@ -332,7 +335,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Vertex 'v_CreateNewProjectDialog_VerifyUnknownProductErrorMessage'
    */
-  public void v_CreateNewProjectDialog_VerifyUnknownProductErrorMessage() {
+  public void CreateNewProjectDialog_VerifyUnknownProductErrorMessage() {
   }
 
 
@@ -340,7 +343,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Vertex 'v_CreateNewStoryDialog_Opened'
    */
-  public void v_CreateNewStoryDialog_Opened() {
+  public void CreateNewStoryDialog_Opened() {
   }
 
 
@@ -348,7 +351,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Vertex 'v_CreateNewStoryDialog_VerifyInvalidProductBasedInputErrorMessage'
    */
-  public void v_CreateNewStoryDialog_VerifyInvalidProductBasedInputErrorMessage() {
+  public void CreateNewStoryDialog_VerifyInvalidProductBasedInputErrorMessage() {
   }
 
 
@@ -356,7 +359,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Vertex 'v_CreateNewStoryDialog_VerifyInvalidProjectBasedInputErrorMessage'
    */
-  public void v_CreateNewStoryDialog_VerifyInvalidProjectBasedInputErrorMessage() {
+  public void CreateNewStoryDialog_VerifyInvalidProjectBasedInputErrorMessage() {
   }
 
 
@@ -364,7 +367,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Vertex 'v_CreateNewStoryDialog_VerifyInvalidProjectBasedInterationInputErrorMessage'
    */
-  public void v_CreateNewStoryDialog_VerifyInvalidProjectBasedInterationInputErrorMessage() {
+  public void CreateNewStoryDialog_VerifyInvalidProjectBasedInterationInputErrorMessage() {
   }
 
 
@@ -372,7 +375,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Vertex 'v_CreateNewStoryDialog_VerifyInvalidStandaloneIterationInputErrorMessage'
    */
-  public void v_CreateNewStoryDialog_VerifyInvalidStandaloneIterationInputErrorMessage() {
+  public void CreateNewStoryDialog_VerifyInvalidStandaloneIterationInputErrorMessage() {
   }
 
 
@@ -380,7 +383,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Vertex 'v_CreateProductDialog_Opened'
    */
-  public void v_CreateProductDialog_Opened() {
+  public void CreateProductDialog_Opened() {
   }
 
 
@@ -388,7 +391,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Vertex 'v_CreateProductDialog_VerifyInvalidInputErrorMessage'
    */
-  public void v_CreateProductDialog_VerifyInvalidInputErrorMessage() {
+  public void CreateProductDialog_VerifyInvalidInputErrorMessage() {
   }
 
 
@@ -396,7 +399,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Vertex 'v_MainPage_Opened'
    */
-  public void v_MainPage_Opened() {
+  public void MainPage_Opened() {
   }
 
 
@@ -404,7 +407,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Vertex 'v_MainPage_VerifyProductBasedStoryCreation'
    */
-  public void v_MainPage_VerifyProductBasedStoryCreation() {
+  public void MainPage_VerifyProductBasedStoryCreation() {
   }
 
 
@@ -412,7 +415,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Vertex 'v_MainPage_VerifyProductCreation'
    */
-  public void v_MainPage_VerifyProductCreation() {
+  public void MainPage_VerifyProductCreation() {
   }
 
 
@@ -420,7 +423,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Vertex 'v_MainPage_VerifyProjectBasedIterationCreation'
    */
-  public void v_MainPage_VerifyProjectBasedIterationCreation() {
+  public void MainPage_VerifyProjectBasedIterationCreation() {
   }
 
 
@@ -428,7 +431,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Vertex 'v_MainPage_VerifyProjectBasedIterationStoryCreation'
    */
-  public void v_MainPage_VerifyProjectBasedIterationStoryCreation() {
+  public void MainPage_VerifyProjectBasedIterationStoryCreation() {
   }
 
 
@@ -436,7 +439,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Vertex 'v_MainPage_VerifyProjectBasedStoryCreation'
    */
-  public void v_MainPage_VerifyProjectBasedStoryCreation() {
+  public void MainPage_VerifyProjectBasedStoryCreation() {
   }
 
 
@@ -444,7 +447,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Vertex 'v_MainPage_VerifyProjectCreation'
    */
-  public void v_MainPage_VerifyProjectCreation() {
+  public void MainPage_VerifyProjectCreation() {
   }
 
 
@@ -452,7 +455,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Vertex 'v_MainPage_VerifyStandaloneIterationCreation'
    */
-  public void v_MainPage_VerifyStandaloneIterationCreation() {
+  public void MainPage_VerifyStandaloneIterationCreation() {
   }
 
 
@@ -460,15 +463,7 @@ public class ProductProjectIterationStoryCreationModelHandler extends ModelAPI {
   /**
    * This method implements the Vertex 'v_MainPage_VerifyStandaloneIterationStoryCreation'
    */
-  public void v_MainPage_VerifyStandaloneIterationStoryCreation() {
-  }
-
-
-
-  /**
-   * This method implements the Vertex 'v_NoOp'
-   */
-  public void v_NoOp() {
+  public void MainPage_VerifyStandaloneIterationStoryCreation() {
   }
 
 } // end of class ProductProjectIterationStoryCreationModelHandler

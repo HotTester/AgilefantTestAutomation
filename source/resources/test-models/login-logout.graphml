@@ -32,7 +32,7 @@
           <y:Geometry height="43.96712073580676" width="143.390625" x="503.0" y="345.4895357963368"/>
           <y:Fill color="#FFCC00" color2="#FFFF00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.630859375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="98.509765625" x="22.4404296875" y="12.66813068040338">LoginPage_Opened</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.630859375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="98.509765625" x="22.4404296875" y="12.668130680403351">LoginPage_Opened</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
           <y:DropShadow color="#B3A691" offsetX="1" offsetY="1"/>
         </y:ShapeNode>
@@ -94,7 +94,7 @@ SWITCH_MODEL</y:NodeLabel>
           <y:Path sx="25.179136949889255" sy="0.0" tx="-50.6953125" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Segoe UI" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.30078125" modelName="free" modelPosition="anywhere" preferredPlacement="source_on_edge" ratio="0.5" textColor="#000000" visible="true" width="660.572265625" x="-68.53363037109375" y="-44.83331298828125">LoginPage_Open / import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.datamodel.*; AgilefantDataModel m = AgilefantDataModel.instance();<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="source" side="on_edge" sideReference="relative_to_edge_flow"/>
+          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Segoe UI" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.30078125" modelName="free" modelPosition="anywhere" preferredPlacement="source_on_edge" ratio="0.5" textColor="#000000" visible="true" width="667.2958984375" x="-71.89544677734375" y="-44.83331298828125">ModelHandler_Init / import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.datamodel.*; AgilefantDataModel m = AgilefantDataModel.instance();<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="source" side="on_edge" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="true"/>
         </y:PolyLineEdge>
@@ -125,7 +125,6 @@ SWITCH_MODEL</y:NodeLabel>
       </data>
     </edge>
     <edge id="e3" source="n4" target="n3">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="39.3046875" sy="14.981137508176062" tx="39.3046875" ty="-14.988756243867954"/>
@@ -138,7 +137,6 @@ SWITCH_MODEL</y:NodeLabel>
       </data>
     </edge>
     <edge id="e4" source="n3" target="n4">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="-41.6953125" sy="-15.020006243867954" tx="-41.6953125" ty="15.028012508176062"/>
@@ -168,7 +166,7 @@ SWITCH_MODEL</y:NodeLabel>
           <y:Path sx="-40.6953125" sy="0.0" tx="-40.6953125" ty="-6.637193743867954"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Segoe UI" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.30078125" modelName="six_pos" modelPosition="shead" preferredPlacement="source_on_edge" ratio="0.5" textColor="#000000" visible="true" width="78.4384765625" x="-80.4384765625" y="-27.412777436085094">LoginPage_Close<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="source" side="on_edge" sideReference="relative_to_edge_flow"/>
+          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Segoe UI" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.30078125" modelName="six_pos" modelPosition="shead" preferredPlacement="source_on_edge" ratio="0.5" textColor="#000000" visible="true" width="138.521484375" x="-140.521484375" y="-27.412777436085094">MiscellaneousAlienPage_Open<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="source" side="on_edge" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="true"/>
         </y:PolyLineEdge>

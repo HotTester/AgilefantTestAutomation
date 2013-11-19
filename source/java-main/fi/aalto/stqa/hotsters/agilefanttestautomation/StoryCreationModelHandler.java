@@ -1,29 +1,33 @@
+
 package fi.aalto.stqa.hotsters.agilefanttestautomation;
 
+
 /**
-* T-76.5613 Software Testing and Quality Assurance P
-* School of Science
-* Aalto University
-*
+ * T-76.5613 Software Testing and Quality Assurance P
+ * School of Science
+ * Aalto University
+ *
  * Group Exercise of Team Hotsters
-*/
+ */
+
 import java.io.File;
 
 import org.apache.log4j.Logger;
 import org.graphwalker.Util;
 import org.graphwalker.generators.PathGenerator;
 import org.graphwalker.multipleModels.ModelAPI;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.TestContext;
+import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.datamodel.AgilefantDataModel;
 import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.exceptions.CreateException;
 
-/**
- *Remember to start the selenium server, before running the test:
- *java -jar lib/selenium-server.jar -singleWindow
-*/
 
+
+
+/**
+ * Remember to start the selenium server, before running the test:
+ * java -jar lib/selenium-server.jar -singleWindow
+ */
 public class StoryCreationModelHandler extends ModelAPI {
 
   /**  */
@@ -34,7 +38,9 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**  */
   private final Logger log = Util.setupLogger(StoryCreationModelHandler.class);
-  
+
+
+
   /**
    * @param model
    * @param efsm
@@ -50,12 +56,12 @@ public class StoryCreationModelHandler extends ModelAPI {
       final TestContext testContext) {
 
     super(model, efsm, generator, weight);
-    
+
     if (testContext == null) {
-      throw CreateException.forNullArgument("testContext"); //\$NON-NLS-1\$
+      throw CreateException.forNullArgument("testContext"); // \$NON-NLS-1\$
     }
     _testContext = testContext;
-    log.info("Model handler created."); //\$NON-NLS-1\$
+    log.info("Model handler created."); // \$NON-NLS-1\$
   }
 
 
@@ -63,7 +69,6 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**
    * This method implements the Vertex 'MainPage_Opened'
-   * 
    */
   public void MainPage_Opened() {
   }
@@ -72,7 +77,6 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**
    * This method implements the Edge 'e_CreateNewStoryDialog_CancelButton_Click'
-   * 
    */
   public void e_CreateNewStoryDialog_CancelButton_Click() {
   }
@@ -81,7 +85,6 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**
    * This method implements the Edge 'e_CreateNewStoryDialog_EnterInvalidProductBasedDetailsAndSave'
-   * 
    */
   public void e_CreateNewStoryDialog_EnterInvalidProductBasedDetailsAndSave() {
   }
@@ -90,7 +93,6 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**
    * This method implements the Edge 'e_CreateNewStoryDialog_EnterInvalidProjectBasedDetailsAndSave'
-   * 
    */
   public void e_CreateNewStoryDialog_EnterInvalidProjectBasedDetailsAndSave() {
   }
@@ -99,7 +101,6 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**
    * This method implements the Edge 'e_CreateNewStoryDialog_EnterInvalidProjectBasedIterationDetailsAndSave'
-   * 
    */
   public void e_CreateNewStoryDialog_EnterInvalidProjectBasedIterationDetailsAndSave() {
   }
@@ -108,7 +109,6 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**
    * This method implements the Edge 'e_CreateNewStoryDialog_EnterInvalidStandAloneIterationDetailsAndSave'
-   * 
    */
   public void e_CreateNewStoryDialog_EnterInvalidStandAloneIterationDetailsAndSave() {
   }
@@ -117,7 +117,6 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**
    * This method implements the Edge 'e_CreateNewStoryDialog_EnterProductBasedDetailsAndSave'
-   * 
    */
   public void e_CreateNewStoryDialog_EnterProductBasedDetailsAndSave() {
   }
@@ -126,7 +125,6 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**
    * This method implements the Edge 'e_CreateNewStoryDialog_EnterProjectBasedDetailsAndSave'
-   * 
    */
   public void e_CreateNewStoryDialog_EnterProjectBasedDetailsAndSave() {
   }
@@ -135,7 +133,6 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**
    * This method implements the Edge 'e_CreateNewStoryDialog_EnterProjectBasedIterationDetailsAndSave'
-   * 
    */
   public void e_CreateNewStoryDialog_EnterProjectBasedIterationDetailsAndSave() {
   }
@@ -144,7 +141,6 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**
    * This method implements the Edge 'e_CreateNewStoryDialog_EnterStandaloneIterationDetailsAndSave'
-   * 
    */
   public void e_CreateNewStoryDialog_EnterStandaloneIterationDetailsAndSave() {
   }
@@ -153,7 +149,6 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**
    * This method implements the Edge 'e_Header_NewStoryLink_Click'
-   * 
    */
   public void e_Header_NewStoryLink_Click() {
   }
@@ -162,7 +157,6 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**
    * This method implements the Edge 'e_NoOp'
-   * 
    */
   public void e_NoOp() {
   }
@@ -171,7 +165,6 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**
    * This method implements the Edge 'noOp'
-   * 
    */
   public void noOp() {
   }
@@ -180,7 +173,6 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**
    * This method implements the Vertex 'v_CreateNewStoryDialog_Opened'
-   * 
    */
   public void v_CreateNewStoryDialog_Opened() {
   }
@@ -189,7 +181,6 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**
    * This method implements the Vertex 'v_CreateNewStoryDialog_VerifyInvalidProductBasedInputErrorMessage'
-   * 
    */
   public void v_CreateNewStoryDialog_VerifyInvalidProductBasedInputErrorMessage() {
   }
@@ -198,7 +189,6 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**
    * This method implements the Vertex 'v_CreateNewStoryDialog_VerifyInvalidProjectBasedInputErrorMessage'
-   * 
    */
   public void v_CreateNewStoryDialog_VerifyInvalidProjectBasedInputErrorMessage() {
   }
@@ -207,7 +197,6 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**
    * This method implements the Vertex 'v_CreateNewStoryDialog_VerifyInvalidProjectBasedInterationInputErrorMessage'
-   * 
    */
   public void v_CreateNewStoryDialog_VerifyInvalidProjectBasedInterationInputErrorMessage() {
   }
@@ -216,7 +205,6 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**
    * This method implements the Vertex 'v_CreateNewStoryDialog_VerifyInvalidStandaloneIterationInputErrorMessage'
-   * 
    */
   public void v_CreateNewStoryDialog_VerifyInvalidStandaloneIterationInputErrorMessage() {
   }
@@ -225,7 +213,6 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**
    * This method implements the Vertex 'v_MainPage_VerifyProductBasedStoryCreation'
-   * 
    */
   public void v_MainPage_VerifyProductBasedStoryCreation() {
   }
@@ -234,7 +221,6 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**
    * This method implements the Vertex 'v_MainPage_VerifyProjectBasedIterationStoryCreation'
-   * 
    */
   public void v_MainPage_VerifyProjectBasedIterationStoryCreation() {
   }
@@ -243,7 +229,6 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**
    * This method implements the Vertex 'v_MainPage_VerifyProjectBasedStoryCreation'
-   * 
    */
   public void v_MainPage_VerifyProjectBasedStoryCreation() {
   }
@@ -252,19 +237,17 @@ public class StoryCreationModelHandler extends ModelAPI {
 
   /**
    * This method implements the Vertex 'v_MainPage_VerifyStandaloneIterationStoryCreation'
-   * 
    */
   public void v_MainPage_VerifyStandaloneIterationStoryCreation() {
-	  
+
   }
-  
+
+
+
   /**
    * This method implements the Vertex 'v_NoOp'
-   * 
    */
   public void v_NoOp() {
-	  
+
   }
-}
-
-
+} // end of class StoryCreationModelHandler

@@ -13,10 +13,13 @@ import org.graphwalker.conditions.TimeDuration;
 import org.graphwalker.generators.AllPathPermutationsGenerator;
 import org.graphwalker.generators.PathGenerator;
 import org.graphwalker.multipleModels.ModelAPI;
+import org.graphwalker.multipleModels.ModelHandler;
 
 import org.junit.Test;
 
 import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.BrowserBasedTestBase;
+import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.TestContext;
+import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.uimodel.AgilefantUIModel;
 
 
 
@@ -33,12 +36,27 @@ public class Tests extends BrowserBasedTestBase {
    */
   @Test
   public void ensureProductsProjectsIterationsAndStoriesCanBeCreated() {
-    final String modelName = "ProductProjectIterationStoryCreationModelHandler"; //$NON-NLS-1$
-    final Class<? extends ModelAPI> modelHandler = ProductProjectIterationStoryCreationModelHandler.class;
-    final String modelResourcePath = "/test-models/product-project-iteration-story-creation.graphml"; //$NON-NLS-1$
+    final String modelName = "LoginLogoutModelHandler"; //$NON-NLS-1$
+    final Class<? extends ModelAPI> modelHandler = LoginLogoutModelHandler.class;
+    final String modelResourcePath = "/test-models/login-logout.graphml"; //$NON-NLS-1$
     final PathGenerator pathGenerator = new AllPathPermutationsGenerator(new TimeDuration(1800));
 
-    initializeAndExecuteSingleModel(modelName, modelHandler, modelResourcePath, pathGenerator);
+    initTestContextWithoutCreatingBrowser();
+    initializeModel(modelName, modelHandler, modelResourcePath, pathGenerator);
+    executeModel(modelName);
+  }
+
+
+
+  /**
+   * 
+   */
+  private void initTestContextWithoutCreatingBrowser() {
+    setContext(new TestContext());
+
+    context().setOutputStream(System.out);
+    context().setModelHandler(new ModelHandler());
+    context().setUIModel(new AgilefantUIModel(context()));
   }
 
 } // end of class Tests
