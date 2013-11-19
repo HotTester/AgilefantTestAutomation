@@ -80,6 +80,8 @@ public class ProjectCreationModelHandler extends ModelAPI {
    * This method implements the Edge 'e_CreateNewProjectDialog_CancelButton_Click'
    */
   public void e_CreateNewProjectDialog_CancelButton_Click() {
+	  log.info("Edge: e_CreateNewProjectDialog_CancelButton_Click");
+	  context().uiModel().newProjectDialog().CancelButton().click();
   }
 
 
@@ -104,6 +106,11 @@ public class ProjectCreationModelHandler extends ModelAPI {
    * This method implements the Edge 'e_Header_NewProjectLink_Click'
    */
   public void e_Header_NewProjectLink_Click() {
+	  log.info("Edge: e_Header_NewProjectLink_Click");
+
+	  // Click Create new --> Product
+	  context().uiModel().mainPage().menuLink().click();
+	  context().uiModel().mainPage().newProjectLink().click();
   }
 
 

@@ -16,6 +16,7 @@ import org.apache.log4j.Logger;
 import org.graphwalker.Util;
 import org.graphwalker.generators.PathGenerator;
 import org.graphwalker.multipleModels.ModelAPI;
+import org.openqa.selenium.WebDriver;
 
 import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.TestContext;
 import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.datamodel.AgilefantDataModel;
@@ -79,6 +80,8 @@ public class StoryCreationModelHandler extends ModelAPI {
    * This method implements the Edge 'e_CreateNewStoryDialog_CancelButton_Click'
    */
   public void e_CreateNewStoryDialog_CancelButton_Click() {
+	  log.info("Edge: e_CreateNewStoryDialog_CancelButton_Click");
+	  context().uiModel().newStoryDialog().CancelButton().click();
   }
 
 
@@ -151,6 +154,11 @@ public class StoryCreationModelHandler extends ModelAPI {
    * This method implements the Edge 'e_Header_NewStoryLink_Click'
    */
   public void e_Header_NewStoryLink_Click() {
+	  log.info("Edge: e_Header_NewStoryLink_Click");
+
+	  // Click Create new --> Product
+	  context().uiModel().mainPage().menuLink().click();
+	  context().uiModel().mainPage().newStoryLink().click();
   }
 
 
@@ -249,5 +257,30 @@ public class StoryCreationModelHandler extends ModelAPI {
    */
   public void v_NoOp() {
 
+  }
+  
+  /**
+   * @return
+   */
+  public WebDriver driver() {
+    return context().driver();
+  }
+
+
+
+  /**
+   * @return
+   */
+  public TestContext context() {
+    return _testContext;
+  }
+
+
+
+  /**
+   * @return the dataModel
+   */
+  public final AgilefantDataModel dataModel() {
+    return _dataModel;
   }
 } // end of class StoryCreationModelHandler

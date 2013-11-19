@@ -78,6 +78,9 @@ public class IterationCreationModelHandler extends ModelAPI {
    * This method implements the Edge 'e_CreateNewIterationDialog_CancelButton_Click'
    */
   public void e_CreateNewIterationDialog_CancelButton_Click() {
+	  log.info("Edge: e_CreateNewIterationDialog_CancelButton_Click");
+	  context().uiModel().newIterationDialog().CancelButton().click();
+	  
   }
 
 
@@ -118,6 +121,11 @@ public class IterationCreationModelHandler extends ModelAPI {
    * This method implements the Edge 'e_Header_NewIterationLink_Click'
    */
   public void e_Header_NewIterationLink_Click() {
+	  log.info("Edge: e_Header_NewIterationLink_Click");
+
+	  // Click Create new --> Product
+	  context().uiModel().mainPage().menuLink().click();
+	  context().uiModel().mainPage().newIterationLink().click();
   }
 
 

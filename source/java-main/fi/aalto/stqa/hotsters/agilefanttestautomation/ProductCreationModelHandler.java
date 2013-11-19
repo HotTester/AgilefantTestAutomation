@@ -15,6 +15,7 @@ import org.apache.log4j.Logger;
 import org.graphwalker.Util;
 import org.graphwalker.generators.PathGenerator;
 import org.graphwalker.multipleModels.ModelAPI;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.TestContext;
@@ -71,6 +72,16 @@ public class ProductCreationModelHandler extends ModelAPI {
    * This method implements the Vertex 'MainPage_Opened'
    */
   public void MainPage_Opened() {
+	  final boolean mainPageOpen = context().uiModel().mainPage().VerifyMainPagePresent();
+	  
+	  if(!mainPageOpen) {
+		  getMbt().passRequirement(false);
+	      Util.AbortIf(true, "Dialog title for the Create a new product dialog was not found.");
+	  }
+	  else {
+		  getMbt().passRequirement(true);
+	  }
+	  
   }
 
 
@@ -79,6 +90,8 @@ public class ProductCreationModelHandler extends ModelAPI {
    * This method implements the Edge 'e_CreateProductDialog_CancelButton_Click'
    */
   public void e_CreateProductDialog_CancelButton_Click() {
+	  log.info("Edge: e_CreateProductDialog_CancelButton_ClickClickCancel");
+	  context().uiModel().newProductDialog().CancelButton().click(); 
   }
 
 
@@ -95,6 +108,34 @@ public class ProductCreationModelHandler extends ModelAPI {
    * This method implements the Edge 'e_CreateProductDialog_EnterProductInformationAndSave'
    */
   public void e_CreateProductDialog_EnterProductInformationAndSave() {
+	  log.info("Edge: e_InputDetailsAndSave");
+	  WebDriver driver = context().driver();
+	  // Click on Name text field
+	  driver
+	      .findElement(
+	          By.xpath("(//div[contains(@class, 'ui-dialog') and not(contains(@class, 'ui-dialog-'))])[last()]//input[@type='text'][1]"))
+	      .click();
+
+	    // Input Product name, which is fetched from testdata.xls
+	  /* change to create a new product without the use of excel.
+	    driver
+	        .findElement(
+	            By.xpath("(//div[contains(@class, 'ui-dialog') and not(contains(@class, 'ui-dialog-'))])[last()]//input[@type='text'][1]"))
+	        .sendKeys(productNames.getValue(sheetName, rowIndex, cellnum));
+
+	    // Save
+	    driver
+	        .findElement(
+	            By.xpath("(//div[contains(@class, 'ui-dialog') and not(contains(@class, 'ui-dialog-'))])[last()]//button[@type='button'][2]"))
+	        .click();
+
+		// ADD THE NUMBER OF PRODUCTS CREATED, NOT CHANGE THE ROW OF EXCEL FILE
+	    // Increase rowIndex by one
+	    rowIndex++;
+	    if (rowIndex > 5) {
+	      rowIndex = 1;
+	    }
+	    */
   }
 
 
@@ -103,6 +144,11 @@ public class ProductCreationModelHandler extends ModelAPI {
    * This method implements the Edge 'e_Header_CreateNewProductLink_Click'
    */
   public void e_Header_CreateNewProductLink_Click() {
+	  log.info("Edge: e_Header_CreateNewProductLink_Click");
+
+	  // Click Create new --> Product
+	  context().uiModel().mainPage().menuLink().click();
+	  context().uiModel().mainPage().newProductLink().click();
   }
 
 
@@ -111,6 +157,7 @@ public class ProductCreationModelHandler extends ModelAPI {
    * This method implements the Edge 'noOp'
    */
   public void noOp() {
+	  //NOTHING?
   }
 
 
@@ -119,6 +166,17 @@ public class ProductCreationModelHandler extends ModelAPI {
    * This method implements the Vertex 'v_CreateProductDialog_Opened'
    */
   public void v_CreateProductDialog_Opened() {
+	  
+	  final boolean productDialog = context().uiModel().newProductDialog().
+			  VerifyNewProductDialogPresent();
+	  
+	  if(!productDialog) {
+		  getMbt().passRequirement(false);
+	      Util.AbortIf(true, "Dialog title for the Create a new product dialog was not found.");
+	  }
+	  else {
+		  getMbt().passRequirement(true);
+	  }
   }
 
 
@@ -135,6 +193,43 @@ public class ProductCreationModelHandler extends ModelAPI {
    * This method implements the Vertex 'v_MainPage_VerifyProductCreation'
    */
   public void v_MainPage_VerifyProductCreation() {
+	  /* IMPLEMENT WITHOUT EXCEL
+	  log.info("Vertex: v_VerifyProductCreation");
+
+	    try {
+	      Thread.sleep(5000);
+	    }
+	    catch (final InterruptedException exception) {
+	      // TODO Auto-generated catch block
+	      exception.printStackTrace();
+	    }
+
+	    // Click All Backlogs menu to open it
+	    driver.findElement(By.id("menuAccordion-products")).click();
+
+	    // We need to verify creation of created product
+	    final int previousRow = rowIndex - 1 < 1 ? 5 : rowIndex - 1;
+	    try {
+	      driver.findElement(By.xpath("//div[@id='backlogMenuTree']//a[@class='ui-dynatree-title' and text()='"
+	          + productNames.getValue(sheetName, previousRow, cellnum) + "']")).click();
+	    }
+	    catch (final Exception e) {
+	      System.out.println(e);
+	      log.error("Could not match: " + productNames.getValue(sheetName, previousRow, cellnum));
+	      getMbt().passRequirement(false);
+	      Util.AbortIf(true, "Verification failed");
+	    }
+	    try {
+	      driver.findElement(By.xpath("//h2[text()='Product: "
+	          + productNames.getValue(sheetName, previousRow, cellnum) + "']"));
+	    }
+	    catch (final Exception e) {
+	      System.out.println(e);
+	      log.error("Could not match: Product: " + productNames.getValue(sheetName, previousRow, cellnum));
+	      getMbt().passRequirement(false);
+	      Util.AbortIf(true, "Verification failed");
+	    }
+	    getMbt().passRequirement(true);*/
   }
 
 
