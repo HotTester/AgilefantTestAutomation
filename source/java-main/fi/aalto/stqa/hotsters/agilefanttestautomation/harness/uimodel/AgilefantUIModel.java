@@ -18,7 +18,7 @@ public class AgilefantUIModel {
   private final TestContext _testContext;
 
   /**  */
-  private final LoginPage _loginPage;
+  private LoginPage _loginPage;
 
 
 
@@ -28,8 +28,6 @@ public class AgilefantUIModel {
    */
   public AgilefantUIModel(final TestContext testContext) {
     _testContext = testContext;
-
-    _loginPage = new LoginPage(context());
   }
 
 
@@ -38,6 +36,10 @@ public class AgilefantUIModel {
    * @return the loginPage
    */
   public final LoginPage loginPage() {
+    if (_loginPage == null) {
+      _loginPage = new LoginPage(context());
+    }
+
     return _loginPage;
   }
 
