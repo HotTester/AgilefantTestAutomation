@@ -249,7 +249,9 @@ public class LoginLogoutModelHandler extends ModelAPI {
   public void LoginPage_VerifyPresenceOfInvalidLoginError() {
     log.info("LoginPage_VerifyPresenceOfInvalidLoginError"); //$NON-NLS-1$
 
-    if (!context().uiModel().loginPage().errorMessageInvalidUsernameOrPassword().isDisplayed()) {
+    if (!context().uiModel().loginPage().
+        errorMessageInvalidUsernameOrPassword().isDisplayed()) {
+
       abortWithMessage(
       "The expected error message about invalid " +
           "username and/or password was not displayed.");

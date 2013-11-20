@@ -81,7 +81,7 @@ public class ProjectCreationModelHandler extends ModelAPI {
    */
   public void e_CreateNewProjectDialog_CancelButton_Click() {
 	  log.info("Edge: e_CreateNewProjectDialog_CancelButton_Click");
-	  context().uiModel().newProjectDialog().CancelButton().click();
+	  context().uiModel().newProjectDialog().cancelButton().click();
   }
 
 

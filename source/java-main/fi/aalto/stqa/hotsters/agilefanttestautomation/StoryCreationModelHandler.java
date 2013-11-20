@@ -81,7 +81,7 @@ public class StoryCreationModelHandler extends ModelAPI {
    */
   public void e_CreateNewStoryDialog_CancelButton_Click() {
 	  log.info("Edge: e_CreateNewStoryDialog_CancelButton_Click");
-	  context().uiModel().newStoryDialog().CancelButton().click();
+	  context().uiModel().newStoryDialog().cancelButton().click();
   }
 
 

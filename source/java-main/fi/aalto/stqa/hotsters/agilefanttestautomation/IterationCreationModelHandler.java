@@ -79,7 +79,7 @@ public class IterationCreationModelHandler extends ModelAPI {
    */
   public void e_CreateNewIterationDialog_CancelButton_Click() {
 	  log.info("Edge: e_CreateNewIterationDialog_CancelButton_Click");
-	  context().uiModel().newIterationDialog().CancelButton().click();
+	  context().uiModel().newIterationDialog().cancelButton().click();
 	  
   }
 

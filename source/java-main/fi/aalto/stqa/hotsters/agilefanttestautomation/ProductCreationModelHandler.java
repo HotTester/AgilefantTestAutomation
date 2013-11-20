@@ -72,7 +72,7 @@ public class ProductCreationModelHandler extends ModelAPI {
    * This method implements the Vertex 'MainPage_Opened'
    */
   public void MainPage_Opened() {
-	  final boolean mainPageOpen = context().uiModel().mainPage().VerifyMainPagePresent();
+	  final boolean mainPageOpen = context().uiModel().mainPage().verifyPresence();
 	  
 	  if(!mainPageOpen) {
 		  getMbt().passRequirement(false);
@@ -91,7 +91,7 @@ public class ProductCreationModelHandler extends ModelAPI {
    */
   public void e_CreateProductDialog_CancelButton_Click() {
 	  log.info("Edge: e_CreateProductDialog_CancelButton_ClickClickCancel");
-	  context().uiModel().newProductDialog().CancelButton().click(); 
+	  context().uiModel().newProductDialog().cancelButton().click(); 
   }
 
 
@@ -168,7 +168,7 @@ public class ProductCreationModelHandler extends ModelAPI {
   public void v_CreateProductDialog_Opened() {
 	  
 	  final boolean productDialog = context().uiModel().newProductDialog().
-			  VerifyNewProductDialogPresent();
+			  verifyPresence();
 	  
 	  if(!productDialog) {
 		  getMbt().passRequirement(false);

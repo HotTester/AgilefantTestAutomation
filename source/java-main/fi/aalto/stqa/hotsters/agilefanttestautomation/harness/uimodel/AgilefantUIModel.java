@@ -20,10 +20,10 @@ public class AgilefantUIModel {
   /**  */
   private MainPage _mainPage;
   private LoginPage _loginPage;
-  private NewProductDialog _newProductDialog;
-  private NewProjectDialog _newProjectDialog;
-  private NewIterationDialog _newIterationDialog;
-  private NewStoryDialog _newStoryDialog;
+  private CreateProductDialog _newProductDialog;
+  private CreateProjectDialog _newProjectDialog;
+  private CreateIterationDialog _newIterationDialog;
+  private CreateStoryDialog _newStoryDialog;
 
 
 
@@ -60,9 +60,9 @@ public class AgilefantUIModel {
   /**
    * @return the newProductDialog
    */
-  public final NewProductDialog newProductDialog() {
+  public final CreateProductDialog newProductDialog() {
     if (_newProductDialog == null) {
-    	_newProductDialog = new NewProductDialog(context());
+    	_newProductDialog = new CreateProductDialog(context());
     }
 
     return _newProductDialog;
@@ -71,9 +71,9 @@ public class AgilefantUIModel {
   /**
    * @return the newProjectDialog
    */
-  public final NewProjectDialog newProjectDialog() {
+  public final CreateProjectDialog newProjectDialog() {
     if (_newProjectDialog == null) {
-    	_newProjectDialog = new NewProjectDialog(context());
+    	_newProjectDialog = new CreateProjectDialog(context());
     }
 
     return _newProjectDialog;
@@ -82,9 +82,9 @@ public class AgilefantUIModel {
   /**
    * @return the newIterationDialog
    */
-  public final NewIterationDialog newIterationDialog() {
+  public final CreateIterationDialog newIterationDialog() {
     if (_newIterationDialog == null) {
-    	_newIterationDialog = new NewIterationDialog(context());
+    	_newIterationDialog = new CreateIterationDialog(context());
     }
 
     return _newIterationDialog;
@@ -93,9 +93,9 @@ public class AgilefantUIModel {
   /**
    * @return the newStoryDialog
    */
-  public final NewStoryDialog newStoryDialog() {
+  public final CreateStoryDialog newStoryDialog() {
     if (_newStoryDialog == null) {
-    	_newStoryDialog = new NewStoryDialog(context());
+    	_newStoryDialog = new CreateStoryDialog(context());
     }
 
     return _newStoryDialog;
