@@ -21,15 +21,23 @@ import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.TestContext;
 
 
 /**
- * @author Rubén
+ * @author Ruben
  */
 public class CreateProductDialog {
 
   // @formatter:off
   /**  */
-  private static final String CREATE_NEW_PRODUCT = 
+  private static final String CREATE_NEW_PRODUCT_DIALOG = 
       "(//div[contains(@class, 'ui-dialog') and not(contains(@class, 'ui-dialog-'))])[last()]//span[@class='ui-dialog-title' and text()='Create a new product']"; //$NON-NLS-1$
 
+  /** */
+  private static final String INPUT_NAME = 
+	  "(//div[contains(@class, 'ui-dialog') and not(contains(@class, 'ui-dialog-'))])[last()]//input[@type='text'][1]"; //$NON-NLS-1$
+  
+  /**  */
+  private static final String OK_BUTTON = 
+	  "(//div[contains(@class, 'ui-dialog') and not(contains(@class, 'ui-dialog-'))])[last()]//button[@type='button'][2]"; //$NON-NLS-1$
+  
   /**  */
   private static final String CANCEL_BUTTON = 
       "(//div[contains(@class, 'ui-dialog') and not(contains(@class, 'ui-dialog-'))])[last()]//button[@type='button'][1]"; //$NON-NLS-1$
@@ -61,7 +69,7 @@ public class CreateProductDialog {
     final WebDriver driver = context().driver();
 
     try {
-      driver.findElement(By.xpath(CREATE_NEW_PRODUCT));
+      driver.findElement(By.xpath(CREATE_NEW_PRODUCT_DIALOG));
     }
     catch (final Exception e) {
       log.error("Dialog title for the Create a new product dialog was not found.");

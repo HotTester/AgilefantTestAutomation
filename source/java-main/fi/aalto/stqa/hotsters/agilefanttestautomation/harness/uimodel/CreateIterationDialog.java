@@ -21,15 +21,35 @@ import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.TestContext;
 
 
 /**
- * @author Rubén
+ * @author Ruben
  */
 public class CreateIterationDialog {
 
   // @formatter:off
   /**  */
-  private static final String CREATE_NEW_ITERATION =
+  private static final String CREATE_NEW_ITERATION_DIALOG =
       "(//div[contains(@class, 'ui-dialog') and not(contains(@class, 'ui-dialog-'))])[last()]//span[@class='ui-dialog-title' and text()='Create a new iteration']"; //$NON-NLS-1$
 
+  /** */
+  private static final String INPUT_NAME = 
+	  "(//div[contains(@class, 'ui-dialog') and not(contains(@class, 'ui-dialog-'))])[last()]//input[not(contains(@class, 'hasDatepicker')) and not(@role='textbox')][1]"; //$NON-NLS-1$
+  
+  /** */
+  private static final String PROJECT_NAME = 
+	  "(//div[contains(@class, 'ui-dialog') and not(contains(@class, 'ui-dialog-'))])[last()]//input[@role='textbox'][1]"; //$NON-NLS-1$
+  
+  
+  private static final String START_DATE =
+		"(//div[contains(@class, 'ui-dialog') and not(contains(@class, 'ui-dialog-'))])[last()]//input[contains(@class, 'hasDatepicker') and not(@role='textbox')][1]";
+		  
+  // need a way to differenciate start_date and end_date or just set them as default
+  private static final String END_DATE =
+		"(//div[contains(@class, 'ui-dialog') and not(contains(@class, 'ui-dialog-'))])[last()]//input[contains(@class, 'hasDatepicker') and not(@role='textbox')][1]"; 	  
+  
+  /**  */
+  private static final String OK_BUTTON = 
+	  "(//div[contains(@class, 'ui-dialog') and not(contains(@class, 'ui-dialog-'))])[last()]//button[@type='button'][2]"; //$NON-NLS-1$
+  
   /**  */
   private static final String CANCEL_BUTTON =
       "(//div[contains(@class, 'ui-dialog') and not(contains(@class, 'ui-dialog-'))])[last()]//button[@type='button'][1]"; //$NON-NLS-1$
@@ -70,7 +90,7 @@ public class CreateIterationDialog {
     final WebDriver driver = context().driver();
 
     try {
-      driver.findElement(By.xpath(CREATE_NEW_ITERATION));
+      driver.findElement(By.xpath(CREATE_NEW_ITERATION_DIALOG));
     }
     catch (final Exception e) {
       log.error("Dialog title for the Create a new iteration dialog was not found.");
