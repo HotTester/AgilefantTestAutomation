@@ -12,7 +12,6 @@ package fi.aalto.stqa.hotsters.agilefanttestautomation.harness.uimodel;
 import org.apache.log4j.Logger;
 import org.graphwalker.Util;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.TestContext;
@@ -48,13 +47,10 @@ public class MainPage {
    * @return
    */
   public boolean verifyPresence() {
-    final WebDriver driver = context().driver();
-
     try {
-      driver.findElement(By.linkText("Create new"));
-      driver.findElement(By.linkText("Logout"));
-      driver.findElement(By.linkText("Help"));
-
+      createNewMenuLink();
+      logoutLinkInHeader();
+      helpLinkInHeader();
     }
     catch (final Exception e) {
       log.error("Main page was not present.");
@@ -69,8 +65,8 @@ public class MainPage {
   /**
    * @return
    */
-  public WebElement menuLink() {
-    return context().driver().findElement(By.id("createNewMenuLink"));
+  public WebElement helpLinkInHeader() {
+    return findElementByXPath("//div[@id='headerWrapper']/div[@id='logoutDiv']/a[text()='Help']");
   }
 
 
@@ -78,8 +74,8 @@ public class MainPage {
   /**
    * @return
    */
-  public WebElement newProductLink() {
-    return context().driver().findElement(By.id("createNewProduct"));
+  public WebElement logoutLinkInHeader() {
+    return findElementByXPath("//div[@id='headerWrapper']/div[@id='logoutDiv']/a[text()='Logout']");
   }
 
 
@@ -87,8 +83,8 @@ public class MainPage {
   /**
    * @return
    */
-  public WebElement newProjectLink() {
-    return context().driver().findElement(By.id("createNewProject"));
+  public WebElement createNewMenuLink() {
+    return findElementById("createNewMenuLink");
   }
 
 
@@ -96,8 +92,8 @@ public class MainPage {
   /**
    * @return
    */
-  public WebElement newIterationLink() {
-    return context().driver().findElement(By.id("createNewIteration"));
+  public WebElement createNewProductLink() {
+    return findElementByXPath("//ul[@id='createNewMenu']//a[@id='createNewProduct'");
   }
 
 
@@ -105,8 +101,46 @@ public class MainPage {
   /**
    * @return
    */
-  public WebElement newStoryLink() {
-    return context().driver().findElement(By.id("createNewStory"));
+  public WebElement createNewProjectLink() {
+    return findElementByXPath("//ul[@id='createNewMenu']//a[@id='createNewProject'");
+  }
+
+
+
+  /**
+   * @return
+   */
+  public WebElement createNewIterationLink() {
+    return findElementByXPath("//ul[@id='createNewMenu']//a[@id='createNewIteration'");
+  }
+
+
+
+  /**
+   * @return
+   */
+  public WebElement createNewStoryLink() {
+    return findElementByXPath("//ul[@id='createNewMenu']//a[@id='createNewStory'");
+  }
+
+
+
+  /**
+   * @param id
+   * @return
+   */
+  private WebElement findElementById(final String id) {
+    return context().driver().findElement(By.id(id));
+  }
+
+
+
+  /**
+   * @param xpath
+   * @return
+   */
+  private WebElement findElementByXPath(final String xpath) {
+    return context().driver().findElement(By.xpath(xpath));
   }
 
 

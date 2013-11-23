@@ -76,7 +76,7 @@ public class AgilefantDataModel {
   private final Collection<Product> _products = new Vector<>(MAX_PRODUCTS);
 
   /**  */
-  private boolean _rememberMeState = false;
+  private boolean _shouldRememberMe = false;
 
 
 
@@ -144,15 +144,6 @@ public class AgilefantDataModel {
   @SuppressWarnings("static-method")
   public String agilefantAdminPassword() {
     return AGILEFANT_ADMIN_DEFAULT_PASSWORD;
-  }
-
-
-
-  /**
-   * @param rememberMe
-   */
-  public void setRememberMeStatus(final boolean rememberMe) {
-
   }
 
 
@@ -248,7 +239,19 @@ public class AgilefantDataModel {
    * @return the rememberMeState
    */
   public final boolean shouldRememberMe() {
-    return _rememberMeState;
+    return _shouldRememberMe;
+  }
+
+
+
+
+  /**
+   * @return
+   */
+  public final boolean toggleRememberMeState() {
+    _shouldRememberMe = !_shouldRememberMe;
+
+    return _shouldRememberMe;
   }
 
 
@@ -259,7 +262,7 @@ public class AgilefantDataModel {
    *          the rememberMeState to set
    */
   public final void setRememberMeState(final boolean rememberMeState) {
-    _rememberMeState = rememberMeState;
+    _shouldRememberMe = rememberMeState;
   }
 
 } // end of class AgilefantDataModel

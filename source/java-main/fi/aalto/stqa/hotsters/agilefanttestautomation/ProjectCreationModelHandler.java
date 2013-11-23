@@ -109,8 +109,8 @@ public class ProjectCreationModelHandler extends ModelAPI {
 	  log.info("Edge: e_Header_NewProjectLink_Click");
 
 	  // Click Create new --> Product
-	  context().uiModel().mainPage().menuLink().click();
-	  context().uiModel().mainPage().newProjectLink().click();
+	  context().uiModel().mainPage().createNewMenuLink().click();
+	  context().uiModel().mainPage().createNewProjectLink().click();
   }
 
 

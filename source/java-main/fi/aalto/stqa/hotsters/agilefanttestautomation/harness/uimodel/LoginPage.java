@@ -43,11 +43,11 @@ public class LoginPage {
 
   /**  */
   private static final String XPATH_ERR_MSG_INVALID_UID_OR_PWD = 
-      "//div[@id='messageContainer' and " + //$NON-NLS-1$
+      "//div[@id='loginWrapper']/div[@id='messageContainer']/p[" + //$NON-NLS-1$
       "normalize-space(text())='Invalid username or password, please try again.']"; //$NON-NLS-1$
 
   /**  */
-  private static final String ID_REMEMBER_ME_CHECKBOX = 
+  private static final String NAME_REMEMBER_ME_CHECKBOX = 
       "_spring_security_remember_me"; //$NON-NLS-1$
   // @formatter:on
 
@@ -101,7 +101,7 @@ public class LoginPage {
    * @return
    */
   public WebElement dialogTitle() {
-    return context().driver().findElement(By.xpath(XPATH_LOGINPAGE_DIALOG_TITLE));
+    return findElementByXPath(XPATH_LOGINPAGE_DIALOG_TITLE);
   }
 
 
@@ -110,7 +110,7 @@ public class LoginPage {
    * @return
    */
   public WebElement errorMessageInvalidUsernameOrPassword() {
-    return context().driver().findElement(By.xpath(XPATH_ERR_MSG_INVALID_UID_OR_PWD));
+    return findElementByXPath(XPATH_ERR_MSG_INVALID_UID_OR_PWD);
   }
 
 
@@ -119,7 +119,7 @@ public class LoginPage {
    * @return
    */
   public WebElement usernameField() {
-    return context().driver().findElement(By.name(ID_USERNAME_FIELD));
+    return findElementByName(ID_USERNAME_FIELD);
   }
 
 
@@ -128,7 +128,7 @@ public class LoginPage {
    * @return
    */
   public WebElement passwordField() {
-    return context().driver().findElement(By.name(ID_PASSWORD_FIELD));
+    return findElementByName(ID_PASSWORD_FIELD);
   }
 
 
@@ -137,7 +137,7 @@ public class LoginPage {
    * @return
    */
   public WebElement rememberMeCheckbox() {
-    return context().driver().findElement(By.id(ID_REMEMBER_ME_CHECKBOX));
+    return findElementByName(NAME_REMEMBER_ME_CHECKBOX);
   }
 
 
@@ -146,7 +146,37 @@ public class LoginPage {
    * @return
    */
   public WebElement loginButton() {
-    return context().driver().findElement(By.xpath(XPATH_LOGIN_BUTTON));
+    return findElementByXPath(XPATH_LOGIN_BUTTON);
+  }
+
+
+
+  /**
+   * @param id
+   * @return
+   */
+  private WebElement findElementById(final String id) {
+    return context().driver().findElement(By.id(id));
+  }
+
+
+
+  /**
+   * @param name
+   * @return
+   */
+  private WebElement findElementByName(final String name) {
+    return context().driver().findElement(By.name(name));
+  }
+
+
+
+  /**
+   * @param xpath
+   * @return
+   */
+  private WebElement findElementByXPath(final String xpath) {
+    return context().driver().findElement(By.xpath(xpath));
   }
 
 

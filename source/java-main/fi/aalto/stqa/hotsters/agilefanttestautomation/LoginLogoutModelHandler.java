@@ -38,8 +38,8 @@ public class LoginLogoutModelHandler extends ModelAPI {
       "Presence of the login page could not be verified."; //$NON-NLS-1$
 
   /**  */
-  private static final String MSG_OPENING_LOGIN_PAGE = 
-      "Opening login page..."; //$NON-NLS-1$
+  private static final String ERR_MSG_PRESENCE_OF_THE_MAIN_PAGE_COULD_NOT_BE_VERIFIED = 
+      "Presence of the main page could not be verified."; //$NON-NLS-1$
   // @formatter:on
 
   /**  */
@@ -53,6 +53,9 @@ public class LoginLogoutModelHandler extends ModelAPI {
 
   /**  */
   private final Logger log = Util.setupLogger(LoginLogoutModelHandler.class);
+
+  /**  */
+  private boolean _browserWasStartedBefore = false;
 
 
 
@@ -87,7 +90,7 @@ public class LoginLogoutModelHandler extends ModelAPI {
    * 
    */
   public void ModelHandler_Init() {
-    log.info("ModelHandler_Init"); //$NON-NLS-1$
+
   }
 
 
@@ -96,8 +99,6 @@ public class LoginLogoutModelHandler extends ModelAPI {
    * 
    */
   public void Browser_NotStarted() {
-    log.info("Browser_NotStarted"); //$NON-NLS-1$
-
     if (context().driver() != null) {
       throw CreateException.forIllegalState("WebDriver is supposed to be null, but it isn't."); //$NON-NLS-1$
     }
@@ -109,11 +110,19 @@ public class LoginLogoutModelHandler extends ModelAPI {
    * 
    */
   public void Browser_Start() {
-    log.info("Browser_Start"); //$NON-NLS-1$
+    final WebDriver firefoxDriver;
+    if (browserWasStartedBefore()) {
+      firefoxDriver = context().browserDriverFactory().createFirefoxDriverInstanceUsingExistingTemporaryProfile();
+    }
+    else {
+      firefoxDriver = context().browserDriverFactory().createFirefoxDriverInstanceWithCleanProfile();
+      setBrowserStartedStatus(true);
+    }
+    context().setDriver(firefoxDriver);
+    waitTimeInSeconds(1);
 
-    context().setDriver(
-        context().browserDriverFactory().createFirefoxDriverInstance());
     MiscellaneousAlienPage_Open();
+    waitTimeInSeconds(5);
   }
 
 
@@ -122,8 +131,6 @@ public class LoginLogoutModelHandler extends ModelAPI {
    * 
    */
   public void Browser_Started() {
-    log.info("Browser_Started"); //$NON-NLS-1$
-
     if (context().driver() == null) {
       throw CreateException.forIllegalState("WebDriver instance equals null."); //$NON-NLS-1$
     }
@@ -135,7 +142,12 @@ public class LoginLogoutModelHandler extends ModelAPI {
    * 
    */
   public void Browser_Stop() {
-    log.info("Browser_Stop"); //$NON-NLS-1$
+    try {
+      Thread.sleep(5000);
+    }
+    catch (final InterruptedException exception) {
+      /* EMPTY */
+    }
 
     context().driver().quit();
     context().setDriver(null);
@@ -147,10 +159,6 @@ public class LoginLogoutModelHandler extends ModelAPI {
    * 
    */
   public void LoginPage_Open() {
-    log.info("LoginPage_Open"); //$NON-NLS-1$
-
-    log.info(MSG_OPENING_LOGIN_PAGE);
-
     context().driver().navigate().to(dataModel().agilefantBaseUrl());
   }
 
@@ -160,8 +168,6 @@ public class LoginLogoutModelHandler extends ModelAPI {
    * 
    */
   public void LoginPage_Opened() {
-    log.info("LoginPage_Opened"); //$NON-NLS-1$
-
     final boolean loginPagePresent =
         context().uiModel().loginPage().verifyPresence();
 
@@ -179,19 +185,34 @@ public class LoginLogoutModelHandler extends ModelAPI {
    * 
    */
   public void LoginPage_ToggleRememberMe() {
-    log.info("LoginPage_ToggleRememberMe"); //$NON-NLS-1$
+    dataModel().toggleRememberMeState();
+    log.info("Remember Me state switched to " + dataModel().shouldRememberMe()); //$NON-NLS-1$
 
-    final WebElement checkbox = context().uiModel().loginPage().rememberMeCheckbox();
+    setRememberMeCheckboxAccordingToDatamodel();
+  }
 
-    checkbox.click();
-    dataModel().setRememberMeState(checkbox.isSelected());
+
+
+  /**
+   * 
+   */
+  private void setRememberMeCheckboxAccordingToDatamodel() {
+    final WebElement checkbox =
+        context().uiModel().loginPage().rememberMeCheckbox();
+
+    if ((dataModel().shouldRememberMe() && !checkbox.isSelected())
+        || (!dataModel().shouldRememberMe() && checkbox.isSelected())) {
+
+      checkbox.click();
+      log.info("Remember Me checkbox clicked to synchronize state with datamodel.");
+    }
 
     String logMessage;
-    if (checkbox.isSelected()) {
-      logMessage = "Agilefant should remember the next login (remember-me state toggled).";
+    if (dataModel().shouldRememberMe()) {
+      logMessage = "Agilefant should remember the next login.";
     }
     else {
-      logMessage = "Agilefant should not remember the next login (remember-me state toggled).";
+      logMessage = "Agilefant should not remember the next login.";
     }
     log.info(logMessage);
   }
@@ -202,8 +223,6 @@ public class LoginLogoutModelHandler extends ModelAPI {
    * 
    */
   public void LoginPage_EnterValidUserCredentials() {
-    log.info("LoginPage_EnterValidUserCredentials"); //$NON-NLS-1$
-
     final String username = dataModel().agilefantAdminUsername();
     final String password = dataModel().agilefantAdminPassword();
 
@@ -234,8 +253,6 @@ public class LoginLogoutModelHandler extends ModelAPI {
    * 
    */
   public void LoginPage_EnterInvalidUserCredentials() {
-    log.info("LoginPage_EnterInValidUserCredentials"); //$NON-NLS-1$
-
     enterUserCredentials(
         "MattiMeikäläinen",
         "HattiWattiMehuKatti");
@@ -247,8 +264,6 @@ public class LoginLogoutModelHandler extends ModelAPI {
    * 
    */
   public void LoginPage_VerifyPresenceOfInvalidLoginError() {
-    log.info("LoginPage_VerifyPresenceOfInvalidLoginError"); //$NON-NLS-1$
-
     if (!context().uiModel().loginPage().
         errorMessageInvalidUsernameOrPassword().isDisplayed()) {
 
@@ -264,8 +279,6 @@ public class LoginLogoutModelHandler extends ModelAPI {
    * 
    */
   public void MiscellaneousAlienPage_Open() {
-    log.info("MiscellaneousAlienPage_Open"); //$NON-NLS-1$
-
     context().driver().navigate().to(URL_ALIEN_PAGE);
   }
 
@@ -275,8 +288,15 @@ public class LoginLogoutModelHandler extends ModelAPI {
    * 
    */
   public void MainPage_Opened() {
-    log.info("MainPage_Opened"); //$NON-NLS-1$
+    final boolean mainPagePresent =
+        context().uiModel().mainPage().verifyPresence();
 
+    if (!mainPagePresent) {
+      failRequirement();
+      abortWithMessage(ERR_MSG_PRESENCE_OF_THE_MAIN_PAGE_COULD_NOT_BE_VERIFIED);
+    }
+
+    passRequirement();
   }
 
 
@@ -285,8 +305,11 @@ public class LoginLogoutModelHandler extends ModelAPI {
    * 
    */
   public void Header_LogoutLink_Click() {
-    log.info("Header_LogoutLink_Click"); //$NON-NLS-1$
+    context().uiModel().mainPage().logoutLinkInHeader().click();
 
+    dataModel().setRememberMeState(false);
+    log.info("Remember Me state switched to false."); //$NON-NLS-1$
+    log.info("Agilefant should not remember the current login any more."); //$NON-NLS-1$
   }
 
 
@@ -341,6 +364,44 @@ public class LoginLogoutModelHandler extends ModelAPI {
    */
   private void failRequirement() {
     getMbt().passRequirement(false);
+  }
+
+
+
+
+  /**
+   * @param numberOfSeconds
+   */
+  private static void waitTimeInSeconds(final int numberOfSeconds) {
+    if (numberOfSeconds < 1) {
+      throw CreateException.forIllegalArgument("Wait time must be larger than zero.");
+    }
+
+    try {
+      Thread.sleep(numberOfSeconds * 1000);
+    }
+    catch (final InterruptedException exception) {
+      /* EMPTY */
+    }
+  }
+
+
+
+  /**
+   * @return
+   */
+  public final boolean browserWasStartedBefore() {
+    return _browserWasStartedBefore;
+  }
+
+
+
+
+  /**
+   * @param browserWasStartedBefore
+   */
+  public final void setBrowserStartedStatus(final boolean browserWasStartedBefore) {
+    _browserWasStartedBefore = browserWasStartedBefore;
   }
 
 } // end of class LoginLogoutModelHandler

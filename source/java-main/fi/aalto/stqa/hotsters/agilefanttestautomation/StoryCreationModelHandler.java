@@ -157,8 +157,8 @@ public class StoryCreationModelHandler extends ModelAPI {
 	  log.info("Edge: e_Header_NewStoryLink_Click");
 
 	  // Click Create new --> Product
-	  context().uiModel().mainPage().menuLink().click();
-	  context().uiModel().mainPage().newStoryLink().click();
+	  context().uiModel().mainPage().createNewMenuLink().click();
+	  context().uiModel().mainPage().createNewStoryLink().click();
   }
 
 

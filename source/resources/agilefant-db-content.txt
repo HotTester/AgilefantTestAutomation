@@ -1,0 +1,1261 @@
+-- phpMyAdmin SQL Dump
+-- version 3.5.1
+-- http://www.phpmyadmin.net
+--
+-- Servidor: localhost
+-- Tiempo de generación: 19-11-2013 a las 18:14:46
+-- Versión del servidor: 5.5.25
+-- Versión de PHP: 5.4.4
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Base de datos: `agilefant`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `agilefant_revisions`
+--
+
+CREATE TABLE `agilefant_revisions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `timestamp` bigint(20) NOT NULL,
+  `userId` int(11) NOT NULL,
+  `userName` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=58 ;
+
+--
+-- Volcado de datos para la tabla `agilefant_revisions`
+--
+
+INSERT INTO `agilefant_revisions` (`id`, `timestamp`, `userId`, `userName`) VALUES
+(1, 1384859024139, 3, 'Administrator'),
+(2, 1384859407495, 3, 'Administrator'),
+(3, 1384859514735, 3, 'Administrator'),
+(4, 1384859524505, 3, 'Administrator'),
+(5, 1384859533179, 3, 'Administrator'),
+(6, 1384859540302, 3, 'Administrator'),
+(7, 1384859547158, 3, 'Administrator'),
+(8, 1384859555327, 3, 'Administrator'),
+(9, 1384859563736, 3, 'Administrator'),
+(10, 1384859572123, 3, 'Administrator'),
+(11, 1384859579244, 3, 'Administrator'),
+(12, 1384859586026, 3, 'Administrator'),
+(13, 1384859592683, 3, 'Administrator'),
+(14, 1384859600517, 3, 'Administrator'),
+(15, 1384859608734, 3, 'Administrator'),
+(16, 1384859615843, 3, 'Administrator'),
+(17, 1384859622429, 3, 'Administrator'),
+(18, 1384859630493, 3, 'Administrator'),
+(19, 1384859637980, 3, 'Administrator'),
+(20, 1384859645565, 3, 'Administrator'),
+(21, 1384859652084, 3, 'Administrator'),
+(22, 1384859659196, 3, 'Administrator'),
+(23, 1384859667892, 3, 'Administrator'),
+(24, 1384859674425, 3, 'Administrator'),
+(25, 1384859951066, 3, 'Administrator'),
+(26, 1384859958897, 3, 'Administrator'),
+(27, 1384859965935, 3, 'Administrator'),
+(28, 1384859973398, 3, 'Administrator'),
+(29, 1384859980659, 3, 'Administrator'),
+(30, 1384859987825, 3, 'Administrator'),
+(31, 1384859994947, 3, 'Administrator'),
+(32, 1384860002894, 3, 'Administrator'),
+(33, 1384860010871, 3, 'Administrator'),
+(34, 1384860017452, 3, 'Administrator'),
+(35, 1384860024433, 3, 'Administrator'),
+(36, 1384860032404, 3, 'Administrator'),
+(37, 1384860039396, 3, 'Administrator'),
+(38, 1384860046564, 3, 'Administrator'),
+(39, 1384860054112, 3, 'Administrator'),
+(40, 1384860061596, 3, 'Administrator'),
+(41, 1384860069736, 3, 'Administrator'),
+(42, 1384860076864, 3, 'Administrator'),
+(43, 1384860084242, 3, 'Administrator'),
+(44, 1384860090779, 3, 'Administrator'),
+(45, 1384860098417, 3, 'Administrator'),
+(46, 1384860108079, 3, 'Administrator'),
+(47, 1384860117287, 3, 'Administrator'),
+(48, 1384860124357, 3, 'Administrator'),
+(49, 1384860131123, 3, 'Administrator'),
+(50, 1384860164961, 3, 'Administrator'),
+(51, 1384860171482, 3, 'Administrator'),
+(52, 1384860179553, 3, 'Administrator'),
+(53, 1384860187137, 3, 'Administrator'),
+(54, 1384860193782, 3, 'Administrator'),
+(55, 1384881006376, 3, 'Administrator'),
+(56, 1384881115301, 3, 'Administrator'),
+(57, 1384881160746, 3, 'Administrator');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `assignment`
+--
+
+CREATE TABLE `assignment` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `availability` int(11) NOT NULL,
+  `delta_personal_load` bigint(20) DEFAULT NULL,
+  `backlog_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK3D2B86CDF8762ABE` (`backlog_id`),
+  KEY `FK3D2B86CDE537EC82` (`backlog_id`),
+  KEY `FK3D2B86CDC1610AD2` (`user_id`),
+  KEY `FK3D2B86CDF63400A2` (`backlog_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `assignment_AUD`
+--
+
+CREATE TABLE `assignment_AUD` (
+  `id` int(11) NOT NULL,
+  `REV` int(11) NOT NULL,
+  `REVTYPE` tinyint(4) DEFAULT NULL,
+  `availability` int(11) DEFAULT NULL,
+  `delta_personal_load` bigint(20) DEFAULT NULL,
+  `backlog_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`,`REV`),
+  KEY `FK1B6D861E20258526` (`REV`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `backlogs`
+--
+
+CREATE TABLE `backlogs` (
+  `backlogtype` varchar(31) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `description` longtext,
+  `name` varchar(255) DEFAULT NULL,
+  `backlogSize` bigint(20) DEFAULT NULL,
+  `baselineLoad` bigint(20) DEFAULT NULL,
+  `endDate` datetime DEFAULT NULL,
+  `readonlyToken` varchar(255) DEFAULT NULL,
+  `startDate` datetime DEFAULT NULL,
+  `rank` int(11) DEFAULT NULL,
+  `status` int(11) DEFAULT NULL,
+  `parent_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `readonlyToken` (`readonlyToken`),
+  KEY `FK7E75FF16B8A85DD5` (`parent_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=56 ;
+
+--
+-- Volcado de datos para la tabla `backlogs`
+--
+
+INSERT INTO `backlogs` (`backlogtype`, `id`, `description`, `name`, `backlogSize`, `baselineLoad`, `endDate`, `readonlyToken`, `startDate`, `rank`, `status`, `parent_id`) VALUES
+('Product', 1, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 2, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 3, '', 'test-product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 4, '', 'test-product-3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 5, '', 'test-product-4', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 6, '', 'test-product-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 7, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 8, '', 'test-product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 9, '', 'test-product-3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 10, '', 'test-product-4', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 11, '', 'test-product-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 12, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 13, '', 'test-product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 14, '', 'test-product-3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 15, '', 'test-product-4', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 16, '', 'test-product-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 17, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 18, '', 'test-product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 19, '', 'test-product-3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 20, '', 'test-product-4', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 21, '', 'test-product-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 22, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 23, '', 'test-product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 24, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 25, '', 'test-product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 26, '', 'test-product-3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 27, '', 'test-product-4', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 28, '', 'test-product-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 29, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 30, '', 'test-product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 31, '', 'test-product-3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 32, '', 'test-product-4', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 33, '', 'test-product-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 34, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 35, '', 'test-product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 36, '', 'test-product-3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 37, '', 'test-product-4', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 38, '', 'test-product-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 39, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 40, '', 'test-product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 41, '', 'test-product-3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 42, '', 'test-product-4', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 43, '', 'test-product-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 44, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 45, '', 'test-product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 46, '', 'test-product-3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 47, '', 'test-product-4', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 48, '', 'test-product-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 49, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 50, '', 'test-product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 51, '', 'test-product-3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 52, '', 'test-product-4', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 53, '', 'test-product-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Project', 54, '', 'asd', 0, 0, '2013-12-03 18:00:00', NULL, '2013-11-19 08:00:00', 0, 0, 10),
+('Iteration', 55, '', 'iterarion', 0, 0, '2013-12-03 18:00:00', NULL, '2013-11-19 08:00:00', NULL, NULL, 10);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `backlogs_AUD`
+--
+
+CREATE TABLE `backlogs_AUD` (
+  `backlogtype` varchar(31) NOT NULL,
+  `id` int(11) NOT NULL,
+  `REV` int(11) NOT NULL,
+  `REVTYPE` tinyint(4) DEFAULT NULL,
+  `description` longtext,
+  `name` varchar(255) DEFAULT NULL,
+  `parent_id` int(11) DEFAULT NULL,
+  `backlogSize` bigint(20) DEFAULT NULL,
+  `baselineLoad` bigint(20) DEFAULT NULL,
+  `endDate` datetime DEFAULT NULL,
+  `rank` int(11) DEFAULT NULL,
+  `startDate` datetime DEFAULT NULL,
+  `status` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`,`REV`),
+  KEY `FK46C0B1E720258526` (`REV`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `backlogs_AUD`
+--
+
+INSERT INTO `backlogs_AUD` (`backlogtype`, `id`, `REV`, `REVTYPE`, `description`, `name`, `parent_id`, `backlogSize`, `baselineLoad`, `endDate`, `rank`, `startDate`, `status`) VALUES
+('Product', 1, 1, 0, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 2, 3, 0, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 3, 4, 0, '', 'test-product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 4, 5, 0, '', 'test-product-3', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 5, 6, 0, '', 'test-product-4', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 6, 7, 0, '', 'test-product-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 7, 8, 0, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 8, 9, 0, '', 'test-product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 9, 10, 0, '', 'test-product-3', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 10, 11, 0, '', 'test-product-4', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 11, 12, 0, '', 'test-product-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 12, 13, 0, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 13, 14, 0, '', 'test-product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 14, 15, 0, '', 'test-product-3', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 15, 16, 0, '', 'test-product-4', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 16, 17, 0, '', 'test-product-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 17, 18, 0, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 18, 19, 0, '', 'test-product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 19, 20, 0, '', 'test-product-3', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 20, 21, 0, '', 'test-product-4', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 21, 22, 0, '', 'test-product-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 22, 23, 0, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 23, 24, 0, '', 'test-product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 24, 25, 0, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 25, 26, 0, '', 'test-product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 26, 27, 0, '', 'test-product-3', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 27, 28, 0, '', 'test-product-4', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 28, 29, 0, '', 'test-product-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 29, 30, 0, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 30, 31, 0, '', 'test-product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 31, 32, 0, '', 'test-product-3', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 32, 33, 0, '', 'test-product-4', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 33, 34, 0, '', 'test-product-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 34, 35, 0, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 35, 36, 0, '', 'test-product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 36, 37, 0, '', 'test-product-3', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 37, 38, 0, '', 'test-product-4', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 38, 39, 0, '', 'test-product-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 39, 40, 0, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 40, 41, 0, '', 'test-product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 41, 42, 0, '', 'test-product-3', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 42, 43, 0, '', 'test-product-4', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 43, 44, 0, '', 'test-product-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 44, 45, 0, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 45, 46, 0, '', 'test-product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 46, 47, 0, '', 'test-product-3', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 47, 48, 0, '', 'test-product-4', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 48, 49, 0, '', 'test-product-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 49, 50, 0, '', 'test-product-1', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 50, 51, 0, '', 'test-product-2', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 51, 52, 0, '', 'test-product-3', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 52, 53, 0, '', 'test-product-4', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Product', 53, 54, 0, '', 'test-product-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Project', 54, 55, 0, '', 'asd', 10, 0, 0, '2013-12-03 18:00:00', 0, '2013-11-19 08:00:00', 0),
+('Iteration', 55, 56, 0, '', 'iterarion', 10, 0, 0, '2013-12-03 18:00:00', NULL, '2013-11-19 08:00:00', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `history_backlogs`
+--
+
+CREATE TABLE `history_backlogs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `branchMax` bigint(20) NOT NULL,
+  `doneSum` bigint(20) NOT NULL,
+  `estimateSum` bigint(20) NOT NULL,
+  `rootSum` bigint(20) NOT NULL,
+  `timestamp` datetime DEFAULT NULL,
+  `backlog_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKA6B13261F8762ABE` (`backlog_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `history_iterations`
+--
+
+CREATE TABLE `history_iterations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `deltaOriginalEstimate` bigint(20) NOT NULL,
+  `effortLeftSum` bigint(20) NOT NULL,
+  `originalEstimateSum` bigint(20) NOT NULL,
+  `timestamp` date NOT NULL,
+  `iteration_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `iteration_id` (`iteration_id`,`timestamp`),
+  KEY `FK9DD479C14157D2A2` (`iteration_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `Holiday`
+--
+
+CREATE TABLE `Holiday` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `endDate` datetime DEFAULT NULL,
+  `startDate` datetime DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKA44DC038C1610AD2` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `HolidayAnomaly`
+--
+
+CREATE TABLE `HolidayAnomaly` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `date` date DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK267567ABC1610AD2` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `hourentries`
+--
+
+CREATE TABLE `hourentries` (
+  `DTYPE` varchar(31) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `date` datetime DEFAULT NULL,
+  `description` longtext,
+  `minutesSpent` bigint(20) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `backlog_id` int(11) DEFAULT NULL,
+  `story_id` int(11) DEFAULT NULL,
+  `task_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKF6FE62CE0E4BFA2` (`story_id`),
+  KEY `FKF6FE62CF63400A2` (`backlog_id`),
+  KEY `FKF6FE62CC1610AD2` (`user_id`),
+  KEY `FKF6FE62C6E84F892` (`task_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `labels`
+--
+
+CREATE TABLE `labels` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `displayName` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `timestamp` datetime DEFAULT NULL,
+  `creator_id` int(11) DEFAULT NULL,
+  `story_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `label_name` (`name`),
+  KEY `FKBDD05FFFE0E4BFA2` (`story_id`),
+  KEY `FKBDD05FFF1C5D0ED1` (`creator_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `logins`
+--
+
+CREATE TABLE `logins` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK4B213410C1610AD4` (`user_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
+
+--
+-- Volcado de datos para la tabla `logins`
+--
+
+INSERT INTO `logins` (`id`, `user_id`, `time`) VALUES
+(1, 3, '2013-11-13 15:25:52'),
+(2, 3, '2013-11-17 14:21:21'),
+(3, 3, '2013-11-19 13:03:40'),
+(4, 3, '2013-11-19 13:08:59'),
+(5, 3, '2013-11-19 13:11:53'),
+(6, 3, '2013-11-19 13:12:10'),
+(7, 3, '2013-11-19 13:12:33'),
+(8, 3, '2013-11-19 13:12:50'),
+(9, 3, '2013-11-19 13:13:27'),
+(10, 3, '2013-11-19 13:13:48'),
+(11, 3, '2013-11-19 13:14:25'),
+(12, 3, '2013-11-19 13:19:09'),
+(13, 3, '2013-11-19 13:19:32'),
+(14, 3, '2013-11-19 13:20:01'),
+(15, 3, '2013-11-19 13:20:09'),
+(16, 3, '2013-11-19 13:20:30'),
+(17, 3, '2013-11-19 13:21:07'),
+(18, 3, '2013-11-19 13:21:23'),
+(19, 3, '2013-11-19 13:21:37'),
+(20, 3, '2013-11-19 13:21:44'),
+(21, 3, '2013-11-19 13:22:57'),
+(22, 3, '2013-11-19 13:23:05'),
+(23, 3, '2013-11-19 14:31:29'),
+(24, 3, '2013-11-19 16:35:00');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `schema_version`
+--
+
+CREATE TABLE `schema_version` (
+  `version_rank` int(11) NOT NULL,
+  `installed_rank` int(11) NOT NULL,
+  `version` varchar(50) NOT NULL,
+  `description` varchar(200) NOT NULL,
+  `type` varchar(20) NOT NULL,
+  `script` varchar(1000) NOT NULL,
+  `checksum` int(11) DEFAULT NULL,
+  `installed_by` varchar(30) NOT NULL,
+  `installed_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `execution_time` int(11) NOT NULL,
+  `success` tinyint(1) NOT NULL,
+  KEY `schema_version_vr_idx` (`version_rank`),
+  KEY `schema_version_ir_idx` (`installed_rank`),
+  KEY `schema_version_s_idx` (`success`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `schema_version`
+--
+
+INSERT INTO `schema_version` (`version_rank`, `installed_rank`, `version`, `description`, `type`, `script`, `checksum`, `installed_by`, `installed_on`, `execution_time`, `success`) VALUES
+(1, 1, '0', 'Initial version', 'SQL', 'V0__Initial_version.sql', -1085754636, 'agilefant', '2013-11-13 13:22:52', 6113, 1),
+(2, 2, '1', 'updated version', 'SQL', 'V1__updated_version.sql', -733178282, 'agilefant', '2013-11-13 13:22:53', 307, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `settings`
+--
+
+CREATE TABLE `settings` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `description` varchar(255) DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `stories`
+--
+
+CREATE TABLE `stories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `description` longtext,
+  `name` varchar(255) NOT NULL,
+  `state` int(11) NOT NULL,
+  `storyPoints` int(11) DEFAULT NULL,
+  `storyValue` int(11) DEFAULT NULL,
+  `treeRank` int(11) NOT NULL DEFAULT '0',
+  `backlog_id` int(11) DEFAULT NULL,
+  `iteration_id` int(11) DEFAULT NULL,
+  `parent_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK8FB060534157D2A2` (`iteration_id`),
+  KEY `FK8FB06053F63400A2` (`backlog_id`),
+  KEY `FK8FB06053F5E897CD` (`parent_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Volcado de datos para la tabla `stories`
+--
+
+INSERT INTO `stories` (`id`, `description`, `name`, `state`, `storyPoints`, `storyValue`, `treeRank`, `backlog_id`, `iteration_id`, `parent_id`) VALUES
+(1, '', 'story', 0, NULL, NULL, 0, 10, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `stories_AUD`
+--
+
+CREATE TABLE `stories_AUD` (
+  `id` int(11) NOT NULL,
+  `REV` int(11) NOT NULL,
+  `REVTYPE` tinyint(4) DEFAULT NULL,
+  `description` longtext,
+  `name` varchar(255) DEFAULT NULL,
+  `state` int(11) DEFAULT NULL,
+  `storyPoints` int(11) DEFAULT NULL,
+  `storyValue` int(11) DEFAULT NULL,
+  `treeRank` int(11) DEFAULT '0',
+  `backlog_id` int(11) DEFAULT NULL,
+  `iteration_id` int(11) DEFAULT NULL,
+  `parent_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`,`REV`),
+  KEY `FK853E2CA420258526` (`REV`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `stories_AUD`
+--
+
+INSERT INTO `stories_AUD` (`id`, `REV`, `REVTYPE`, `description`, `name`, `state`, `storyPoints`, `storyValue`, `treeRank`, `backlog_id`, `iteration_id`, `parent_id`) VALUES
+(1, 57, 0, '', 'story', 0, NULL, NULL, 0, 10, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `storyrank`
+--
+
+CREATE TABLE `storyrank` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `rank` int(11) NOT NULL,
+  `backlog_id` int(11) NOT NULL,
+  `story_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `backlog_id` (`backlog_id`,`story_id`),
+  KEY `FK6600C2A1E0E4BFA2` (`story_id`),
+  KEY `FK6600C2A1F63400A2` (`backlog_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `storyrank_AUD`
+--
+
+CREATE TABLE `storyrank_AUD` (
+  `id` int(11) NOT NULL,
+  `REV` int(11) NOT NULL,
+  `REVTYPE` tinyint(4) DEFAULT NULL,
+  `rank` int(11) DEFAULT NULL,
+  `backlog_id` int(11) DEFAULT NULL,
+  `story_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`,`REV`),
+  KEY `FK1CD8B7F220258526` (`REV`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `story_access`
+--
+
+CREATE TABLE `story_access` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `date` datetime DEFAULT NULL,
+  `story_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK44C5ABEEE0E4BFA2` (`story_id`),
+  KEY `FK44C5ABEEC1610AD2` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `story_user`
+--
+
+CREATE TABLE `story_user` (
+  `Story_id` int(11) NOT NULL,
+  `User_id` int(11) NOT NULL,
+  PRIMARY KEY (`Story_id`,`User_id`),
+  KEY `FK5914FCD5E0E4BFA2` (`Story_id`),
+  KEY `FK5914FCD5C1610AD2` (`User_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `story_user_AUD`
+--
+
+CREATE TABLE `story_user_AUD` (
+  `REV` int(11) NOT NULL,
+  `Story_id` int(11) NOT NULL,
+  `User_id` int(11) NOT NULL,
+  `REVTYPE` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`REV`,`Story_id`,`User_id`),
+  KEY `FK9A1CB82620258526` (`REV`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tasks`
+--
+
+CREATE TABLE `tasks` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `description` longtext,
+  `effortleft` bigint(20) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `originalestimate` bigint(20) DEFAULT NULL,
+  `rank` int(11) NOT NULL DEFAULT '0',
+  `state` int(11) NOT NULL,
+  `iteration_id` int(11) DEFAULT NULL,
+  `story_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK6907B8E4157D2A2` (`iteration_id`),
+  KEY `FK6907B8EE0E4BFA2` (`story_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tasks_AUD`
+--
+
+CREATE TABLE `tasks_AUD` (
+  `id` int(11) NOT NULL,
+  `REV` int(11) NOT NULL,
+  `REVTYPE` tinyint(4) DEFAULT NULL,
+  `description` longtext,
+  `effortleft` bigint(20) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `originalestimate` bigint(20) DEFAULT NULL,
+  `rank` int(11) DEFAULT '0',
+  `state` int(11) DEFAULT NULL,
+  `iteration_id` int(11) DEFAULT NULL,
+  `story_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`,`REV`),
+  KEY `FKBD8325F20258526` (`REV`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `task_user`
+--
+
+CREATE TABLE `task_user` (
+  `tasks_id` int(11) NOT NULL,
+  `responsibles_id` int(11) NOT NULL,
+  PRIMARY KEY (`tasks_id`,`responsibles_id`),
+  KEY `FKAC91A45B1C109E9` (`tasks_id`),
+  KEY `FKAC91A4527F4B120` (`responsibles_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `task_user_AUD`
+--
+
+CREATE TABLE `task_user_AUD` (
+  `REV` int(11) NOT NULL,
+  `tasks_id` int(11) NOT NULL,
+  `responsibles_id` int(11) NOT NULL,
+  `REVTYPE` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`REV`,`tasks_id`,`responsibles_id`),
+  KEY `FKF0A49D9620258526` (`REV`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `teams`
+--
+
+CREATE TABLE `teams` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `description` longtext,
+  `name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Volcado de datos para la tabla `teams`
+--
+
+INSERT INTO `teams` (`id`, `description`, `name`) VALUES
+(1, NULL, 'team1');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `teams_AUD`
+--
+
+CREATE TABLE `teams_AUD` (
+  `id` int(11) NOT NULL,
+  `REV` int(11) NOT NULL,
+  `REVTYPE` tinyint(4) DEFAULT NULL,
+  `description` longtext,
+  `name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`,`REV`),
+  KEY `FKF6966C8720258526` (`REV`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `teams_AUD`
+--
+
+INSERT INTO `teams_AUD` (`id`, `REV`, `REVTYPE`, `description`, `name`) VALUES
+(1, 2, 0, NULL, 'team1');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `team_iteration`
+--
+
+CREATE TABLE `team_iteration` (
+  `Team_id` int(11) NOT NULL,
+  `Iteration_id` int(11) NOT NULL,
+  PRIMARY KEY (`Team_id`,`Iteration_id`),
+  KEY `FKF2269B7B4157D2A2` (`Iteration_id`),
+  KEY `FKF2269B7B745BA992` (`Team_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `team_iteration_AUD`
+--
+
+CREATE TABLE `team_iteration_AUD` (
+  `REV` int(11) NOT NULL,
+  `Team_id` int(11) NOT NULL,
+  `Iteration_id` int(11) NOT NULL,
+  `REVTYPE` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`REV`,`Team_id`,`Iteration_id`),
+  KEY `FKFE5293CC20258526` (`REV`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `team_product`
+--
+
+CREATE TABLE `team_product` (
+  `Team_id` int(11) NOT NULL,
+  `Product_id` int(11) NOT NULL,
+  PRIMARY KEY (`Team_id`,`Product_id`),
+  KEY `FK65CE090D745BA992` (`Team_id`),
+  KEY `FK65CE090DA7FE2362` (`Product_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `team_product`
+--
+
+INSERT INTO `team_product` (`Team_id`, `Product_id`) VALUES
+(1, 1),
+(1, 2),
+(1, 3),
+(1, 4),
+(1, 5),
+(1, 6),
+(1, 7),
+(1, 8),
+(1, 9),
+(1, 10),
+(1, 11),
+(1, 12),
+(1, 13),
+(1, 14),
+(1, 15),
+(1, 16),
+(1, 17),
+(1, 18),
+(1, 19),
+(1, 20),
+(1, 21),
+(1, 22),
+(1, 23),
+(1, 24),
+(1, 25),
+(1, 26),
+(1, 27),
+(1, 28),
+(1, 29),
+(1, 30),
+(1, 31),
+(1, 32),
+(1, 33),
+(1, 34),
+(1, 35),
+(1, 36),
+(1, 37),
+(1, 38),
+(1, 39),
+(1, 40),
+(1, 41),
+(1, 42),
+(1, 43),
+(1, 44),
+(1, 45),
+(1, 46),
+(1, 47),
+(1, 48),
+(1, 49),
+(1, 50),
+(1, 51),
+(1, 52),
+(1, 53);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `team_product_AUD`
+--
+
+CREATE TABLE `team_product_AUD` (
+  `REV` int(11) NOT NULL,
+  `Team_id` int(11) NOT NULL,
+  `Product_id` int(11) NOT NULL,
+  `REVTYPE` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`REV`,`Team_id`,`Product_id`),
+  KEY `FK4E84E85E20258526` (`REV`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `team_product_AUD`
+--
+
+INSERT INTO `team_product_AUD` (`REV`, `Team_id`, `Product_id`, `REVTYPE`) VALUES
+(2, 1, 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `team_user`
+--
+
+CREATE TABLE `team_user` (
+  `User_id` int(11) NOT NULL,
+  `Team_id` int(11) NOT NULL,
+  KEY `FKF587546DC1610AD2` (`User_id`),
+  KEY `FKF587546D745BA992` (`Team_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `team_user`
+--
+
+INSERT INTO `team_user` (`User_id`, `Team_id`) VALUES
+(3, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `team_user_AUD`
+--
+
+CREATE TABLE `team_user_AUD` (
+  `REV` int(11) NOT NULL,
+  `Team_id` int(11) NOT NULL,
+  `User_id` int(11) NOT NULL,
+  `REVTYPE` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`REV`,`Team_id`,`User_id`),
+  KEY `FK7FE983BE20258526` (`REV`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `team_user_AUD`
+--
+
+INSERT INTO `team_user_AUD` (`REV`, `Team_id`, `User_id`, `REVTYPE`) VALUES
+(2, 1, 3, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `admin` bit(1) DEFAULT b'1',
+  `autoassignToStories` bit(1) DEFAULT b'0',
+  `autoassignToTasks` bit(1) DEFAULT b'1',
+  `email` varchar(255) DEFAULT NULL,
+  `enabled` bit(1) NOT NULL,
+  `fullName` varchar(255) DEFAULT NULL,
+  `initials` varchar(255) DEFAULT NULL,
+  `loginName` varchar(255) DEFAULT NULL,
+  `markStoryStarted` int(11) DEFAULT '1',
+  `password` varchar(255) DEFAULT NULL,
+  `recentItemsNumberOfWeeks` int(11) NOT NULL,
+  `weekEffort` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `loginName` (`loginName`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `admin`, `autoassignToStories`, `autoassignToTasks`, `email`, `enabled`, `fullName`, `initials`, `loginName`, `markStoryStarted`, `password`, `recentItemsNumberOfWeeks`, `weekEffort`) VALUES
+(3, '', '\0', '', NULL, '', 'Administrator', 'Admin', 'admin', 1, '5ebe2294ecd0e0f08eab7690d2a6ee69', 16, NULL),
+(4, '\0', '\0', '', NULL, '', 'readonly', 'readonly', 'readonly', 1, '5ebe2294ecd0e0f08eab7690d2a6ee69', 0, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `users_AUD`
+--
+
+CREATE TABLE `users_AUD` (
+  `id` int(11) NOT NULL,
+  `REV` int(11) NOT NULL,
+  `REVTYPE` tinyint(4) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `enabled` bit(1) DEFAULT NULL,
+  `fullName` varchar(255) DEFAULT NULL,
+  `initials` varchar(255) DEFAULT NULL,
+  `loginName` varchar(255) DEFAULT NULL,
+  `weekEffort` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`,`REV`),
+  KEY `FK154C77D920258526` (`REV`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `whatsnextentry`
+--
+
+CREATE TABLE `whatsnextentry` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `rank` int(11) NOT NULL DEFAULT '0',
+  `task_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `task_id` (`task_id`,`user_id`),
+  KEY `FK4B213410C1610AD2` (`user_id`),
+  KEY `FK4B2134106E84F892` (`task_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `whatsnextstoryentry`
+--
+
+CREATE TABLE `whatsnextstoryentry` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `rank` int(11) NOT NULL DEFAULT '0',
+  `story_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `story_id` (`story_id`,`user_id`),
+  KEY `FK4B213410C1610AD3` (`user_id`),
+  KEY `FK4B2134106E84F893` (`story_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `widgetcollections`
+--
+
+CREATE TABLE `widgetcollections` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK26C78D1C1610AD2` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `widgets`
+--
+
+CREATE TABLE `widgets` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `listNumber` int(11) DEFAULT NULL,
+  `objectId` int(11) DEFAULT NULL,
+  `position` int(11) DEFAULT NULL,
+  `type` varchar(255) NOT NULL,
+  `widgetCollection_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK4FE3EEAF8BACA792` (`widgetCollection_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `assignment`
+--
+ALTER TABLE `assignment`
+  ADD CONSTRAINT `FK3D2B86CDC1610AD2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `FK3D2B86CDE537EC82` FOREIGN KEY (`backlog_id`) REFERENCES `backlogs` (`id`),
+  ADD CONSTRAINT `FK3D2B86CDF63400A2` FOREIGN KEY (`backlog_id`) REFERENCES `backlogs` (`id`),
+  ADD CONSTRAINT `FK3D2B86CDF8762ABE` FOREIGN KEY (`backlog_id`) REFERENCES `backlogs` (`id`);
+
+--
+-- Filtros para la tabla `assignment_AUD`
+--
+ALTER TABLE `assignment_AUD`
+  ADD CONSTRAINT `FK1B6D861E20258526` FOREIGN KEY (`REV`) REFERENCES `agilefant_revisions` (`id`);
+
+--
+-- Filtros para la tabla `backlogs`
+--
+ALTER TABLE `backlogs`
+  ADD CONSTRAINT `FK7E75FF16B8A85DD5` FOREIGN KEY (`parent_id`) REFERENCES `backlogs` (`id`);
+
+--
+-- Filtros para la tabla `backlogs_AUD`
+--
+ALTER TABLE `backlogs_AUD`
+  ADD CONSTRAINT `FK46C0B1E720258526` FOREIGN KEY (`REV`) REFERENCES `agilefant_revisions` (`id`);
+
+--
+-- Filtros para la tabla `history_backlogs`
+--
+ALTER TABLE `history_backlogs`
+  ADD CONSTRAINT `FKA6B13261F8762ABE` FOREIGN KEY (`backlog_id`) REFERENCES `backlogs` (`id`);
+
+--
+-- Filtros para la tabla `history_iterations`
+--
+ALTER TABLE `history_iterations`
+  ADD CONSTRAINT `FK9DD479C14157D2A2` FOREIGN KEY (`iteration_id`) REFERENCES `backlogs` (`id`);
+
+--
+-- Filtros para la tabla `Holiday`
+--
+ALTER TABLE `Holiday`
+  ADD CONSTRAINT `FKA44DC038C1610AD2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Filtros para la tabla `HolidayAnomaly`
+--
+ALTER TABLE `HolidayAnomaly`
+  ADD CONSTRAINT `FK267567ABC1610AD2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Filtros para la tabla `hourentries`
+--
+ALTER TABLE `hourentries`
+  ADD CONSTRAINT `FKF6FE62C6E84F892` FOREIGN KEY (`task_id`) REFERENCES `tasks` (`id`),
+  ADD CONSTRAINT `FKF6FE62CC1610AD2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `FKF6FE62CE0E4BFA2` FOREIGN KEY (`story_id`) REFERENCES `stories` (`id`),
+  ADD CONSTRAINT `FKF6FE62CF63400A2` FOREIGN KEY (`backlog_id`) REFERENCES `backlogs` (`id`);
+
+--
+-- Filtros para la tabla `labels`
+--
+ALTER TABLE `labels`
+  ADD CONSTRAINT `FKBDD05FFF1C5D0ED1` FOREIGN KEY (`creator_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `FKBDD05FFFE0E4BFA2` FOREIGN KEY (`story_id`) REFERENCES `stories` (`id`);
+
+--
+-- Filtros para la tabla `logins`
+--
+ALTER TABLE `logins`
+  ADD CONSTRAINT `FK4B213410C1610AD4` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Filtros para la tabla `stories`
+--
+ALTER TABLE `stories`
+  ADD CONSTRAINT `FK8FB060534157D2A2` FOREIGN KEY (`iteration_id`) REFERENCES `backlogs` (`id`),
+  ADD CONSTRAINT `FK8FB06053F5E897CD` FOREIGN KEY (`parent_id`) REFERENCES `stories` (`id`),
+  ADD CONSTRAINT `FK8FB06053F63400A2` FOREIGN KEY (`backlog_id`) REFERENCES `backlogs` (`id`);
+
+--
+-- Filtros para la tabla `stories_AUD`
+--
+ALTER TABLE `stories_AUD`
+  ADD CONSTRAINT `FK853E2CA420258526` FOREIGN KEY (`REV`) REFERENCES `agilefant_revisions` (`id`);
+
+--
+-- Filtros para la tabla `storyrank`
+--
+ALTER TABLE `storyrank`
+  ADD CONSTRAINT `FK6600C2A1E0E4BFA2` FOREIGN KEY (`story_id`) REFERENCES `stories` (`id`),
+  ADD CONSTRAINT `FK6600C2A1F63400A2` FOREIGN KEY (`backlog_id`) REFERENCES `backlogs` (`id`);
+
+--
+-- Filtros para la tabla `storyrank_AUD`
+--
+ALTER TABLE `storyrank_AUD`
+  ADD CONSTRAINT `FK1CD8B7F220258526` FOREIGN KEY (`REV`) REFERENCES `agilefant_revisions` (`id`);
+
+--
+-- Filtros para la tabla `story_access`
+--
+ALTER TABLE `story_access`
+  ADD CONSTRAINT `FK44C5ABEEC1610AD2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `FK44C5ABEEE0E4BFA2` FOREIGN KEY (`story_id`) REFERENCES `stories` (`id`);
+
+--
+-- Filtros para la tabla `story_user`
+--
+ALTER TABLE `story_user`
+  ADD CONSTRAINT `FK5914FCD5C1610AD2` FOREIGN KEY (`User_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `FK5914FCD5E0E4BFA2` FOREIGN KEY (`Story_id`) REFERENCES `stories` (`id`);
+
+--
+-- Filtros para la tabla `story_user_AUD`
+--
+ALTER TABLE `story_user_AUD`
+  ADD CONSTRAINT `FK9A1CB82620258526` FOREIGN KEY (`REV`) REFERENCES `agilefant_revisions` (`id`);
+
+--
+-- Filtros para la tabla `tasks`
+--
+ALTER TABLE `tasks`
+  ADD CONSTRAINT `FK6907B8E4157D2A2` FOREIGN KEY (`iteration_id`) REFERENCES `backlogs` (`id`),
+  ADD CONSTRAINT `FK6907B8EE0E4BFA2` FOREIGN KEY (`story_id`) REFERENCES `stories` (`id`);
+
+--
+-- Filtros para la tabla `tasks_AUD`
+--
+ALTER TABLE `tasks_AUD`
+  ADD CONSTRAINT `FKBD8325F20258526` FOREIGN KEY (`REV`) REFERENCES `agilefant_revisions` (`id`);
+
+--
+-- Filtros para la tabla `task_user`
+--
+ALTER TABLE `task_user`
+  ADD CONSTRAINT `FKAC91A4527F4B120` FOREIGN KEY (`responsibles_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `FKAC91A45B1C109E9` FOREIGN KEY (`tasks_id`) REFERENCES `tasks` (`id`);
+
+--
+-- Filtros para la tabla `task_user_AUD`
+--
+ALTER TABLE `task_user_AUD`
+  ADD CONSTRAINT `FKF0A49D9620258526` FOREIGN KEY (`REV`) REFERENCES `agilefant_revisions` (`id`);
+
+--
+-- Filtros para la tabla `teams_AUD`
+--
+ALTER TABLE `teams_AUD`
+  ADD CONSTRAINT `FKF6966C8720258526` FOREIGN KEY (`REV`) REFERENCES `agilefant_revisions` (`id`);
+
+--
+-- Filtros para la tabla `team_iteration`
+--
+ALTER TABLE `team_iteration`
+  ADD CONSTRAINT `FKF2269B7B4157D2A2` FOREIGN KEY (`Iteration_id`) REFERENCES `backlogs` (`id`),
+  ADD CONSTRAINT `FKF2269B7B745BA992` FOREIGN KEY (`Team_id`) REFERENCES `teams` (`id`);
+
+--
+-- Filtros para la tabla `team_iteration_AUD`
+--
+ALTER TABLE `team_iteration_AUD`
+  ADD CONSTRAINT `FKFE5293CC20258526` FOREIGN KEY (`REV`) REFERENCES `agilefant_revisions` (`id`);
+
+--
+-- Filtros para la tabla `team_product`
+--
+ALTER TABLE `team_product`
+  ADD CONSTRAINT `FK65CE090D745BA992` FOREIGN KEY (`Team_id`) REFERENCES `teams` (`id`),
+  ADD CONSTRAINT `FK65CE090DA7FE2362` FOREIGN KEY (`Product_id`) REFERENCES `backlogs` (`id`);
+
+--
+-- Filtros para la tabla `team_product_AUD`
+--
+ALTER TABLE `team_product_AUD`
+  ADD CONSTRAINT `FK4E84E85E20258526` FOREIGN KEY (`REV`) REFERENCES `agilefant_revisions` (`id`);
+
+--
+-- Filtros para la tabla `team_user`
+--
+ALTER TABLE `team_user`
+  ADD CONSTRAINT `FKF587546D745BA992` FOREIGN KEY (`Team_id`) REFERENCES `teams` (`id`),
+  ADD CONSTRAINT `FKF587546DC1610AD2` FOREIGN KEY (`User_id`) REFERENCES `users` (`id`);
+
+--
+-- Filtros para la tabla `team_user_AUD`
+--
+ALTER TABLE `team_user_AUD`
+  ADD CONSTRAINT `FK7FE983BE20258526` FOREIGN KEY (`REV`) REFERENCES `agilefant_revisions` (`id`);
+
+--
+-- Filtros para la tabla `users_AUD`
+--
+ALTER TABLE `users_AUD`
+  ADD CONSTRAINT `FK154C77D920258526` FOREIGN KEY (`REV`) REFERENCES `agilefant_revisions` (`id`);
+
+--
+-- Filtros para la tabla `whatsnextentry`
+--
+ALTER TABLE `whatsnextentry`
+  ADD CONSTRAINT `FK4B2134106E84F892` FOREIGN KEY (`task_id`) REFERENCES `tasks` (`id`),
+  ADD CONSTRAINT `FK4B213410C1610AD2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Filtros para la tabla `whatsnextstoryentry`
+--
+ALTER TABLE `whatsnextstoryentry`
+  ADD CONSTRAINT `FK4B2134106E84F893` FOREIGN KEY (`story_id`) REFERENCES `stories` (`id`),
+  ADD CONSTRAINT `FK4B213410C1610AD3` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Filtros para la tabla `widgetcollections`
+--
+ALTER TABLE `widgetcollections`
+  ADD CONSTRAINT `FK26C78D1C1610AD2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Filtros para la tabla `widgets`
+--
+ALTER TABLE `widgets`
+  ADD CONSTRAINT `FK4FE3EEAF8BACA792` FOREIGN KEY (`widgetCollection_id`) REFERENCES `widgetcollections` (`id`);

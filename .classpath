@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="source/java-main"/>
 	<classpathentry kind="src" path="source/java-test"/>
-	<classpathentry including="*.properties|*/*.graphml|*/*.xls" kind="src" path="source/resources"/>
+	<classpathentry kind="src" path="source/resources"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="libraries/bsh-2.0b4.jar"/>
 	<classpathentry kind="lib" path="libraries/commons-codec-1.8.jar" sourcepath="libraries/commons-codec-1.8-sources.jar">

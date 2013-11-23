@@ -168,6 +168,24 @@ public class CreateException {
 
 
   /**
+   * @param cause
+   * @param messageFormat
+   * @param args
+   * @return
+   */
+  public static final RuntimeException forIoError(
+      final Throwable cause,
+      final String messageFormat,
+      final Object... args) {
+
+    return new RuntimeException(
+        String.format(Locale.ROOT, messageFormat, args),
+        cause);
+  }
+
+
+
+  /**
    * @param resourceLocation
    * @return
    */

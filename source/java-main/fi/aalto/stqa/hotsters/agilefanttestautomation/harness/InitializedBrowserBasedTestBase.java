@@ -25,7 +25,7 @@ public class InitializedBrowserBasedTestBase extends BrowserBasedTestBase {
 
     context().setOutputStream(System.out);
     context().setBrowserDriverFactory(new BrowserDriverFactory());
-    context().setDriver(context().browserDriverFactory().createFirefoxDriverInstance());
+    context().setDriver(context().browserDriverFactory().createFirefoxDriverInstanceWithCleanProfile());
     context().setModelHandler(new ModelHandler());
   }
 

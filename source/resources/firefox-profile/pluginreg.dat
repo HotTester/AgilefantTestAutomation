@@ -5,6 +5,40 @@ Version|0.16|$
 Arch|x86-msvc|$
 
 [PLUGINS]
+NPSWF32_11_9_900_152.dll|$
+C:\WINDOWS\SysWOW64\Macromed\Flash\NPSWF32_11_9_900_152.dll|$
+11.9.900.152|$
+1384721588002|0|0|$
+Shockwave Flash 11.9 r900|$
+Shockwave Flash|$
+2
+0|application/x-shockwave-flash|Adobe Flash movie|swf|$
+1|application/futuresplash|FutureSplash movie|spl|$
+npPDFXEditPlugin.x86.dll|$
+C:\Program Files\Tracker Software\PDF Editor\npPDFXEditPlugin.x86.dll|$
+3.0.306.0|$
+1382714562000|0|0|$
+PDF-XChange Editor Netscape Gecko Plugin|$
+PDF-XChange Editor|$
+1
+0|application/pdf|Portable Document Format|pdf|$
+npPDFXCviewNPPlugin.dll|$
+C:\Program Files\Tracker Software\PDF Viewer\Win32\npPDFXCviewNPPlugin.dll|$
+2.5.213.0|$
+1382690966000|0|0|$
+PDF-XChange Viewer Netscape Gecko Plugin|$
+PDF-XChange Viewer|$
+1
+0|application/pdf|Portable Document Format|pdf|$
+NPSPWRAP.DLL|$
+C:\Program Files\Microsoft Office 15\root\Office15\NPSPWRAP.DLL|$
+15.0.4514.1000|$
+1382211528484|0|0|$
+The plugin allows you to have a better experience with Microsoft SharePoint|$
+Microsoft Office 2013|$
+2
+0|application/x-sharepoint|SharePoint Plug-in for Firefox||$
+1|application/x-sharepoint-uc|||$
 npGoogleUpdate3.dll|$
 C:\Users\Aleksi\AppData\Local\Google\Update\1.3.21.165\npGoogleUpdate3.dll|$
 1.3.21.165|$
@@ -25,10 +59,10 @@ Shockwave Flash|$
 1|application/futuresplash|FutureSplash movie|spl|$
 npjp2.dll|$
 C:\Program Files (x86)\Java\jre7\bin\plugin2\npjp2.dll|$
-10.40.2.43|$
-1381173656041|0|0|$
-Next Generation Java Plug-in 10.40.2 for Mozilla browsers|$
-Java(TM) Platform SE 7 U40|$
+10.45.2.18|$
+1381207868000|0|0|$
+Next Generation Java Plug-in 10.45.2 for Mozilla browsers|$
+Java(TM) Platform SE 7 U45|$
 38
 0|application/x-java-applet|Java Applet||$
 1|application/x-java-bean|JavaBeans||$
@@ -63,35 +97,64 @@ Java(TM) Platform SE 7 U40|$
 30|application/x-java-bean;version=1.6|||$
 31|application/x-java-applet;version=1.7|||$
 32|application/x-java-bean;version=1.7|||$
-33|application/x-java-applet;jpi-version=1.7.0_40|||$
-34|application/x-java-bean;jpi-version=1.7.0_40|||$
+33|application/x-java-applet;jpi-version=1.7.0_45|||$
+34|application/x-java-bean;jpi-version=1.7.0_45|||$
 35|application/x-java-vm-npruntime|||$
-36|application/x-java-applet;deploy=10.40.2|||$
-37|application/x-java-applet;javafx=2.2.40|||$
-npDeployJava1.dll|$
-C:\WINDOWS\SysWOW64\npDeployJava1.dll|$
-10.40.2.43|$
-1381173655581|0|0|$
+36|application/x-java-applet;deploy=10.45.2|||$
+37|application/x-java-applet;javafx=2.2.45|||$
+npdeployJava1.dll|$
+C:\Program Files (x86)\Java\jre7\bin\dtplugin\npdeployJava1.dll|$
+10.45.2.18|$
+1381207865000|0|0|$
 NPRuntime Script Plug-in Library for Java(TM) Deploy|$
-Java Deployment Toolkit 7.0.400.43|$
+Java Deployment Toolkit 7.0.450.18|$
 1
 0|application/java-deployment-toolkit|||$
 npitunes.dll|$
 C:\Program Files (x86)\iTunes\Mozilla Plugins\npitunes.dll|$
 1.0.1.1|$
-1380584316000|0|0|$
+1380644364000|0|0|$
 iTunes Detector Plug-in|$
 iTunes Application Detector|$
 1
 0|application/itunes-plugin|This plug-in detects the presence of iTunes when opening iTunes Store URLs in a web page with Firefox.||$
-npPDFXCviewNPPlugin.dll|$
-C:\Program Files\Tracker Software\PDF Viewer\Win32\npPDFXCviewNPPlugin.dll|$
-2.5.212.0|$
-1377796026000|0|0|$
-PDF-XChange Viewer Netscape Gecko Plugin|$
-PDF-XChange Viewer|$
-1
-0|application/pdf|Portable Document Format|pdf|$
+nppdf32.dll|$
+C:\Program Files (x86)\Adobe\Reader 11.0\Reader\browser\nppdf32.dll|$
+11.0.5.3|$
+1380218439000|0|0|$
+Adobe PDF Plug-In For Firefox and Netscape 11.0.05|$
+Adobe Acrobat|$
+7
+0|application/pdf|Acrobat Portable Document Format|pdf|$
+1|application/vnd.adobe.pdfxml|Adobe PDF in XML Format|pdfxml|$
+2|application/vnd.adobe.x-mars|Adobe PDF in XML Format|mars|$
+3|application/vnd.fdf|Acrobat Forms Data Format|fdf|$
+4|application/vnd.adobe.xfdf|XML Version of Acrobat Forms Data Format|xfdf|$
+5|application/vnd.adobe.xdp+xml| Acrobat XML Data Package|xdp|$
+6|application/vnd.adobe.xfd+xml|Adobe FormFlow99 Data File|xfd|$
+nppdf32.dll|$
+C:\Program Files (x86)\Adobe\Reader 11.0\Reader\AIR\nppdf32.dll|$
+11.0.5.3|$
+1380218439000|0|0|$
+Adobe PDF Plug-In For Firefox and Netscape 11.0.05|$
+Adobe Acrobat|$
+7
+0|application/pdf|Acrobat Portable Document Format|pdf|$
+1|application/vnd.adobe.pdfxml|Adobe PDF in XML Format|pdfxml|$
+2|application/vnd.adobe.x-mars|Adobe PDF in XML Format|mars|$
+3|application/vnd.fdf|Acrobat Forms Data Format|fdf|$
+4|application/vnd.adobe.xfdf|XML Version of Acrobat Forms Data Format|xfdf|$
+5|application/vnd.adobe.xdp+xml| Acrobat XML Data Package|xdp|$
+6|application/vnd.adobe.xfd+xml|Adobe FormFlow99 Data File|xfd|$
+npctrl.dll|$
+C:\Program Files (x86)\Microsoft Silverlight\5.1.20913.0\npctrl.dll|$
+5.1.20913.0|$
+1379026436000|0|0|$
+5.1.20913.0|$
+Silverlight Plug-In|$
+2
+0|application/x-silverlight|npctrl|scr|$
+1|application/x-silverlight-2|||$
 npqtplugin5.dll|$
 C:\Program Files (x86)\QuickTime\Plugins\npqtplugin5.dll|$
 7.7.4.0|$
@@ -161,31 +224,6 @@ QuickTime Plug-in 7.7.4|$
 4|video/flc|AutoDesk Animator|flc,fli,cel|$
 5|audio/x-wav|WAVE-èèni|wav,bwf|$
 6|audio/wav|WAVE-èèni|wav,bwf|$
-npctrl.dll|$
-c:\Program Files (x86)\Microsoft Silverlight\5.1.20513.0\npctrl.dll|$
-5.1.20513.0|$
-1368447276000|0|0|$
-5.1.20513.0|$
-Silverlight Plug-In|$
-2
-0|application/x-silverlight|npctrl|scr|$
-1|application/x-silverlight-2|||$
-npPDFXEditPlugin.x86.dll|$
-C:\Program Files\Tracker Software\PDF Editor\npPDFXEditPlugin.x86.dll|$
-3.0.301.0|$
-1366972082000|0|0|$
-PDF-XChange Editor Netscape Gecko Plugin|$
-PDF-XChange Editor|$
-1
-0|application/pdf|Portable Document Format|pdf|$
-npNokiaSuiteEnabler.dll|$
-C:\Program Files (x86)\Nokia\Nokia Suite\npNokiaSuiteEnabler.dll|$
-1.0.0.1|$
-1366325190000|0|0|$
-Nokia Suite Enabler Plugin|$
-Nokia Suite Enabler Plugin|$
-1
-0|application/x-enabler-nokiasuite|||$
 np32dsw_1202122.dll|$
 C:\WINDOWS\SysWOW64\Adobe\Director\np32dsw_1202122.dll|$
 12.0.2.122|$
@@ -194,34 +232,6 @@ Adobe Shockwave for Director Netscape plug-in, version 12.0.2.122|$
 Shockwave for Director|$
 1
 0|application/x-director|Shockwave Movie|dir,dxr,dcr|$
-nppdf32.dll|$
-C:\Program Files (x86)\Adobe\Reader 11.0\Reader\browser\nppdf32.dll|$
-11.0.2.0|$
-1360965892000|0|0|$
-Adobe PDF Plug-In For Firefox and Netscape 11.0.02|$
-Adobe Acrobat|$
-7
-0|application/pdf|Acrobat Portable Document Format|pdf|$
-1|application/vnd.adobe.pdfxml|Adobe PDF in XML Format|pdfxml|$
-2|application/vnd.adobe.x-mars|Adobe PDF in XML Format|mars|$
-3|application/vnd.fdf|Acrobat Forms Data Format|fdf|$
-4|application/vnd.adobe.xfdf|XML Version of Acrobat Forms Data Format|xfdf|$
-5|application/vnd.adobe.xdp+xml| Acrobat XML Data Package|xdp|$
-6|application/vnd.adobe.xfd+xml|Adobe FormFlow99 Data File|xfd|$
-nppdf32.dll|$
-C:\Program Files (x86)\Adobe\Reader 11.0\Reader\AIR\nppdf32.dll|$
-11.0.2.0|$
-1360965892000|0|0|$
-Adobe PDF Plug-In For Firefox and Netscape 11.0.02|$
-Adobe Acrobat|$
-7
-0|application/pdf|Acrobat Portable Document Format|pdf|$
-1|application/vnd.adobe.pdfxml|Adobe PDF in XML Format|pdfxml|$
-2|application/vnd.adobe.x-mars|Adobe PDF in XML Format|mars|$
-3|application/vnd.fdf|Acrobat Forms Data Format|fdf|$
-4|application/vnd.adobe.xfdf|XML Version of Acrobat Forms Data Format|xfdf|$
-5|application/vnd.adobe.xdp+xml| Acrobat XML Data Package|xdp|$
-6|application/vnd.adobe.xfd+xml|Adobe FormFlow99 Data File|xfd|$
 npBrowserPlugin.dll|$
 C:\PROGRA~2\COMMON~1\Nero\BROWSE~1\npBrowserPlugin.dll|$
 1.1.2.0|$
@@ -260,7 +270,5 @@ Microsoft Office 2010|$
 0|application/x-msoffice14|14.0.4730.1010|*|$
 
 [INVALID]
-C:\WINDOWS\SysWOW64\npmproxy.dll|$
-1367643436327|$
-c:\Program Files (x86)\Microsoft Silverlight\5.1.20513.0\npctrlui.dll|$
-1368447276000|$
+C:\Program Files (x86)\Microsoft Silverlight\5.1.20913.0\npctrlui.dll|$
+1379026436000|$

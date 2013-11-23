@@ -41,7 +41,7 @@
     <node id="n2">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="105.54514653210913" width="143.390625" x="503.0" y="435.10996193439996"/>
+          <y:Geometry height="105.54514653210913" width="143.390625" x="503.0" y="509.07708267020666"/>
           <y:Fill color="#FFCCCC" color2="#FF9999" transparent="false"/>
           <y:BorderStyle color="#990033" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="47.892578125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="95.88330078125" x="23.753662109375" y="28.826284203554565">MainPage_Opened
@@ -79,10 +79,22 @@ SWITCH_MODEL</y:NodeLabel>
     <node id="n5">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="43.96712073580676" width="239.0" x="241.38066518021014" y="435.10996193439996"/>
+          <y:Geometry height="30.0" width="239.0" x="241.38066518021014" y="419.45665653214354"/>
           <y:Fill color="#FFCC00" color2="#FFFF00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.630859375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="224.62841796875" x="7.185791015625" y="12.668130680403351">LoginPage_VerifyPresenceOfInvalidLoginError</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.630859375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="224.62841796875" x="7.185791015625" y="5.6845703125">LoginPage_VerifyPresenceOfInvalidLoginError</y:NodeLabel>
+          <y:Shape type="roundrectangle"/>
+          <y:DropShadow color="#B3A691" offsetX="1" offsetY="1"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n6">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="109.0" x="561.5" y="419.45665653214354"/>
+          <y:Fill color="#FFCC00" color2="#FFFF00" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.630859375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="98.509765625" x="5.2451171875" y="5.6845703125">LoginPage_Opened</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
           <y:DropShadow color="#B3A691" offsetX="1" offsetY="1"/>
         </y:ShapeNode>
@@ -100,13 +112,13 @@ SWITCH_MODEL</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e1" source="n1" target="n2">
+    <edge id="e1" source="n6" target="n2">
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="40.98278884462138" sy="0.0" tx="40.98278884462138" ty="-34.44172624737974"/>
+          <y:Path sx="0.0" sy="14.990234375" tx="41.3046875" ty="-52.743747272021096"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Segoe UI" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.30078125" modelName="six_pos" modelPosition="stail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="168.39453125" x="2.000000758683882" y="10.15489871964354">LoginPage_EnterValidUserCredentials<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Segoe UI" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.30078125" modelName="six_pos" modelPosition="stail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="168.39453125" x="2.0" y="10.10564334854979">LoginPage_EnterValidUserCredentials<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
@@ -118,7 +130,7 @@ SWITCH_MODEL</y:NodeLabel>
           <y:Path sx="-39.01721115537862" sy="-14.81883875627092" tx="-39.01721115537862" ty="9.357600485294938"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Segoe UI" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.30078125" modelName="six_pos" modelPosition="shead" preferredPlacement="source_on_edge" ratio="0.5" textColor="#000000" visible="true" width="114.05859375" x="-116.05859299131612" y="-27.459587626146913">Header_LogoutLink_Click<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="source" side="on_edge" sideReference="relative_to_edge_flow"/>
+          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Segoe UI" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.30078125" modelName="six_pos" modelPosition="shead" preferredPlacement="source_on_edge" ratio="0.5" textColor="#000000" visible="true" width="114.05859375" x="-116.05859299131612" y="-27.441838228230836">Header_LogoutLink_Click<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="source" side="on_edge" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="true"/>
         </y:PolyLineEdge>
@@ -142,7 +154,8 @@ SWITCH_MODEL</y:NodeLabel>
           <y:Path sx="-41.6953125" sy="-15.020006243867954" tx="-41.6953125" ty="15.028012508176062"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="16.2509765625" modelName="six_pos" modelPosition="shead" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="66.8076171875" x="-68.8076171875" y="-26.35596931295089">Browser_Stop<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="28.501953125" modelName="six_pos" modelPosition="shead" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="66.8076171875" x="-68.8076171875" y="-37.0576220140791">Browser_Stop
+weight=0.05<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
@@ -172,15 +185,15 @@ SWITCH_MODEL</y:NodeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e7" source="n1" target="n1">
+    <edge id="e7" source="n6" target="n6">
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="71.6828498840332" sy="0.0" tx="71.6828498840332" ty="0.0">
-            <y:Point x="684.0" y="367.47309616424013"/>
+          <y:Path sx="54.516357421875" sy="0.0" tx="54.516357421875" ty="0.0">
+            <y:Point x="700.0" y="434.45665653214354"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Segoe UI" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.30078125" modelName="free" modelPosition="anywhere" preferredPlacement="source_on_edge" ratio="0.5" textColor="#000000" visible="true" width="147.4814453125" x="11.86614990234375" y="-40.271575927734375">LoginPage_ToggleRememberMe<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="source" side="on_edge" sideReference="relative_to_edge_flow"/>
+          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Segoe UI" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.30078125" modelName="free" modelPosition="anywhere" preferredPlacement="source_on_edge" ratio="0.5" textColor="#000000" visible="true" width="147.4814453125" x="2.242919921875" y="-33.91726873309409">LoginPage_ToggleRememberMe<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="source" side="on_edge" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="true"/>
         </y:PolyLineEdge>
@@ -208,7 +221,7 @@ SWITCH_MODEL</y:NodeLabel>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Segoe UI" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="free" modelPosition="anywhere" preferredPlacement="source_on_edge" ratio="0.5" textColor="#000000" visible="true" width="4.0" x="-38.26069613269715" y="-117.04406296689626">
+          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Segoe UI" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="free" modelPosition="anywhere" preferredPlacement="source_on_edge" ratio="0.5" textColor="#000000" visible="true" width="4.0" x="-38.26069613269715" y="-123.99837258471229">
             <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="source" side="on_edge" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="true"/>
@@ -220,7 +233,7 @@ SWITCH_MODEL</y:NodeLabel>
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="-30.21020028640004">
             <y:Point x="846.0" y="239.83623039408036"/>
-            <y:Point x="846.0" y="457.6723349140545"/>
+            <y:Point x="846.0" y="531.6394556498612"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
@@ -234,12 +247,12 @@ SWITCH_MODEL</y:NodeLabel>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="33.11746479954547" tx="0.0" ty="0.0">
-            <y:Point x="890.0" y="521.0"/>
+            <y:Point x="890.0" y="594.9671207358067"/>
             <y:Point x="890.0" y="164.18292499182394"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Segoe UI" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.30078125" modelName="free" modelPosition="anywhere" preferredPlacement="source_on_edge" ratio="0.5" textColor="#000000" visible="true" width="63.833984375" x="7.68206787109375" y="-19.650390625">Browser_Stop<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="source" side="on_edge" sideReference="relative_to_edge_flow"/>
+          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Segoe UI" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.30078125" modelName="free" modelPosition="anywhere" preferredPlacement="source_on_edge" ratio="0.5" textColor="#000000" visible="true" width="63.833984375" x="7.68206787109375" y="-19.650371939974548">Browser_Stop<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="source" side="on_edge" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="true"/>
         </y:PolyLineEdge>
@@ -249,12 +262,25 @@ SWITCH_MODEL</y:NodeLabel>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="34.0" tx="0.0" ty="0.0">
-            <y:Point x="204.0" y="521.8825352004545"/>
+            <y:Point x="204.0" y="595.8496559362612"/>
             <y:Point x="204.0" y="239.83623039408036"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Segoe UI" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.30078125" modelName="free" modelPosition="anywhere" preferredPlacement="source_on_edge" ratio="0.5" textColor="#000000" visible="true" width="138.521484375" x="-141.2333984375" y="-18.53289794921875">MiscellaneousAlienPage_Open<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="source" side="on_edge" sideReference="relative_to_edge_flow"/>
+          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Segoe UI" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.30078125" modelName="free" modelPosition="anywhere" preferredPlacement="source_on_edge" ratio="0.5" textColor="#000000" visible="true" width="138.521484375" x="-141.2333984375" y="-18.532940299349548">MiscellaneousAlienPage_Open<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="source" side="on_edge" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="true"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e13" source="n1" target="n6">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="41.3046875" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Segoe UI" fontSize="10" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="free" modelPosition="anywhere" preferredPlacement="source_on_edge" ratio="0.5" textColor="#000000" visible="true" width="4.0" x="34.26068533938951" y="112.99178494906471">
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" placement="source" side="on_edge" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="true"/>
         </y:PolyLineEdge>

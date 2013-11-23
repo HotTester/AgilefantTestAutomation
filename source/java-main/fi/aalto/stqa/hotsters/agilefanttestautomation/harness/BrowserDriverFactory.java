@@ -10,8 +10,10 @@ package fi.aalto.stqa.hotsters.agilefanttestautomation.harness;
 
 
 import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
@@ -40,13 +42,16 @@ public final class BrowserDriverFactory {
 
 
   /** Default path for profile to be used during tests by Firefox browser. */
-  public static final String DEFAULT_FIREFOX_PROFILE_PATH = "/firefox-profile/"; //$NON-NLS-1$
+  public static final String DEFAULT_FIREFOX_PROFILE_TEMPLATE_PATH = "/firefox-profile/"; //$NON-NLS-1$
 
   /**  */
   private int _implicitWaitingTimeoutInSeconds = DEFAULT_IMPLICIT_WAITING_TIMEOUT_IN_SECONDS;
 
   /** Path for profile to be used during tests by Firefox browser. */
-  private String _firefoxProfilePath = DEFAULT_FIREFOX_PROFILE_PATH;
+  private String _firefoxProfileTemplatePath = DEFAULT_FIREFOX_PROFILE_TEMPLATE_PATH;
+
+  /** Path for profile to be used during tests by Firefox browser. */
+  private String _temporaryBrowserProfilePath = null;
 
 
 
@@ -62,8 +67,67 @@ public final class BrowserDriverFactory {
   /**
    * @return
    */
-  public final WebDriver createFirefoxDriverInstance() {
-    final File profilePath = ResourceResolver.resolveBasedOn(firefoxProfilePath());
+  public final WebDriver createFirefoxDriverInstanceWithCleanProfile() {
+    copyFirefoxProfileTemplateToTemporaryFolder();
+
+    return createFirefoxDriverInstanceUsingExistingTemporaryProfile();
+  }
+
+
+
+  /**
+   * @return
+   */
+  public final WebDriver createFirefoxDriverInstanceUsingExistingTemporaryProfile() {
+    return instantiateFirefox();
+  }
+
+
+
+  /**
+   * 
+   */
+  private void copyFirefoxProfileTemplateToTemporaryFolder() {
+    final File sourceFolder = ResourceResolver.resolveBasedOn(firefoxProfileTemplatePath());
+    final File targetFolder = new File(temporaryBrowserProfilePath());
+
+    if (!sourceFolder.exists()) {
+      throw CreateException.forMissingResource(sourceFolder.getPath());
+    }
+
+    if (targetFolder.exists()) {
+      try {
+        FileUtils.forceDelete(targetFolder);
+      }
+      catch (final IOException exception) {
+        throw CreateException
+            .forIoError(
+                exception,
+                "An exception occurred when trying to delete existing temporary folder assigned for Firefox profile template.\n  Folder: %s\n\n", //$NON-NLS-1$
+                targetFolder.getPath());
+      }
+    }
+
+    try {
+      System.out.printf("Copying Firefox profile template...\n  Source: %s\n  Target: %s\n\n", //$NON-NLS-1$
+          sourceFolder.getPath(), targetFolder.getPath());
+
+      FileUtils.copyDirectory(sourceFolder, targetFolder);
+    }
+    catch (final IOException exception) {
+      throw CreateException.forIoError(exception,
+          "An exception occurred when trying to copy Firefox profile template from %s to %s.", //$NON-NLS-1$
+          firefoxProfileTemplatePath(), temporaryBrowserProfilePath());
+    }
+  }
+
+
+
+  /**
+   * @return
+   */
+  private WebDriver instantiateFirefox() {
+    final File profilePath = new File(temporaryBrowserProfilePath());
     final FirefoxProfile profile = new FirefoxProfile(profilePath);
     final WebDriver driver = new FirefoxDriver(profile);
 
@@ -77,19 +141,18 @@ public final class BrowserDriverFactory {
 
 
   /**
-   * @return the _firefoxProfilePath
+   * @return
    */
-  public String firefoxProfilePath() {
-    return _firefoxProfilePath;
+  public String firefoxProfileTemplatePath() {
+    return _firefoxProfileTemplatePath;
   }
 
 
 
   /**
    * @param path
-   *          the _firefoxProfilePath to set
    */
-  public void setFirefoxProfilePath(final String path) {
+  public void setFirefoxProfileTemplatePath(final String path) {
     if (path == null) {
       throw CreateException.forNullArgument("path"); //$NON-NLS-1$
     }
@@ -98,7 +161,7 @@ public final class BrowserDriverFactory {
           ERR_MSG_LENGTH_OF_THE_PROFILE_PATH_MUST_BE_A_POSITIVE_NUMBER);
     }
 
-    _firefoxProfilePath = path;
+    _firefoxProfileTemplatePath = path;
   }
 
 
@@ -123,6 +186,26 @@ public final class BrowserDriverFactory {
     }
 
     _implicitWaitingTimeoutInSeconds = timeout;
+  }
+
+
+
+
+  /**
+   * @return
+   */
+  public final String temporaryBrowserProfilePath() {
+    return _temporaryBrowserProfilePath;
+  }
+
+
+
+
+  /**
+   * @param path
+   */
+  public final void setTemporaryBrowserProfilePath(final String path) {
+    _temporaryBrowserProfilePath = path;
   }
 
 } // end of class BrowserDriverFactory

@@ -124,8 +124,8 @@ public class IterationCreationModelHandler extends ModelAPI {
 	  log.info("Edge: e_Header_NewIterationLink_Click");
 
 	  // Click Create new --> Product
-	  context().uiModel().mainPage().menuLink().click();
-	  context().uiModel().mainPage().newIterationLink().click();
+	  context().uiModel().mainPage().createNewMenuLink().click();
+	  context().uiModel().mainPage().createNewIterationLink().click();
   }
 
 

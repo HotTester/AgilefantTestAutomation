@@ -18,6 +18,7 @@ import org.graphwalker.multipleModels.ModelHandler;
 import org.junit.Test;
 
 import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.BrowserBasedTestBase;
+import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.BrowserDriverFactory;
 import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.TestContext;
 import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.uimodel.AgilefantUIModel;
 
@@ -30,6 +31,11 @@ import fi.aalto.stqa.hotsters.agilefanttestautomation.harness.uimodel.AgilefantU
  * @author Aleksi
  */
 public class Tests extends BrowserBasedTestBase {
+
+  /**  */
+  private static final String TEMPORARY_BROWSER_PROFILE_PATH = "C:\\Temp\\browser-profile\\"; //$NON-NLS-1$
+
+
 
   /**
    * 
@@ -55,6 +61,11 @@ public class Tests extends BrowserBasedTestBase {
     setContext(new TestContext());
 
     context().setOutputStream(System.out);
+
+    final BrowserDriverFactory bdf = new BrowserDriverFactory();
+    bdf.setTemporaryBrowserProfilePath(TEMPORARY_BROWSER_PROFILE_PATH);
+    context().setBrowserDriverFactory(bdf);
+
     context().setModelHandler(new ModelHandler());
     context().setUIModel(new AgilefantUIModel(context()));
   }

@@ -147,8 +147,8 @@ public class ProductCreationModelHandler extends ModelAPI {
 	  log.info("Edge: e_Header_CreateNewProductLink_Click");
 
 	  // Click Create new --> Product
-	  context().uiModel().mainPage().menuLink().click();
-	  context().uiModel().mainPage().newProductLink().click();
+	  context().uiModel().mainPage().createNewMenuLink().click();
+	  context().uiModel().mainPage().createNewProductLink().click();
   }
 
 
