@@ -12,7 +12,6 @@ package fi.aalto.stqa.hotsters.agilefanttestautomation;
 import org.graphwalker.conditions.TimeDuration;
 import org.graphwalker.generators.AllPathPermutationsGenerator;
 import org.graphwalker.generators.PathGenerator;
-import org.graphwalker.multipleModels.ModelAPI;
 import org.graphwalker.multipleModels.ModelHandler;
 
 import org.junit.Test;
@@ -40,16 +39,37 @@ public class Tests extends BrowserBasedTestBase {
   /**
    * 
    */
+  /*  
+    @Test
+    public void ensureThatLoginIsPossible() {
+      final PathGenerator pathGenerator = new AllPathPermutationsGenerator(new TimeDuration(600));
+
+      initTestContextWithoutCreatingBrowser();
+
+      initializeModel("LoginLogoutModelHandler", LoginLogoutModelHandler.class, //$NON-NLS-1$
+          "/test-models/login-logout.graphml", pathGenerator); //$NON-NLS-1$
+
+      executeModel("LoginLogoutModelHandler"); //$NON-NLS-1$
+    }
+  */
+
+
+  /**
+   * 
+   */
   @Test
-  public void ensureProductsProjectsIterationsAndStoriesCanBeCreated() {
-    final String modelName = "LoginLogoutModelHandler"; //$NON-NLS-1$
-    final Class<? extends ModelAPI> modelHandler = LoginLogoutModelHandler.class;
-    final String modelResourcePath = "/test-models/login-logout.graphml"; //$NON-NLS-1$
+  public void ensureThatProductsCanBeCreated() {
     final PathGenerator pathGenerator = new AllPathPermutationsGenerator(new TimeDuration(1800));
 
     initTestContextWithoutCreatingBrowser();
-    initializeModel(modelName, modelHandler, modelResourcePath, pathGenerator);
-    executeModel(modelName);
+
+    initializeModel("ProductCreationModelHandler", LoginLogoutModelHandler.class, //$NON-NLS-1$
+        "/test-models/create-product.graphml", pathGenerator); //$NON-NLS-1$
+
+    initializeModel("LoginLogoutModelHandler", LoginLogoutModelHandler.class, //$NON-NLS-1$
+        "/test-models/login-logout.graphml", pathGenerator); //$NON-NLS-1$
+
+    executeModel("LoginLogoutModelHandler"); //$NON-NLS-1$
   }
 
 

@@ -20,7 +20,7 @@
           <y:Geometry height="105.54514653210913" width="144.390625" x="699.0" y="220.94601715695535"/>
           <y:Fill color="#FFCCCC" color2="#FF9999" transparent="false"/>
           <y:BorderStyle color="#990033" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="42.865234375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="101.67333984375" x="21.358642578125" y="31.339956078554565">MainPage_Opened
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="47.892578125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="95.88330078125" x="24.253662109375" y="28.826284203554565">MainPage_Opened
 REQTAG=Login
 SWITCH_MODEL</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
@@ -34,7 +34,7 @@ SWITCH_MODEL</y:NodeLabel>
           <y:Geometry height="45.8525390625" width="172.98974609375" x="229.78198327945665" y="280.6386246265645"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="16.955078125" modelName="custom" textColor="#000000" visible="true" width="171.85205078125" x="0.56884765625" y="14.44873046875">v_CreateProductDialog_Opened<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.630859375" modelName="custom" textColor="#000000" visible="true" width="148.49853515625" x="12.24560546875" y="13.61083984375">CreateProductDialog_Opened<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -51,7 +51,7 @@ SWITCH_MODEL</y:NodeLabel>
           <y:Geometry height="30.0" width="207.72019780253981" x="592.5260396589215" y="432.2441673517377"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="29.91015625" modelName="custom" textColor="#000000" visible="true" width="188.21240234375" x="9.753897729394907" y="0.044921875">v_MainPage_VerifyProductCreation
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="33.26171875" modelName="custom" textColor="#000000" visible="true" width="163.74169921875" x="21.989249291894907" y="-1.630859375">MainPage_VerifyProductCreation
 REQTAG=Product Creation<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
@@ -66,10 +66,10 @@ REQTAG=Product Creation<y:LabelModel>
     <node id="n3">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="30.0" width="300.302734375" x="159.62548913883165" y="156.02986172601607"/>
+          <y:Geometry height="30.0" width="300.302734375" x="186.12548913883165" y="143.02986172601607"/>
           <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="16.955078125" modelName="custom" textColor="#000000" visible="true" width="296.1767578125" x="2.06298828125" y="6.5224609375">v_CreateProductDialog_VerifyInvalidInputErrorMessage<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.630859375" modelName="custom" textColor="#000000" visible="true" width="261.0390625" x="19.6318359375" y="5.6845703125">CreateProductDialog_VerifyInvalidInputErrorMessage<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -83,10 +83,10 @@ REQTAG=Product Creation<y:LabelModel>
     <node id="n4">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="30.0" width="66.8734747131208" x="730.2757254303187" y="124.08853640688346"/>
+          <y:Geometry height="30.0" width="66.8734747131208" x="737.7585751434397" y="143.02986172601607"/>
           <y:Fill color="#00FF00" color2="#CCFFCC" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="16.955078125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="28.728515625" x="19.072479544060343" y="6.5224609375">Start</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Segoe UI" fontSize="11" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.630859375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="26.7197265625" x="20.076874075310343" y="5.6845703125">Start</y:NodeLabel>
           <y:Shape type="roundrectangle"/>
           <y:DropShadow color="#B3A691" offsetX="1" offsetY="1"/>
         </y:ShapeNode>
@@ -96,13 +96,13 @@ REQTAG=Product Creation<y:LabelModel>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="-69.0" sy="22.063856655897325" tx="-38.081543826331654" ty="-7.782447078907239"/>
-          <y:LineStyle color="#000000" type="line" width="4.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="229.73828125" x="-263.75048828124994" y="-39.066399356639636">e_Header_CreateNewProductLink_Click<y:LabelModel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="206.095703125" x="-211.10791015625" y="-39.350579044139636">Header_CreateNewProductLink_Click<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
-              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.16443719131357196" segment="-1"/>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.0" segment="0"/>
             </y:ModelParameter>
             <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
@@ -116,11 +116,11 @@ REQTAG=Product Creation<y:LabelModel>
           <y:Path sx="0.0" sy="12.435105842185521" tx="-60.1953125" ty="42.281409576990086"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="253.5625" x="21.337524842853327" y="20.933593749999943">e_CreateProductDialog_CancelButton_Click<y:LabelModel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="226.78515625" x="-2.273803282146673" y="20.6494140625">CreateProductDialog_CancelButton_Click<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
-              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.37509632378533214" segment="-1"/>
             </y:ModelParameter>
             <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
@@ -136,11 +136,11 @@ REQTAG=Product Creation<y:LabelModel>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="472.62109375" x="3.6894531249999716" y="81.68139269353458">e_CreateProductDialog_EnterProductInformationAndSave / num_of_products++;<y:LabelModel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="304.169921875" x="24.178058891960745" y="81.39721300603452">CreateProductDialog_EnterProductInformationAndSave;<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
-              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="left" ratio="0.6808007721421274" segment="-1"/>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="left" ratio="0.5" segment="-1"/>
             </y:ModelParameter>
             <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
@@ -161,17 +161,14 @@ REQTAG=Product Creation<y:LabelModel>
     <edge id="e4" source="n1" target="n3">
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="316.27685632633165" y="237.29737794191527"/>
-            <y:Point x="309.77685632633165" y="237.29737794191527"/>
-          </y:Path>
+          <y:Path sx="20.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="372.625" x="4.68750085758154" y="-83.58463588974675">e_CreateProductDialog_EnterInvalidProductInformationAndSave<y:LabelModel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="335.5234375" x="29.73828210758154" y="-102.61753817632768">CreateProductDialog_EnterInvalidProductInformationAndSave<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
-              <y:SmartEdgeLabelModelParameter angle="6.283185307179586" distance="197.4999999999999" distanceToCenter="true" position="right" ratio="0.8384682710728778" segment="-1"/>
+              <y:SmartEdgeLabelModelParameter angle="6.283185307179586" distance="197.4999999999999" distanceToCenter="true" position="right" ratio="1.0" segment="-1"/>
             </y:ModelParameter>
             <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
@@ -182,10 +179,7 @@ REQTAG=Product Creation<y:LabelModel>
     <edge id="e5" source="n3" target="n1">
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="-51.50655711089279" sy="0.0" tx="-58.776856326331654" ty="-7.064894157814479">
-            <y:Point x="258.27029921543885" y="235.6399308630081"/>
-            <y:Point x="257.5" y="235.6399308630081"/>
-          </y:Path>
+          <y:Path sx="-51.50655711089279" sy="0.0" tx="-31.5065571108928" ty="-7.064894157814479"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
@@ -195,14 +189,14 @@ REQTAG=Product Creation<y:LabelModel>
     <edge id="e6" source="n4" target="n0">
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="-7.482849713120913" ty="-42.218590423009914"/>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="-52.749803999453036"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="35.693359375" x="-47.84668027952716" y="24.33644487273972">noOp<y:LabelModel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="33.35546875" x="13.322265625" y="14.579598987384145">noOp<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
-              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="right" ratio="0.5" segment="0"/>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="left" ratio="0.5" segment="0"/>
             </y:ModelParameter>
             <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>

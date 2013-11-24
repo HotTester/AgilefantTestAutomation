@@ -83,7 +83,7 @@ public class AgilefantUIModel {
   /**
    * @return the newProductDialog
    */
-  public final CreateProductDialog newProductDialog() {
+  public final CreateProductDialog createProductDialog() {
     if (_newProductDialog == null) {
       _newProductDialog = new CreateProductDialog(context());
     }

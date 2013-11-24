@@ -59,7 +59,6 @@ public class LoginLogoutModelHandler extends ModelAPI {
 
 
 
-
   /**
    * @param model
    * @param efsm
@@ -90,7 +89,7 @@ public class LoginLogoutModelHandler extends ModelAPI {
    * 
    */
   public void ModelHandler_Init() {
-
+    /* EMPTY */
   }
 
 
@@ -112,14 +111,16 @@ public class LoginLogoutModelHandler extends ModelAPI {
   public void Browser_Start() {
     final WebDriver firefoxDriver;
     if (browserWasStartedBefore()) {
+      log.info("Creating a browser instance with an existing profile.");
       firefoxDriver = context().browserDriverFactory().createFirefoxDriverInstanceUsingExistingTemporaryProfile();
     }
     else {
+      log.info("Creating a browser instance with a clean profile.");
       firefoxDriver = context().browserDriverFactory().createFirefoxDriverInstanceWithCleanProfile();
       setBrowserStartedStatus(true);
     }
     context().setDriver(firefoxDriver);
-    waitTimeInSeconds(1);
+    waitTimeInSeconds(2);
 
     MiscellaneousAlienPage_Open();
     waitTimeInSeconds(5);
@@ -142,13 +143,20 @@ public class LoginLogoutModelHandler extends ModelAPI {
    * 
    */
   public void Browser_Stop() {
-    try {
-      Thread.sleep(5000);
-    }
-    catch (final InterruptedException exception) {
-      /* EMPTY */
-    }
+    dataModel().setRememberMeState(false);
+    log.info("Remember Me state switched to " + dataModel().shouldRememberMe()); //$NON-NLS-1$
+    log.info("Agilefant should not remember the current login any more."); //$NON-NLS-1$
 
+    waitTimeInSeconds(5);
+    closeBrowser();
+  }
+
+
+
+  /**
+   * 
+   */
+  private void closeBrowser() {
     context().driver().quit();
     context().setDriver(null);
   }
@@ -308,8 +316,17 @@ public class LoginLogoutModelHandler extends ModelAPI {
     context().uiModel().mainPage().logoutLinkInHeader().click();
 
     dataModel().setRememberMeState(false);
-    log.info("Remember Me state switched to false."); //$NON-NLS-1$
+    log.info("Remember Me state switched to " + dataModel().shouldRememberMe()); //$NON-NLS-1$
     log.info("Agilefant should not remember the current login any more."); //$NON-NLS-1$
+  }
+
+
+
+  /**
+   *
+   */
+  public void noOp() {
+    /* EMPTY */
   }
 
 
